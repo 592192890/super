@@ -1,0 +1,136 @@
+/**
+* @file cart.scss
+* @synopsis  购物车
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-21
+*/
+
+@import "common/common";
+@import "common/hd/1.0.0/hd";
+@import "common/checkbox/1.0.0/checkbox";
+@import "common/item/1.0.0/item";
+@import "common/list/1.0.0/list";
+@import "common/list-pro/1.0.0/list-pro";
+@import "common/float-layer/1.0.0/float-layer";
+@import "common/page-tips/1.0.0/page-tips";
+@import "common/change-num/1.0.0/change-num";
+@import "common/nav/back2top";
+//限时购买
+.mod-time-buy {
+    display: block;
+    background: #f9f5ef;
+    text-align: center;
+    height: rem(70);
+    line-height: rem(70);
+    color: #f1c16c;
+    font-size: rem(30);
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: rem(20);
+    }
+    &:hover {
+        color: #f1c16c;
+    }
+}
+
+//失效商品操作按钮
+.mod-oper {
+    text-align: center;
+    padding: rem(20) 0px;
+    .ui-button {
+        width: auto;
+    }
+}
+
+//已享受优惠
+.mod-discount {
+    // background: #feeeee;
+    .list-bd {
+        padding: rem(20) rem(20) rem(20) rem(80);
+        .icon {
+            border: 1px solid #f85d5b;
+            padding: 0px rem(4);
+            margin-right: rem(10);
+            vertical-align: top;
+        }
+    }
+}
+
+//店铺总计
+.mod-shop-total {
+    padding: rem(16) 0px;
+    .ui-list-hor {
+        min-height: rem(40);
+    }
+}
+
+//购物车配送弹出框
+.cart-split-box {
+    background-color: #fff;
+    border-radius: rem(5);
+    padding-top: rem(30);
+    .hd {
+        text-align: center;
+        font-size: rem(28);
+    }
+    .bd {
+        margin: rem(25) 0;
+        padding: 0 rem(30);
+        .row {
+            clear: both;
+            overflow: hidden;
+            margin: rem(20) 0;
+            input {
+                margin-right: rem(15);
+            }
+            span {
+                font-size: rem(28);
+            }
+        }
+        .row-lf {
+            float: left;
+        }
+        .row-rg {
+            float: right;
+        }
+    }
+    .ft {
+        .btn {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            padding: rem(15) 0;
+            font-size: rem(26);
+            &.ok {
+                background-color: #efefef;
+                color: #f95d5b;
+            }
+            &.disable {
+                color: #ccc;
+            }
+        }
+    }
+}
+
+.ul-line {
+    padding-bottom: rem(12);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.deliverie {
+    display: inline-block;
+    margin-left: rem(-7);
+}
+
+.description {
+    margin-left: rem(16);
+}
+.ui-button{
+    &.disabled, &[disabled], &:disabled {
+        color: #fff;
+        background-color: #ccc;
+        border-color: #ccc;
+    }
+}

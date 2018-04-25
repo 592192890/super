@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>立即购买</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/order/1.0.0/pre-sale.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <div id="jOrder">
+            <div id="jNoData">
+                <div class="ui-page-tips ui-page-loading">
+                    <i class="tips-img"></i>
+                    <p class="tips-txt">数据加载中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA ||
+        {};
+        $PAGE_DATA['env'] = 'test'; //测试环境(test)，正式环境(pro)
+        $PAGE_DATA['buyType'] = 'direct';
+        /* dev url begin */
+        $PAGE_DATA['url'] = {
+            addressAdd: '//test.data.com/m/member/address_add.php',
+            addressList: '//test.data.com/m/member/address_list.php',
+            saveSelfMetion: "http://test.data.com/super/save-self-metion.php",
+            page: '//m.yunhou.com/html/order/order.html', //结算页面
+            cartPage: '//m.yunhou.com/html/cart/cart.html', //购物车页面
+            getRefresh: '//test.data.com/m/checkout/getRefresh.php',
+            getSettlementList: 'http://test.data.com/m/checkout/get-buy-at-once.php',
+            getInvoiceList: '//test.data.com/m/checkout/taxContent.php', //获取发票列表
+			saveInvoiceInfo:'http://test.data.com/success.php',//保存发票信息
+            imgPath: '//m.yunhou.com/item/', //图片路径
+			subOrder: '//wx.yunhou.com/o2o/checkout/genOrders',//提交订单
+			payAddr: '',//支付页面的路径
+            login: 'https://ssl.yunhou.com/passport/h5/login'
+        };
+        /* dev url end */
+    </script>
+    <!--#include file="/super/html/module/order/1.0.0/statistics.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

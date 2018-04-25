@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- @author 吕永华 -->
+
+<html>
+
+<head>
+    <title>我的会员卡</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/membership-card/1.0.0/membership-card.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <!-- 我的会员卡 begin -->
+    <div class="page-view membership-card">
+       <div class="wrap">
+           <div class="up">
+               <div class="img-card">
+                   <span class="card-level">银卡会员</span>
+                   <span class="card-id">NO:1202151202541520154120052</span>
+               </div>
+           </div>
+           <img src="//s1.bbgstatic.com/super/images/conf/membership-card/1.0.0/line.png" alt="" class="line"/>
+           <div class="down">
+               <img src="" alt=""  class="bar-code"/>
+               <img src="" alt="" class="qr-code"/>
+               <p>使用时请向门店工作人员出示此码</p>
+           </div>
+       </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!-- #include file="/super/html/common/statistics.html" -->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url']={
+            // allCity: '//wx.yunhou.com/super/point/getAllCity',//城市信息
+            // giftPage: '//wx.yunhou.com/super/point/getGiftPage'
+        };
+        require(['conf/membership-card/1.0.1/membership-card']);
+        
+    </script>
+</body>
+
+</html>

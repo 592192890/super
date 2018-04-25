@@ -1,0 +1,108 @@
+/**
+* @file conversion-recode.scss
+* @synopsis  积分兑换记录
+* @author zhouwei, 1097009033@qq.com
+* @version 1.0.0
+* @date 2017-06-23
+*/
+
+@import "common/common";
+@import "common/tab/1.0.0/tab";
+@import "common/checkbox/1.0.0/checkbox";
+@import "common/button/1.0.0/button";
+@import "common/item/1.0.0/item";
+@import "common/list/1.0.0/list";
+@import "common/nav/back2top";
+@import "common/page-tips/1.0.0/page-tips";
+
+/*页面顶部间距*/
+.top-pitch{
+    margin-top: rem(20);
+}
+/* 积分兑换begin */
+.mod-item{
+    margin-top: rem(1);
+    position: relative;
+    min-height: rem(160);
+    padding: rem(20) rem(20) rem(20) rem(200);
+
+    /* 左边兑换图片 begin */
+    .item-lf{
+        position: absolute;
+        top: rem(20);
+        left: rem(20);
+        width: rem(160);
+        height: rem(160);
+        .img-box{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            img {
+                height: 100%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+        }
+    }
+    /* 左边兑换图片 end */
+
+    /* 右边积分兑换描述 begin */
+    .item-rt{
+        width: 100%;
+        /*兑换标题 begin*/
+        .box-title{
+            color: #333;
+            font-size: rem(30);
+            height: rem(50);
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+        /* 兑换标题 end */
+
+        /* 兑换时间 begin */
+        .box-time,.box-adr{
+            color: #999;
+            font-size: rem(24);
+            line-height: rem(34);
+        }
+        /* 兑换时间 end */
+
+        /* 积分 begin */
+        .box-txt{
+            font-size: rem(24);
+            color: #f95d5b;
+            .txt-nub{
+                font-size: rem(30);
+                margin-right: rem(8);
+            }
+        }
+        /* 积分 end */
+    }
+    /* 右边积分兑换描述 end */
+}
+
+/* 字体 */
+.iconfontmod{
+    font-size: rem(36);
+    vertical-align: middle;
+}
+
+/* 加载中... */
+.loading {
+    padding: rem(40) 0;
+    &:before {
+        content: " ";
+        vertical-align: middle;
+        position:absolute;
+        top:50%;
+        margin-top:rem(-16);
+    }
+}
+.tips-center{
+    margin: 0 auto;
+}

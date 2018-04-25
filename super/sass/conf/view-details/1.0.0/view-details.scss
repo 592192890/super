@@ -1,0 +1,153 @@
+/**
+* @file view-details.scss
+* @synopsis  view-details
+* @author zhouwei, 1097009033@qq.com
+* @version 1.0.0
+* @date 2017-03-29
+*/
+
+@import "common/common";
+$col: #f95d5b;
+.body {
+    margin: 0 auto;
+    min-width: rem(320);
+    max-width: rem(750);
+    padding: rem(40) rem(20);
+    color: $col;
+    background: url('/super/images/conf/view-details/1.0.0/bg.png');
+    //公共的标题
+    .ui-title {
+        text-align: center;
+        //边框
+        .bor {
+            margin: 0 auto;
+            display: block;
+            width: rem(328);
+            height: rem(34);
+            border-bottom: rem(1) solid #ffd6d5;
+        }
+        //文字
+        .text {
+            margin: 0 auto;
+            display: block;
+            width: rem(158);
+            line-height: rem(32);
+            margin-top: rem(-16);
+            font-size: rem(32);
+            font-weight: 400 !important;
+            background-color: #fff;
+        }
+    }
+    //流程图
+    .mod-process {
+        padding: rem(40) rem(20);
+        background-color: #fff;
+        border-radius: rem(10);
+        //盒子阴影滤镜
+        -webkit-filter: drop-shadow(0 0 rem(10) #ffdada);
+        //图标显示
+        .process-box {
+            margin-top: rem(34);
+            .icon {
+                display: inline-block;
+                width: rem(160);
+                height: rem(140);
+                &:nth-child(3) {
+                    width: rem(200);
+                    .round {
+                        margin-left: rem(36);
+                    }
+                    .next-step {
+                        margin-left: rem(26);
+                    }
+                }
+                &:last-child {
+                    width: rem(114);
+                }
+                //圆形
+                .round {
+                    display: inline-block;
+                    margin: 0 rem(5) rem(10);
+                    text-align: center;
+                    width: rem(92);
+                    height: rem(92);
+                    line-height: rem(92);
+                    border: rem(1) solid #f2f3f7;
+                    border-radius: 50%;
+                    .iconfontmod {
+                        font-size: rem(52);
+                    }
+                }
+                //文字
+                .text {
+                    display: inline-block;
+                    color: #666;
+                }
+                //下一步的图标
+                .next-step {
+                    display: inline-block;
+                    margin-left: rem(6);
+                    .iconfontmod {
+                        font-size: rem(28);
+                    }
+                }
+            }
+        }
+        //向下的图标
+        .down {
+            margin-top: rem(20);
+            margin-left: rem(404);
+            line-height: rem(16);
+            .iconfontmod {
+                font-size: rem(28);
+            }
+        }
+        //第二排的流程图
+        .two {
+            margin-top: rem(20);
+            .text {
+                margin-left: rem(28);
+            }
+        }
+    }
+    //说明
+    .mod-description {
+        position: relative;
+        margin-top: rem(20);
+        padding: rem(40) rem(20);
+        background-color: #fff;
+        //设置一个斜角
+        background: linear-gradient(135deg, transparent rem(36.2), #fff 0);
+        border-radius: rem(10);
+        //盒子阴影滤镜
+        -webkit-filter: drop-shadow(0 0 rem(10) #ffdada);
+        //内容
+        .description-content {
+            padding: rem(30) rem(10) 0 rem(10);
+            .sub-title {
+                margin-top: rem(10);
+                font-weight: 400;
+                color: #333;
+            }
+            .sub-text {
+                line-height: rem(52);
+                color: #666;
+                text-align: justify;
+            }
+        }
+    }
+    //折角
+    .mod-description:before {
+        content: "";
+        display: block;
+        width: 0;
+        border-width: rem(25.2);
+        border-color: transparent #ffc6c6 #ffc6c6 transparent;
+        background: transparent;
+        border-style: solid;
+        border-bottom-right-radius: rem(14);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

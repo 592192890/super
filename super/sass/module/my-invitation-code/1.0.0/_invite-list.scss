@@ -1,0 +1,32 @@
+.invite-list{
+    font-size:rem(28);
+    li{
+        height: rem(88);
+        line-height: rem(88);
+        border-bottom:1px solid #f2f3f7; 
+        margin-left: rem(24);
+        .f-r{
+            margin-right: rem(20);
+        }
+        .green{
+            color: #33c165;
+            font-size:rem(24);
+        }
+        .red{
+            color:#f95d5b;
+            font-size:rem(24);
+        }
+        .right-arrow{
+            font-size: rem(32);
+            color: #9f9f9f;
+            float: right;
+            margin-right: rem(-10);
+        }
+    }
+}
+.list-longline{
+    li{
+    margin: 0;
+    padding-left: 0.512rem;
+  }
+}

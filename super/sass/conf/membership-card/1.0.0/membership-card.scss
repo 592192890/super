@@ -1,0 +1,85 @@
+/**
+* @file membership-card.scss
+* @synopsis  我的会员卡
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-07-19
+*/
+
+@import "common/common";
+
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+.wrap{
+    margin:0 auto;
+    max-width:rem(670);
+    // height:rem(1124);
+    background-color: #FFF;
+    border-radius:rem(10);
+    margin-top:rem(22);
+    border:1px solid #e4e4e4;
+    .up{
+        height:rem(404);
+        width:100%;
+        .img-card{
+            position:$rela;
+            margin:rem(24) auto 0;
+            width:rem(640);
+            height:rem(366);
+            background:url(//ssl.bbgstatic.com/super/images/conf/membership-card/1.0.0/card.png);
+            background-size:cover;
+            // height:rem(344);
+            // width:100%
+            .card-level{
+                position:$abso;
+                top:rem(36);
+                right:rem(50);
+                font-size:rem(28);
+                color:#fff;
+            }
+            .card-id{
+                position:$abso;
+                bottom:rem(34);
+                right:rem(40);
+                font-size:rem(24);
+                color:#fff;
+            }
+        }
+    }
+    .line{
+        width:100%;
+    }
+    .down{
+        position:$rela;
+        height:rem(722);
+        width:100%;
+        .bar-code{
+            display:block;
+            width:rem(590);
+            height:rem(180);
+            margin:rem(32) auto 0;
+        }
+        .qr-code{
+            display:block;
+            width:rem(350);
+            height:rem(350);
+            border-radius:rem(10);
+            border:1px solid #e5e5e5;
+            margin:rem(38) auto 0;
+            padding:rem(20);
+        }
+        p{
+            font-size:rem(28);
+            height:rem(28);
+            line-height: rem(28);
+            color:#333;
+            position:$abso;
+            bottom:rem(48);
+            width:100%;
+            text-align: center;
+        }
+    }
+}

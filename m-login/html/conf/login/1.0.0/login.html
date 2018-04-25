@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录/注册</title>
+    <meta charset="utf-8" />
+    <script>
+    // flexible.js
+    !function(e){function h(){var a=f.getBoundingClientRect().width;640<a/b&&(a=640*b);a/=16;f.style.fontSize=a+"px";e.rem=a}function k(a,b,c,e){var d;return function(){var f=e||this,g=arguments,h=c&&!d;clearTimeout(d);d=setTimeout(function(){d=null;c||a.apply(f,g)},b);h&&a.apply(f,g)}}var b,a,d,c=e.document,g=e.navigator,f=c.documentElement,i=c.querySelector('meta[name="viewport"]');d=c.querySelector('meta[name="flexible"]');i?(d=i.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/))&&(a=parseFloat(d[2]),b=parseInt(1/a)):d&&(d=d.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/))&&(b=parseFloat(j[2]),a=parseFloat((1/b).toFixed(2)));!b&&!a&&(b=e.devicePixelRatio,b=g.appVersion.match(/android/gi)||g.appVersion.match(/iphone/gi)?3<=b?3:2<=b?2:1:1,a=1/b);f.setAttribute("data-dpr",b);i||(a='<meta name="viewport" content="width=device-width, initial-scale='+a+", maximum-scale="+a+", minimum-scale="+a+', user-scalable=no" />',f.firstElementChild?(g=c.createElement("div"),g.innerHTML=a,f.firstElementChild.appendChild(g.firstChild)):c.write(a));e.dpr=b;e.addEventListener("resize",k(h,50),!1);e.addEventListener("pageshow",k(function(a){a.persisted&&h()},300),!1);"complete"===c.readyState?c.body.style.fontSize=12*b+"px":c.addEventListener("DOMContentLoaded",function(){c.body.style.fontSize=12*b+"px"},!1);h()}(window);
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <link href="//ssl.bbgstatic.com/m-login/css/conf/login/1.0.0/login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class="page-view">
+    <form class="mod-login" method="post" id="loginForm">
+        <div class="login-telephone">
+            <input type="tel" class="u-form-input-text" value="" placeholder="请输入手机号码" id="mobile" autocomplete="on">
+        </div>
+        <div class="login-sms" id="jLoginSms" >
+            <input type="text" class="u-form-input-text" value="";
+    placeholder="请输入短信验证码" id="captcha" autocomplete="on"><div class="limit-time"><span class="sendSms" id="sendSms">获取验证码</span><span class="sec" id="jReGet">60s</span></div>
+        </div>
+        <div class="login-btn" id="jLoginBtn">
+            <button class="mod-login" type="button" id="loginBtn">确认</button>
+        </div>
+        <div class="agreement">未注册用户在首次登录时便自动完成注册，使用该登录方式代表您已接受<a href="javascript:void(0)" id="jShowProto">用户协议</a></div>
+    </form>
+    <div class="mod-wx">
+        <div class="wx-line"><img src="//ssl.bbgstatic.com/m-login/images/login/or.png" /></div>
+        <dl class="wx-login" id=jWxLogin"">
+            <dt><i class="icon iconfontmod">&#xe7d2;</i></dt>
+            <dd>微信登录</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mod-protocal" id="tipsProtocal">
+    <div class="protocal-frm">
+        <div class="protocal-title">步步高微信平台服务协议</div>
+        <!--#include file="/html/module/login/1.0.0/agreement.html"-->
+        
+        <i class="closeBtn iconfont icon" id="jClose">&#xe607;</i>
+    </div>
+</div>
+<div class="ui-loading" id="jLoading">
+    <div class="tips-img"></div>
+</div>
+
+
+<script src="//ssl.bbgstatic.com/lib/require/2.1/require.js" crossorigin="*" data-cdn="lib/require/2.1/require.js"></script>
+<script src="//ssl.bbgstatic.com/m-login/js/app.js" crossorigin="*" data-cdn="super/js/app.js"></script>
+<script>
+window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+window['$PAGE_DATA']['url']={
+    'smsUrl':'http://wx.yunhou.com/o2o/passport/sendSms?callback=ttt',
+    'loginUrl':'http://wx.yunhou.com/o2o/passport/login',
+    'wxLogin':''
+}
+require(['conf/login/1.0.0/login']);
+</script>
+</body>
+</html>

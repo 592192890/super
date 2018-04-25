@@ -1,0 +1,16 @@
+/**
+* @file integral-detail.scss
+* @synopsis  积分详情
+* @author zhouguangcheng,  zgc7788@gmail.com 
+* @version 1.0.0
+* @date 2017-05-25
+*/
+@import "common/common";
+@import "module/integral-detail/1.0.0/list-style";
+.page-view{
+    max-width:rem(750);
+    margin:0 auto;
+}
+.gray{
+    color: #999;
+}

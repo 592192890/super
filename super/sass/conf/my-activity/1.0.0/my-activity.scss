@@ -1,0 +1,260 @@
+/**
+* @file my-activity.scss
+* @synopsis  my-activity
+* @author zhouwei, 1097009033@qq.com
+* @version 1.0.0
+* @date 2017-03-07
+*/
+
+@import "common/common";
+@import "common/tab/1.0.0/tab";
+@import "common/button/1.0.0/button";
+@import "common/nav/back2top";
+@import "common/page-tips/1.0.0/page-tips";
+.page-view {
+    margin: 0 auto;
+    min-width: rem(320);
+    max-width: rem(750);
+    font-size: rem(26);
+}
+
+// 标签
+.ui-tab {
+    background-color: #fff;
+    height: rem(78);
+    font-size: rem(26);
+    margin-bottom: rem(20);
+    .tab-hd {
+        border-bottom: rem(4);
+        .hd-item {
+            width: 25%;
+            margin: 0 !important;
+            //覆盖原有ui-tab.scss下margin-left设置
+            .item-line {
+                bottom: 0;
+                border-bottom: #fff;
+            }
+        }
+    }
+    a.active {
+        .item-line {
+            font-size: rem(30);
+            border-bottom: rem(4) solid #fa5c59 !important;
+            //覆盖原有tab.scss下border-bottom设置
+            color: #fa5c59;
+        }
+    }
+}
+
+// 活动状态
+.mod-active {
+    margin-top: rem(20);
+    font-size: rem(26);
+    //默认样式开始
+    .display {
+        display: none;
+    }
+    .color-gray {
+        color: #c0c0c0;
+    }
+    .color {
+        color: #f95d5b;
+    }
+    .text-decoration {
+        text-decoration: line-through;
+    }
+    .margin-left {
+        margin-left: rem(-4);
+    }
+    .padding-bg {
+        overflow: hidden;
+        color: #333;
+        padding: 0 rem(20);
+        background: #fff;
+    }
+    //默认样式结束
+    //活动头部
+    .active-hd {
+        overflow: hidden;
+        height: rem(70);
+        a {
+            float: left;
+            color: #666;
+            line-height: rem(70);
+        }
+        span {
+            float: right;
+            line-height: rem(70);
+        }
+    }
+    //活动主体
+    .active-bd {
+        position: relative;
+        .bd {
+            display: flex;
+            background: #f9fafc;
+            //活动左部
+            .bd-img {
+                max-width: rem(270);
+                .img-box {
+                    position: relative;
+                    width: rem(230);
+                    height: rem(160);
+                    margin: rem(20);
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 100%;
+                    }
+                }
+            }
+            //活动右部
+            .bd-ctn {
+                flex-grow: 1;
+                margin-top: rem(20);
+                .ctn-box {
+                    .box-title {
+                        width: rem(478);
+                        height: rem(50);
+                        color: #333;
+                        font-size: rem(30);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .box-time {
+                        color: #999;
+                        font-size: rem(24);
+                    }
+                    .box-txt {
+                        font-size: rem(24);
+                        width: rem(478);
+                        margin-top: rem(18);
+                        .txt-icon {
+                            font-size: rem(28);
+                            color: #ccc;
+                            .iconfontmod {
+                                font-size: rem(36);
+                                vertical-align: middle;
+                            }
+                        }
+                        .txt-sub {
+                            width: rem(298);
+                            display: inline-block;
+                            vertical-align: middle;
+                            color: #666;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .txt-state {
+                            color: #f95d5b;
+                            position: relative;
+                            top: rem(12);
+                            left: rem(54);
+                            margin-right: rem(12);
+                            font-size: rem(62);
+                            line-height: rem(28);
+                        }
+                    }
+                }
+            }
+        }
+        //活动主体遮罩层
+        .bd-layer {
+            z-index: 100;
+            width: rem(230);
+            height: rem(160);
+            position: absolute;
+            //遮罩层定位
+            top: rem(20);
+            left: rem(20);
+            text-align: center;
+            line-height: rem(160);
+            background-color: rgba(0, 0, 0, 0.6);
+            span {
+                display: inline-block;
+                width: rem(110);
+                height: rem(36.5);
+                line-height: rem(26);
+                font-size: rem(26);
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
+        }
+    }
+    //活动底部
+    .active-ft {
+        overflow: hidden;
+        height: rem(80);
+        line-height: rem(80);
+        .color-red {
+            float: left;
+            font-size: rem(32);
+            color: #f95d5b;
+            b {
+                font-size: rem(32);
+                font-weight: normal;
+            }
+        }
+        .ui-button {
+            float: right;
+            margin-top: rem(10);
+            padding: rem(5) rem(10) rem(10);
+            width: rem(130);
+            height: rem(60);
+            border-radius: rem(4);
+            line-height: rem(45);
+            font-size: rem(28);
+            &:active {
+                background-color: #f95d5b;
+                opacity: .7;
+            }
+            &:hover {
+                background-color: #f95d5b;
+            }
+        }
+    }
+}
+
+
+/* 活动页为空时 */
+
+.page-view-empty {
+    .mod-item {
+        background-color: #f2f3f7;
+        .empty-img {
+            width: 50%;
+            margin: 0 auto;
+            padding: rem(100) 0 0 0;
+            text-align: center;
+        }
+        .empty-description {
+            width: 100%;
+            text-align: center;
+            color: #999;
+            font-size: rem(24);
+        }
+    }
+}
+
+
+/* 懒加载覆盖 */
+
+.loading {
+    font-size: rem(24);
+    text-align: center;
+    color: #999;
+    position: relative;
+    padding: rem(50) 0 0 0;
+    &:before {
+        content: " ";
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        margin-top: rem(-16);
+    }
+}

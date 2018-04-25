@@ -1,0 +1,4 @@
+[submodule "js/lib"]
+	path = js/lib
+	url = http://git.bubugao.com/f2e-projects/lib.git
+	branch = master

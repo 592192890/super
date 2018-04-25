@@ -1,0 +1,613 @@
+ /**
+* @file park-polymer.scss
+* @synopsis  停车聚合
+* @author zgc, 839153198@qq.com
+* @version 1.0.0
+* @date 2018-01-15
+*/
+
+ @import "common/common";
+ @import "common/box/2.0.0/box";
+ @import "module/park/1.0.0/search-licence-plate";
+ @import "module/park/1.0.0/licence-plate-address";
+ $gray:#f2f3f7;
+ $red:#fb595c;
+ .page-view {
+     background-color: $gray;
+     max-width: rem(750);
+     margin: 0 auto;
+     font: 300 1rem/1rem "Helvetica Neue", Helvetica, Arial,STHeiTi, sans-serif, "microsoft yahei";
+     height: 100%;
+     overflow: hidden;
+ }
+
+ .hide {
+     display: none;
+ }
+
+ .mod-park-list {
+     background: #f96563;
+     height: rem(198);
+     margin-bottom: rem(184);
+     position: relative;
+     .park-item {
+         background: #fff;
+         width: rem(690);
+         height: rem(372);
+         font-size: rem(28);
+         margin-left: rem(34);
+         position: absolute;
+         top: rem(10);
+         padding: rem(26) rem(36) 0;
+         border-radius: rem(20);
+         box-sizing: border-box;
+         box-shadow: 0px 0px 10px rgba(168, 168, 168, 0.06);
+         opacity: 0.98;
+         .parking-hd {
+             position: relative;
+             height: rem(82);
+             line-height: rem(82);
+             font-size: rem(34);
+             font-weight: 600;
+             padding-bottom: rem(16);
+             overflow: hidden;
+             text-overflow: ellipsis; //  width: 100%;
+             white-space: nowrap;
+             padding-right: rem(80);
+             &::after {
+                 content: '';
+                 width: rem(50);
+                 height: rem(8);
+                 background: #e0dede;
+                 position: absolute;
+                 left: 0;
+                 bottom: rem(8);
+             }
+             i {
+                 font-size: rem(34);
+                 color: #999;
+             }
+         }
+         .parking-msg-content {
+             font-size: 0;
+             margin-left: rem(-8);
+             img {
+                 width: rem(56);
+                 margin-right: rem(6);
+                 vertical-align: middle;
+             }
+         }
+         p {
+             font-size: 0;
+             height: rem(60);
+             line-height: rem(60);
+             .now-carport {
+                 text-decoration: none;
+                 color: $red;
+             }
+             span {
+                 font-size: rem(30);
+             }
+         }
+         .msg-open-time {
+             line-height: rem(34);
+             margin-top: rem(6);
+             min-height: rem(34);
+             .open-time {
+                 overflow: hidden;
+                 line-height: rem(34);
+             }
+         }
+         .parking-address {
+             font-size: rem(30);
+             line-height: rem(34);
+             margin-top: rem(14);
+             min-height: rem(34);
+         }
+         .park-msg {
+             i {
+                 color: #c1c1c1;
+                 font-size: rem(28);
+                 line-height: rem(28);
+                 margin-right: rem(4);
+             }
+         }
+         .address {
+             line-height: rem(34);
+             word-break: break-all;
+             text-overflow: ellipsis;
+             display: -webkit-box;
+             /** 对象作为伸缩盒子模型显示 **/
+             -webkit-box-orient: vertical;
+             /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+             -webkit-line-clamp: 3;
+             /** 显示的行数 **/
+             overflow: hidden;
+             /** 隐藏超出的内容 **/
+         }
+         .other-btn-box {
+             width: rem(80);
+             position: absolute;
+             right: rem(40);
+             top: rem(40);
+             color: #a7a7a7;
+             font-size: rem(18);
+             text-align: center;
+             i {
+                 display: block;
+                 font-size: rem(32);
+             }
+             span {
+                 display: block;
+                 height: rem(18);
+                 line-height: rem(18);
+             }
+         }
+     }
+ }
+
+ .mod-my-licence {
+     width: rem(690);
+     margin: 0 auto;
+     padding-top: rem(30);
+     cursor: pointer;
+     .parking-hd {
+         width: 100%;
+         height: rem(110);
+         span {
+             display: inline-block;
+             width: rem(460);
+             height: rem(50);
+             background: #e7e9ee;
+             border-radius: rem(50);
+             text-align: center;
+             font-size: rem(24);
+             color: #999;
+             margin: rem(30) 0 0 rem(114);
+             .already-bind {
+                 font-style: normal;
+                 color: #f96563;
+             }
+         }
+         &.hide {
+             display: none;
+         }
+     }
+     .licence-list {
+         position: relative;
+         height: rem(466);
+         border-radius: rem(20);
+         transform-style: preserve-3d;
+         -webkit-transform-style: preserve-3d;
+         .licence-item {
+             position: absolute;
+             width: 100%;
+             height: rem(128);
+             line-height: rem(88);
+             font-size: rem(40); //  font-weight: 600;
+             font-family: Arial;
+             text-align: center;
+             background: #fff;
+             color: #afafaf;
+             border-radius: 0.42667rem;
+             box-shadow: 0px 0px 10px rgba(168, 168, 168, 0.06);
+             cursor: pointer;
+             &:nth-child(3) {
+                 line-height: rem(168);
+             }
+             &.licence-item-third {
+                 bottom: 0;
+             }
+             &.clicked {
+                 animation: myscale 0.6s;
+                 -webkit-animation: myscale 0.6s;
+                 transition-timing-function: linear;
+                 -webkit-transition-timing-function: linear;
+             }
+         }
+         .licence-item.active {
+             width: 100%;
+             height: rem(290);
+             background: linear-gradient(45deg, #2087f0, #65b1f8);
+             border-radius: rem(20);
+             box-shadow: 0px 0px 10px rgba(58, 159, 250, 0.59); //#3a9ffa
+             z-index: 10;
+             top: rem(88); //  transition: all .15s linear;
+             .mask-layer {
+                 display: none;
+                 width: 100%;
+                 height: 100%;
+                 position: absolute;
+                 top: 0;
+                 border-radius: rem(20);
+                 background: #2087f0;
+                 box-shadow: 0px 0px 10px rgba(58, 159, 250, 0.59); //#3a9ffa
+                 opacity: 0.9;
+             }
+             &.jumped {
+                 animation: plateMove 0.4s;
+                 -webkit-animation: plateMove 0.4s;
+                 transition-timing-function: linear;
+                 -webkit-transition-timing-function: linear;
+             }
+         }
+         .licence-content {
+             width: rem(280); //  margin: 0 auto;
+             color: #fff;
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             -webkit-transform: translateY(-50%);
+             margin-left: rem(206);
+             .licence-txt {
+                 font-size: rem(50);
+                 height: rem(84);
+                 line-height: rem(84); //  padding-top: rem(20);
+                 font-weight: 600;
+                 font-family: Arial;
+             }
+             a {
+                 height: rem(64);
+                 line-height: rem(64);
+                 display: block;
+                 background: #fff;
+                 color: #2087f0;
+                 font-size: rem(30);
+                 text-align: center;
+                 border-radius: rem(32);
+                 font-weight: 500;
+                 margin-bottom: rem(18);
+                 cursor: pointer;
+             }
+             i {
+                 font-size: rem(34);
+             }
+         }
+         .licence-animate {
+             position: absolute;
+             width: 100%;
+             height: rem(290);
+             text-align: center;
+             font-family: Arial;
+             background: linear-gradient(45deg, #2087f0, #65b1f8);
+             border-radius: rem(20);
+             box-shadow: 0px 0px 10px rgba(58, 159, 250, 0.59); //#3a9ffa
+             z-index: 20; //  top: rem(740);
+             transform: translateY(rem(740));
+             transition: all 0.8s linear; //linear
+             //  transition-delay:.3s;
+             -webkit-backface-visibility: hidden;
+             backface-visibility: hidden;
+             &.visib {
+                 visibility: hidden;
+             }
+         }
+         &.none {
+             width: 100%;
+             height: rem(230);
+             background: #fff;
+             text-align: center;
+             padding-top: rem(60);
+             p {
+                 font-size: rem(24);
+                 line-height: rem(24);
+                 color: #999;
+             }
+             .add-licence-btn {
+                 width: rem(266);
+                 height: rem(92);
+                 line-height: rem(92);
+                 font-size: rem(30);
+                 color: #f96563;
+                 border: rem(3) dashed #d0d0d0;
+                 border-radius: rem(12);
+                 margin: 0 auto;
+                 i {
+                     font-size: rem(34);
+                 }
+             }
+             .reminder {
+                 font-size: rem(28);
+                 color: #333;
+                 line-height: rem(60);
+             }
+         }
+         &.list-one {
+             height: rem(290);
+             .licence-item.active {
+                 top: 0;
+             }
+         }
+         &.list-two {
+             height: rem(380);
+             .licence-item.active {
+                 top: 0;
+             }
+             .licence-item {
+                 line-height: rem(168);
+             }
+             .licence-animate {
+                 // top: rem(640);
+                 transform: translateY(rem(640));
+             }
+         }
+     }
+     .manage-licence {
+         display: inline-block;
+         width: 100%;
+         height: rem(70);
+         line-height: rem(70);
+         background: #3694f3;
+         color: #fff;
+         text-align: center;
+         margin: rem(30) 0 0 0;
+         border-radius: rem(35);
+         font-size: rem(28);
+         box-shadow: 0px 0px 10px rgba(58, 159, 250, 0.59); //#3a9ffa
+         i {
+             font-size: rem(30);
+         }
+     }
+ }
+
+ .mod-operate {
+     width: rem(690);
+     margin: 0 auto;
+     background: #fff;
+     border-radius: rem(20);
+     margin-top: rem(30);
+     li {
+         height: rem(88);
+         line-height: rem(88);
+         font-size: rem(28);
+         padding: 0 rem(30) 0 rem(36);
+         a {
+             display: inline-block;
+             width: 100%;
+         }
+         &:first-child {
+             border-bottom: 1px solid #f2f3f7;
+         }
+         img {
+             width: rem(56); //  margin-right: rem(6);
+             float: left;
+             margin-top: rem(24);
+         }
+         i {
+             font-size: rem(36);
+             color: #ccc;
+         }
+     }
+ }
+
+ .mod-inroom-box {
+     position: relative;
+     width: rem(562);
+     height: rem(668);
+     background: #fff;
+     border-radius: rem(10);
+     text-align: center;
+     img {
+         width: rem(146);
+         margin-top: rem(56);
+     }
+     .park-info {
+         .info-num {
+             font-size: rem(40);
+             font-weight: 600;
+         }
+         .info-park {
+             font-size: rem(28);
+         }
+         .info-place {
+             font-size: rem(32);
+             color: #f96563;
+         }
+     }
+     button {
+         width: rem(246);
+         height: rem(72);
+         margin: rem(20) auto 0;
+         font-size: rem(30);
+     }
+ }
+
+ .mod-park-box {
+     position: relative;
+     width: rem(562); //  height: rem(814);
+     background: #fff;
+     border-radius: rem(10);
+     text-align: center;
+     img {
+         width: rem(146);
+         margin-top: rem(56);
+     }
+     .park-info-none {
+         width: rem(500);
+         margin: rem(10) auto rem(30);
+         padding-bottom: rem(30);
+         .info-num {
+             font-size: rem(40);
+             font-weight: 600;
+             line-height: rem(40);
+         }
+         dl {
+             text-align: left;
+             font-size: rem(28);
+             margin: rem(10) 0 rem(20);
+             dt {
+                 color: #666;
+             }
+             dd {
+                 margin: 0;
+                 line-height: rem(36);
+                 div {
+                     overflow: hidden;
+                 }
+             }
+         }
+         .tips {
+             width: 100%;
+             padding: rem(30) rem(20);
+             box-sizing: border-box;
+             background: #fffbfb;
+             border: 1px solid #e2e2e2;
+             font-size: rem(24);
+             line-height: rem(32);
+             text-align: left;
+             border-radius: rem(8);
+             .red {
+                 font-style: normal;
+                 color: #f96563;
+             }
+         }
+         button {
+             width: rem(246);
+             margin: rem(30) auto 0;
+             font-size: rem(30);
+         }
+     }
+ }
+
+ .mod-park-rules {
+     position: relative;
+     width: rem(562);
+     background: #fff;
+     border-radius: rem(10);
+     font-size: rem(28);
+     text-align: center;
+     .rules-info {
+         width: rem(500);
+         margin: 0 auto;
+         padding: rem(10) 0 rem(30);
+     }
+ }
+
+ .mod-add-plate {
+     position: relative;
+     width: rem(690);
+     height: rem(800);
+     background: #fff;
+     border-radius: rem(10);
+     font-size: rem(28);
+     text-align: center;
+     .box-body {
+         width: rem(600);
+         margin: 0 auto;
+     }
+ }
+
+ //修改选车牌模块样式
+ .mod-search-form {
+     width: rem(600);
+     height: rem(86);
+     margin-bottom: 0;
+     box-sizing: unset;
+     .area {
+         padding: 0 rem(16);
+     }
+     .license-number {
+         margin-left: rem(16);
+         input {
+             width: rem(330); 
+             height: rem(86);
+         }
+     }
+     .search-btn {
+         width: rem(118);
+     }
+ }
+
+ .mod-licence-address {
+     width: rem(600);
+     position: absolute;
+     top: rem(212);
+     ul {
+        padding: rem(22) 0  0 rem(15);
+         li {
+             //0.15133rem 0.2333rem
+             margin: rem(7) rem(10);
+         }
+     }
+ } //搜索关联
+ .mod-relevance {
+    //  display: none;
+     position: absolute;
+     -webkit-box-shadow: 0 0 rem(6) #ccc;
+     -moz-box-shadow: 0 0 rem(6) #ccc;
+     box-shadow: 0 0 rem(6) #ccc;
+     border-radius: rem(6);
+     max-height: rem(440);
+     overflow-y: auto;
+     ul {
+         li {
+             width: rem(560);
+             height: rem(88);
+             line-height: rem(88);
+             margin: 0 rem(20);
+             text-align: center;
+             border-radius: rem(6);
+             border-top: 1px solid #ededed;
+             &:first-child {
+                 border-top: none;
+             }
+         }
+     }
+ }
+
+ .search-none {
+     // display: none;
+     position: absolute;
+     width: rem(246);
+     height: rem(72);
+     line-height: rem(72);
+     border: 1px solid #f0f0f0;
+     box-shadow: 0px 0px 5px #f0f0f0;
+     text-align: center;
+     font-size: rem(24);
+     top: rem(280);
+     left: rem(214);
+     border-radius: rem(6);
+ }
+
+ .box-title {
+     width: 100%;
+     height: rem(88);
+     line-height: rem(88);
+     font-size: rem(32);
+     border-bottom: 1px solid #f2f2f2;
+     text-align: center;
+     .box-close {
+         position: absolute;
+         right: rem(24);
+         top: 0;
+         color: #9f9f9f;
+         font-size: rem(32);
+         -webkit-user-select: none;
+         user-select: none;
+     }
+ }
+
+ @keyframes myscale {
+     0% {
+         transform: scale(1)
+     }
+     50% {
+         transform: scale(0.85)
+     }
+     100% {
+         transform: scale(1)
+     }
+ }
+
+ @keyframes plateMove {
+     0% {
+         transform: translateY(0)
+     }
+     50% {
+         transform: translateY(rem(-10))
+     }
+     100% {
+         transform: translateY(0)
+     }
+ }

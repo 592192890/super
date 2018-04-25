@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+<head>
+    <title>团购活动</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/group-buying/1.0.0/group-buying.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="page-view jLazy">
+        <div class="goods-item jProduct" data-productId="">
+            <!-- 产品实图 -->
+            <div class="item-img">
+                <img src="//s1.bbgstatic.com/super/images/common/error-img.png" data-src="http://img3.bbgstatic.com/15becd765d0_2_6d3ccf1fd88166947395c8d1efa18992_1169x441.png" class="ui-lazy" alt="" />
+            </div>
+            <!-- 产品描述 -->
+            <div class="item-des">
+                <!-- 描述 -->
+                
+                <div class="item-des-title" data-productid="29681000005">团购商品123 </div>
+                <div class="item-des-txt">123啊</div>
+                <!-- 团购人数 -->
+                <div class="group-size">3人成团</div>
+                <!-- 价格&状态 -->
+                <div class="item-des-ft">
+                    <!-- 价格 -->
+                    <div class="price-box f-l">
+                        <span class="cur-price-box"><i>￥</i><b class="cur-price">15.00</b></span>
+                        <span class="old-price-box"><i>￥</i><b class="old-price">100.00</b></span>
+                    </div>
+                    <!-- 按钮 -->
+                    <span class='f-r ui-button ui-button-red' s-time='1493568000000' e-time='1494431999000'>去参团</span>
+                    <i class='jStartTime'></i> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            'productUrl' : '//wx.yunhou.com/super/item/',
+            'pageUrl' : '//wx.yunhou.com/super/Promotion/groupbuying'//获取下拉数据接口
+        };
+        require(['conf/group-buying/1.0.0/group-buying']);
+    </script>
+</body>
+</html>

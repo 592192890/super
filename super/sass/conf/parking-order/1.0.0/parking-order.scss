@@ -1,0 +1,182 @@
+ /**
+* @file parking-order.scss
+* @synopsis  订单缴费
+* @author zgc, 839153198@qq.com
+* @version 1.0.0
+* @date 2017-09-12
+*/
+
+@import "common/common";
+@import "common/button/2.0.0/button";
+@import "common/box/2.0.0/box";
+
+body {
+    background: #f2f3f7; //
+} 
+
+.parking-hd {
+    height: rem(78);
+    line-height: rem(78);
+    font-size: rem(28);
+    padding: 0 rem(20);
+    border-bottom: 1px solid #f4f4f4;
+    i {
+        font-size: rem(34);
+        color: #999;
+    }
+}
+
+.mod-parking-msg {
+    background: #fff;
+    margin-top: rem(20);
+    .parking-msg-content {
+        font-size: rem(28);
+        padding: rem(20);
+        p {
+            line-height: rem(48);
+            .parking-space {
+                margin-left: rem(88);
+            }
+            .red {
+                color: #f95d5b;
+            }
+        }
+    }
+}
+
+.mod-parking-discounts {
+    background: #fff;
+    font-size: rem(28);
+    margin-top: rem(20);
+    .discounts-content {
+        padding: 0 rem(20);
+        .reduction {
+            background: #f8f8f8;
+            padding: 0 rem(20);
+        }
+        .consumption-reduction {
+            margin-top: rem(20);
+        }
+        .reduction-msg {
+            border-bottom: 1px solid #ededed; 
+        }
+        .msg-title {
+            width: rem(250);
+            height: rem(72);
+            line-height: rem(72);
+            i {
+                font-size: rem(36);
+                color: #999;
+                margin-right: rem(10);
+                &.active {
+                    color: #f95d5b;
+                }
+            }
+        }
+        li {
+            width: rem(420);
+            height: rem(72);
+            line-height: rem(72);
+            border-bottom: 1px solid #ededed;
+            i {
+               font-size: rem(28);
+               color: #999;
+               // position: absolute;
+               // left: rem(40);
+               &.active {
+                   color: #f95d5b;
+               }
+           }
+            &:last-child {
+                border-bottom: none;
+               text-align: right;
+            }
+        }
+        .add-discounts,
+        .prompt {
+            line-height: rem(40);
+            text-align: right;
+        }
+        .add-discounts {
+           //  color: #f95d5b;
+            padding-top: rem(16);
+            &.disabled{
+               color: #bfbfbf;
+               pointer-events: none;
+               a{
+                   color: #bfbfbf; 
+               }
+            }
+        }
+        .prompt {
+            color: #bfbfbf;
+            font-size: rem(24);
+            padding-bottom: rem(16);
+        }
+    }
+    .coupon-reduction,
+    {
+        margin-top: rem(10);
+    }
+    .vip-reduction {
+        margin-top: rem(10);
+        .prompt {
+            line-height: rem(66);
+            padding-bottom: 0;
+        }
+    }
+    .total-reduce {
+        height: rem(80);
+        line-height: rem(80);
+        padding: 0 rem(20);
+        text-align: right;
+        font-size: rem(30);
+        .green{
+            color: #33a56f;
+        }
+    }
+}
+.mod-expenses-rules{
+    font-size: rem(28);
+    background: #fff;
+    margin-top: rem(20);
+    .parking-msg-content{
+        padding: rem(20);
+        p{
+            line-height: rem(50);
+        }
+    }
+}
+.mod-total-pay{
+    height: rem(120);
+    line-height: rem(120);
+    font-size: rem(28);
+    background: #fff;
+    padding: 0 rem(20);
+    margin-top: rem(20);
+    button{
+        width: rem(200);
+        height: rem(88);
+        margin-top: rem(18);
+        font-size: rem(30);
+    }
+}
+//小票弹出框
+.add-recsipt-input,.add-pos-input{
+    width: rem(568);
+    height: rem(86);
+    border: 1px solid #ccc;
+    &::-webkit-input-placeholder{
+       font-size: rem(28);
+       color: #bdbdbd;
+    }
+}
+//  .add-pos-input{
+//     margin-top: rem(10);
+//  }
+.ui-recsipt-pop .pop-bd {
+   margin: rem(80) rem(40) rem(60);
+}
+.ui-pop .pop-close:after{
+    color: #f95d5b;
+}

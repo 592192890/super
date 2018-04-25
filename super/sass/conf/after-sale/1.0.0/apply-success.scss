@@ -1,0 +1,71 @@
+/**
+* @file flow-info.scss
+* @synopsis  申请售后成功
+* @author scott, 592192890@qq.com
+* @version 1.0.0
+* @date 2017-03-15
+*/
+
+
+@import 'common/common';
+.info{
+    padding-top:rem(50);
+    background-color:#ffffff;
+}
+.result-icon{
+    text-align:center;
+    height:rem(100);
+   
+}
+.result-icon i{
+    font-size:rem(100);
+    height:rem(100);
+    line-height: rem(100);
+    color:#f95d5b;
+    vertical-align: middle;
+}
+.result-info{
+    text-align: center;
+    margin-top:rem(40);
+    font-size:rem(30);
+    height:rem(50);
+    line-height:rem(30);
+    &.light{
+        margin-top:0px;
+        color:#666666;
+        padding-bottom:rem(50);
+        font-size:rem(26);
+        height:rem(46);
+        line-height:rem(26);
+    }
+}
+.btn-group{
+    font-size:rem(30);
+    margin-top:rem(30);
+}
+.check-button,.index-button{
+    margin:rem(20); 
+}
+.ui-button{
+    height:rem(76);
+    border-radius:rem(8);
+    line-height:rem(76);
+   
+    background-color:#ffffff;
+    font-size:rem(30);
+    color:#f95d5b;
+}
+.ui-button-primary-o{
+    background-color:#ffffff;
+    color:#666666;
+    border:rem(1) solid #cccccc;
+  
+}
+.ui-button:hover{
+    background-color:#ffffff;
+    color:#f95d5b;
+}
+.ui-button-primary-o:hover{
+    color:#666666;
+    background-color:#ffffff;
+}

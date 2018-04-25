@@ -1,0 +1,92 @@
+/**
+* @file integral-detail.scss
+* @synopsis  积分详情
+* @author yanghaitao
+* @version 1.0.0
+* @date 2017-12-06
+*/
+@import "common/common";
+@import 'compass/css3';
+.page-view{
+    max-width:rem(750);
+    margin:0 auto;
+    .detail-list{
+        width:100%;
+        li{
+            width:100%;
+            padding:0 rem(20);
+            box-sizing:border-box;
+            height:rem(120);
+            background:#fff;
+            overflow:hidden;
+            margin-top:rem(20);
+            &.loading{
+                box-sizing:border-box;
+                text-align:center;
+                height:auto;
+            }
+            div{
+                position: relative;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+            .integral-icon{
+                width:rem(58);
+                height:rem(58);
+                line-height:rem(58);
+                text-align:center;
+                background-color:#fff7f7;
+                border-radius:50%;
+                margin-right:rem(24);
+                i{
+                   font-size:rem(42);
+                   color:#f95d5b;
+                   position:relative;
+                   top:rem(4);
+                   left:rem(-2)
+                } 
+            }
+            .integral-info{
+                
+                .integral-info-title{
+                    height:rem(30);
+                    line-height:rem(30);
+                    font-size:rem(28);
+                    color:#333;
+                    margin-bottom:rem(12);
+                }
+                .integral-info-time{
+                    height:rem(24);
+                    line-height:rem(24);
+                    font-size:rem(24);
+                    color:#999;
+                }
+            }
+            .integral-num{
+                font-size:rem(40);
+                color:#f95d5b;
+                display: inline-block;
+                vertical-align: middle;
+                i{
+                    font-style: normal;
+                    font-size:rem(26);
+                    display: inline-block;
+                    height: rem(120);
+                    line-height: rem(120);
+                    vertical-align: middle;
+                }
+                span{
+                    vertical-align: middle;
+                }  
+            }
+        }
+    }
+    /* 清除加载完成动画 */
+    .loading{
+        margin-top: rem(30);
+        &:before{
+            content:"";
+        }
+    }
+}
+

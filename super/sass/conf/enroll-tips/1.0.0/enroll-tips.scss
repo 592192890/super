@@ -1,0 +1,148 @@
+/**
+* @file enroll.scss
+* @synopsis  活动报名状态页
+* @author liuwei, 541042724@qq.com
+* @version 1.0.0
+* @date 2017-03-014
+*/
+/* common */
+@import "common/common";
+
+/* modules */
+html,body{
+	background: #f2f3f7;
+}
+.page-view-body{
+	font-size:rem(30);
+	text-align:center;
+	width:100%;
+	.ui-page-info{
+		.info-box{
+			height:rem(654);
+			background:#fff;
+			.tips-box{
+				height:rem(192);
+				padding-top:rem(50);
+				padding-bottom:rem(84);
+				.tips-txt{
+					font-size:rem(30);
+					line-height:rem(30);
+					font-weight:normal;
+					padding-top:rem(42);
+					color:#333;
+				}
+				.tips-detail{
+					font-size:rem(26);
+					font-weight:200;
+					padding-top:rem(10);
+					color: #999;
+				}			
+			}
+			.info-detail{
+				border-top:1px solid #e5e5e5;
+				background-color: #fff;
+				margin-left:rem(20);
+				text-align:left;
+				.list-hd{
+					padding:0px rem(20) rem(20) 0px;
+					min-height: rem(40);
+					.hd-l{
+						font-size: rem(28);
+						color: #666;
+						float:left;
+					}
+					.hd-place{
+						color: #333;
+						font-size: rem(30);
+					}
+					.hd-r{
+						font-size: rem(28);
+						color: #333;
+						line-height: rem(46);
+						float:right;
+						span{
+							font-size: rem(38);
+							color: #f85e5b;					
+						}
+					}
+				}
+				.list-hd-first{
+					height:rem(128);
+					.hd-place{
+						line-height:rem(138);
+					}
+					.hd-price{
+						span{
+							width:100%;
+							text-align: right;
+							float: right;
+							line-height: rem(86);
+						}
+						em{
+							font-style:normal;
+							color: #b8b8b8;
+							width:100%;
+							text-align: right;
+							float: right;
+							line-height:rem(28);
+						}
+					}
+				}
+			}
+		}
+		.ticket-info{
+			height:rem(212);
+			padding-left:rem(20);
+			margin-top:rem(20);
+			background: #fff;
+			text-align:left;
+			.ticket-title{
+				font-size:rem(28);
+				padding-top:rem(30);
+				color:#333;
+			}
+			.ticket-head{
+				font-size:rem(26);
+				padding-top:rem(10);
+				color:#666;
+			}
+			.ticket-key{
+				font-size:rem(38);
+				color:#333;
+				font-weight:360;
+			}
+		}
+		.tips-btn-box{
+			margin:rem(26) rem(20);
+			.ui-button{
+				height:rem(76);
+				width:100%;
+				line-height:rem(76);
+				background:#fff;
+				color:#f95d5b;
+				display: inline-block;
+				border-radius:rem(10);
+				border:rem(2) solid #f95d5b;
+				font-weight:150;
+				font-size:rem(30);
+			}
+		}
+	}
+}
+.tips-success{
+	&:after{
+		content: "\e617";
+		color:#f95d5b;
+		font-size:rem(100);
+		line-height:rem(100);
+		padding-top:rem(98);
+	}
+}
+.tips-error{
+	&:after{
+		content: "\e61b";
+		color:#f95d5b;
+		font-size:rem(100);
+		line-height:rem(100);
+	}	
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!-- @author 吕永华 -->
+
+<html>
+
+<head>
+    <title>订单详情</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/order-details/1.0.1/order-details.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <!-- 订单详情页面 begin -->
+    <div class="page-view order-details jLazy">
+        <!-- 订单状态模块 start -->
+        <div class="mod-order-status jModOrderStatus" id="jModOrderStatus">
+            <div class="bg-img">
+                <img src="/super/images/conf/order-details/1.0.1/daifukuan.png" alt="" />
+                <div class="status">
+                    <span class="jstatus active">待付尾款<em>(1月20日00:00-1月23日23:00)</em></span>
+                </div>
+                <div class="time-remaining">
+                    <span class="JTimeRemaining" data-endTime="1491318550000">00:18</span><span></span>
+                </div>
+            </div>
+            <div class="order-inf">
+                <div class="order-number">
+                    <span>订单号：</span><span id="jOrderNmuber">20140512021</span>
+                </div>
+                <!-- 联系商家和复制订单号功能暂时去除，请注释，防止以后需要 -->
+                <!-- <div class="copy" id="jCopy" data-clipboard-target="jOrderNmuber">
+                    复制订单号
+                </div>
+                <div class="date">
+                    联系商家
+                    <img class="icon-tel" src="/super/images/conf/order-details/1.0.1/tel.jpg" alt="" />
+                </div> -->
+            </div>
+        </div>
+        <!-- 订单状态模块 end -->
+        <!-- 订单提货方式{到店自提or门店派送（含查询模块）} start -->
+        <!--#include file="/super/html/module/order-details/mod_logistics/1.0.0/by-self.html"-->
+        <!--#include file="/super/html/module/order-details/mod_logistics/1.0.0/by-send.html"-->
+        <!-- 订单提货方式{到店自提or门店派送（包含查询模块）} end -->
+        <!-- 订单商品详情 start -->
+        <div class="mod-product-des" id="jProductDes">
+            <div class="product-des-hd store">
+                <i class="icon iconfontmod">&#xe755;</i><span class="text">云猴全球购自营店</span>
+            </div>
+            <ul>
+                <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+            </ul>
+            <div class="product-des-ft">
+                <div class="wrap-more jWrapMore">
+                    <div class="order-more jOrderMore" data-status="close">
+                        <i class="icon iconfontmod">&#xe774;</i>
+                    </div>
+                </div>
+                <!-- 团购运费+合计 -->
+                <!-- 全款预售添加的部分 -->
+                <div class="single-pay">
+                    <span>运费:<em>￥0.00</em></span>
+                    <span>商品合计:<em>￥19.80</em></span>
+                </div>
+                <div class="mode-payment">
+                    <span>支付方式</span><span class="right jModePayment">在线支付</span>
+                </div>
+                <div class="invoice">
+                    <!-- <span class="left">发票信息</span><span>不开发票</span> -->
+                    <span class="left">发票信息</span><span>办公用品</span><span class="company">步步高电子商务有限责任公司</span>
+                </div>
+                <div class="discount">
+                    <span>订单优惠</span><span class="right">50元优惠券</span>
+                </div>
+            </div>
+        </div>
+        <!-- 订单商品详情 end -->
+        <!-- 订单费用详情 start -->
+        <div class="mod-order-cost">
+            <p><span class="left">商品总计</span><span class="right"><em>￥</em>150.00</span></p>
+            <p><span class="left">定金</span><span class="right"><em>￥</em>10.00<span class="jEarnestStatus">(待付款)</span></span></p>
+            <p><span class="left">尾款</span><span class="right"><em>￥</em>140.00<span class="jFinalStatus">(未开始)</span></span></p>
+            <p><span class="left">运费总计</span><span class="right"><em>￥</em>0.00</span></p>
+            <p class="last"><span class="left">实付金额</span><span class="right"><em>￥</em>10.00</span></p>
+        </div>
+        <!-- 订单费用详情 end -->
+        <!-- 支付款项类别 start -->
+        <div class="mod-payment-button">
+            <div class="wrop">
+                <a class="ui-button disable ui-button-white">支付定金</a>
+                <a class="ui-button">支付尾款</a>
+                <a class="jCheck ui-button">确认收货</a>
+                <a class="again ui-button">申请售后</a>
+				<a node-type='deleteBtn' class="jCancel ui-button cancel">取消订单</a>
+            </div>
+        </div>
+        <!-- 支付款项类别 end -->
+    </div>
+    <!-- 订单详情页面 end -->
+    <!-- 商家联系方式 start -->
+    <div class="hide-all"></div>
+    <div class="shad-contact">
+        <a href="tel:18688888888">
+            <div class="tel-one item">15576974746</div>
+        </a>
+        <a href="tel:18688888888">
+            <div class="tel-two item">15576974746</div>
+        </a>
+        <div class="cancel item">取消</div>
+    </div>
+    <!-- 商家联系方式 end -->
+    <!--#include file="/super/html/common/outro.html"-->
+     <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+        // window[$PAGE_DATA]=window[$PAGE_DATA] || {};
+        // window[$PAGE_DATA][url]={};
+        require(['conf/order-details/1.0.1/order-details']);
+    </script>
+       
+    
+</body>
+
+</html>

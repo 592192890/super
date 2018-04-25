@@ -1,0 +1,177 @@
+/**
+* @file redeem.scss
+* @synopsis  积分兑换
+* @author
+* @version 1.0.0
+* @date 2017-06-26
+*/
+
+@import 'common/common';
+@import 'common/tab/1.0.0/tab';
+@import 'common/form/1.0.0/form';
+@import 'common/checkbox/1.0.0/checkbox';
+@import 'common/select/1.0.0/select';
+@import 'common/item/1.0.0/item';
+@import 'common/list/1.0.0/list';
+@import "common/nav/back2top";
+@import 'common/list-pro/1.0.0/list-pro';
+@import 'common/float-layer/1.0.0/float-layer';
+@import 'common/page-tips/1.0.0/page-tips';
+@import 'common/box/2.0.0/box';
+@import "common/change-num/1.0.0/change-num";
+
+body{
+    padding-bottom: rem(140);
+}
+em,i{
+    font-style:normal;
+}
+.mod-body-140{
+    padding-bottom: rem(140);
+}
+.product-des-bd{
+    @include flexbox((display: box));
+    padding: rem(20) rem(20);
+    border-bottom: 1px solid #fff;
+    background-color: #f8fbfb;
+    .img{
+        height: rem(160);
+    }
+    img{
+        width: rem(160);
+        height: rem(160);
+    }
+    .inf{
+        position: relative;
+        height: rem(160);
+        @include flexbox((box-flex:1));
+        .description{
+            font-size: rem(28);
+            line-height: rem(35);
+            display: block;
+            display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+            overflow: hidden;  /** 隐藏超出的内容 **/
+            margin-left: rem(20);
+            text-overflow: ellipsis;
+            word-break: break-all;
+            color: #333;
+            -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+            -webkit-line-clamp: 2; /** 显示的行数 **/
+        }
+        .category{
+            font-size: rem(24);
+            display: block;
+            margin-left: rem(20);
+            color: #999;
+        }
+        .price{
+            font-size: rem(28);
+            line-height: rem(28);
+            position: absolute;
+            bottom: rem(10);
+            display: block;
+            margin-left: rem(20);
+            color: #666;
+        }
+        .count{
+            font-size: rem(24);
+            position: absolute;
+            right: rem(20);
+            bottom: 0;
+            color: #ccc;
+        }
+    }
+}
+//地址
+.mod-address{
+    position: relative;
+    padding-top: rem(14);
+    background: image-url('module/order/1.0.0/order-letter.png') #fff repeat-x;
+    .ui-tab{
+        margin: 0 rem(20) 0 rem(60);
+        background: none;
+        .tab-hd{
+            margin-bottom: 0;
+        }
+    }
+    .address{
+        position: absolute;
+        top: rem(34);
+        left: rem(26);
+        color: #bbc0c4;
+        font-size: rem(30);
+    }
+    .ui-list{
+        // height: rem(160);
+        .list-hd{
+            padding: rem(34) 0 rem(34) 0;
+            .hd-l{
+                padding-left: 0;
+            }
+            .breadth{
+                display: inline-block;
+                width: rem(160);
+            }
+            .aligned{
+                text-align: justify;
+                text-align-last: justify;
+                display: inline-block;
+                width: rem(160);
+                color: #999;
+            }
+            .address-empty{
+                padding: rem(20) 0 rem(20) 0;
+                color: #999;
+            }
+            .bd-r{
+                right: 0;
+            }
+        }
+    }
+    .item-hd{
+        position: absolute;
+    }
+}
+.mod-info{
+    .list-bd{
+        padding: rem(34) 0 rem(34) 0;
+    }
+}
+.mod-float-layer{
+    background: #fff;
+    .ui-list{
+        border-bottom: 1px solid #fff;
+    }
+}
+//弹窗
+.boxTxt{
+    margin-bottom: rem(20);   
+}
+.selfTake{
+    width: 94% !important;
+    &::-webkit-input-placeholder{
+        font-size:rem(28);
+        color:#ccc;
+        font-weight:normal;
+    }
+}
+//修改加号颜色
+.ui-add-num .num-r .icon:after{
+    color: #333;
+}
+//商品合计与运费间隔
+.pd-bottom{
+    padding-bottom:rem(20)!important;
+}
+.ui-list.line .list-hd{
+    padding-top: 0;
+}
+//数量
+.ui-add-num{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    .zone-l,.zone-m,.zone-r{
+        padding: 0;
+    }
+}

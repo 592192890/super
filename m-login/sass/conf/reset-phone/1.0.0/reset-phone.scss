@@ -1,0 +1,147 @@
+/**
+* @file reset-phone.scss
+* @synopsis  重置手机号码
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-04-10
+*/
+@import "common/common";
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+
+.reset-phone{
+    width:$wFull;
+    max-width:$wMax;
+    margin:rem(20) auto 0;
+}
+.mod-status{
+    position:$rela;
+    width:$wFull;
+    height:rem(200);
+    span{
+        position:$abso;
+        top:rem(50);
+        width:rem(82);
+        height:rem(82);
+        border-radius:50%;
+        text-align:center;
+        line-height:rem(82);
+    }
+    .step-one{
+        // position:$rela;
+        color:#f85e59;
+        border:2px solid #f85e59;
+        left:rem(136);
+        .icon{
+            font-size:rem(50);
+        }
+    }
+    img{
+        position:$abso;
+        top:rem(91);
+        left:rem(235);
+        width:rem(280);
+        height:rem(10);
+    }
+    .step-two{
+        color:#f85e59;
+        border:2px solid #f85e59;
+        right:rem(136);
+        .icon{
+            font-size:rem(50);
+        }
+    }
+    .text{
+        width:auto;
+        height:auto;
+        // font-style:nor
+        line-height:rem(26);
+        top:none;
+        border:none;
+        top:rem(148);
+        font-size:rem(24);
+    }
+    .right{
+        right:rem(120);
+    }
+}
+.mod-input{
+    // width:$wFull;
+    background-color:#fff;
+    // padding:0 rem(20);
+    .input-area{
+        // width:$wFull;
+        // height:rem(90);
+        line-height:rem(90);
+        vertical-align: middle;
+        font-size:rem(26);
+        color:#333;
+        margin:0 0 0 rem(20);
+        input{
+            height:rem(80);
+            border:none;
+            margin-left:rem(23);
+        }
+        input[disabled]{
+            background:#fff;
+        }
+        .right{
+            float:right;
+            font-size:rem(26);
+            margin-top:rem(7);
+            cursor: pointer;
+        }
+        .get{
+            // display:none;
+            margin-right:rem(20);
+        }
+        .sec{
+            display:none;
+            width:rem(194);
+            margin-right:rem(20);
+        }
+    }
+    .phone-num{
+        border-bottom:1px solid #e5e5e5;
+    }
+
+}
+.mod-inf{
+    color:#999;
+    font-size:rem(24);
+    background-color:#f2f3f7;
+    margin:0 rem(20);
+}
+.submit{
+    // margin-top:rem(60);
+    margin:rem(60) rem(20) 0;
+    .disable{
+        background-color:#ccc!important;
+        border:1px solid #ccc!important;
+    }
+}
+/* loading */
+.ui-loading{
+    width:rem(750);
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1;
+    display:none;
+    .tips-img{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin:0 auto;
+        width:rem(100);
+        height:rem(100);
+        transform:translate(-50%,-50%);
+        background-image: image-url('loading/loading.gif?1489389307');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}

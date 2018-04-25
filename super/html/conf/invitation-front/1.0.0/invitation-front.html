@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+
+<head>
+    <title>我的邀请码</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/invitation-front/1.0.0/invitation-front.css" type="text/css" charset="utf-8" data-cdn="//s1.bbgstatic.com/super/css/conf/invitation-front/1.0.0/invitation-front.css">
+</head>
+
+<body>
+    <!-- 填写邀请码begin -->
+    <div class="page-view invitation-front">    
+        <form class="mod-invite" method="post" id="">
+            <div class="mod-invite-code">
+                <input type="text" name="" class="u-form-input-text jInviteCode" placeholder="请填写邀请码">
+            </div>
+            <div class="invite-btn" id="">
+                <button type="button" class="ui-btn-primary-line margin-r jumpOver">跳过</button><!--                     
+             --><button type="button" class="ui-btn-primary submit-btn-disable jSubmit">提交</button>
+            </div>
+        </form>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+        window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            submitUrl: 'http://localhost:3000/ajax/checkname'
+        };
+        require(['conf/invitation-front/1.0.0/invitation-front']);
+    </script>
+</body>
+
+</html>

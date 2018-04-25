@@ -1,0 +1,207 @@
+/**
+* @file order.scss
+* @synopsis  结算
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-06
+*/
+
+@import "common/common";
+@import "common/tab/1.0.0/tab";
+@import "common/form/1.0.0/form";
+@import "common/checkbox/1.0.0/checkbox";
+@import "common/select/1.0.0/select";
+@import "common/item/1.0.0/item";
+@import "common/list/1.0.0/list";
+@import "common/list-pro/1.0.0/list-pro";
+@import "common/float-layer/1.0.0/float-layer";
+@import "common/page-tips/1.0.0/page-tips";
+
+
+body {
+	padding-bottom:rem(140);
+}
+.mod-body-140 {
+	padding-bottom:rem(140);
+}
+.mod-item {
+    .ui-form {
+        padding: 0px rem(20) 0px rem(60);
+        .ui-select {
+            margin-bottom: rem(30);
+        }
+        padding-bottom:rem(30);
+    }
+    .ui-list {
+        input[type="text"] {
+            width: rem(200);
+			text-align:center;
+        }
+    }
+}
+
+//地址
+.mod-address {
+    //.pickup-store {
+    //    .hd-r .arrow {
+    //        top: auto;
+    //        bottom: rem(60);
+    //    }
+    //}
+    .pickup-address {
+        padding: rem(15) 0 rem(30) 0;
+        margin-bottom: rem(15);
+    }
+    .address-wrap {
+        width: 90%;
+    }
+    .button {
+        border: 1px solid #ccc;
+        border-radius: rem(3);
+        text-align: center;
+        padding: rem(6) rem(15);
+    }
+    .selected-address {
+        display: inline-block;
+        padding-top: rem(20);
+        .store {
+          display: block;
+        }
+        .address {
+          display: inline-block;
+        }
+    }
+	background:image-url('module/order/1.0.0/order-letter.png') #fff repeat-x;
+	padding-top:rem(14);
+	position:relative;
+    .ui-tab {
+        margin:0px rem(20) 0px rem(60);
+		background:none;
+        .tab-hd {
+            margin-bottom: 0;
+        }
+    }
+    .ui-list {
+        .list-bd {
+			padding:rem(34) 0px rem(34) 0px;
+            .bd-l {
+                padding-left: 0px;
+            }
+			.bd-r {
+			    right:0;	
+			}
+        }
+    }
+	.item-hd {
+		position:absolute;	
+	}
+}
+.mod-info {
+	.list-bd {
+		padding:rem(34) 0px rem(34) 0px;
+	}
+}
+.mod-float-layer {
+	.ui-list {
+		border-bottom:1px solid #fff;
+	}
+} 
+
+//弹窗
+.ui-pop {
+	.ui-form {
+		.ui-input {
+			margin-top:rem(30);
+		}
+	}
+}
+input[type="tel"] {
+	border:0;
+	width:100%;
+	background:#f8f8f8;	
+	padding: rem(24) rem(20);
+	border-radius:rem(10);
+}
+.ui-input {
+	padding: 0 rem(20);
+	background:#f8f8f8;	
+	border-radius:rem(10);
+	input[type="tel"] {
+		width:100%;
+		padding:rem(26) 0px;
+		border-radius:0px;
+	}
+}
+//优惠券
+.mod-coupon {
+	.list-bd {
+		.bd-r {
+			.text {
+				width:rem(350);	
+			}	
+		}
+	}
+}
+
+//多行值
+.mod-multiple {
+  .list-hd {
+    overflow: hidden;
+    .hd-l {
+      display: inline-block;
+    }
+    .hd-r {
+      position: static;
+      text-align: right;
+      float: right;
+      //margin-right: 0.426rem;
+      margin-right: rem(20);
+      p {
+        padding: rem(15) 0;
+      }
+    }
+  }
+}
+
+//已享受优惠
+.mod-discount {
+	.list-bd {
+		padding:0px rem(20) rem(20);
+		display:none;
+		ul {
+			li {
+
+			}
+		}
+		
+	}
+}
+
+//弹出层中的表单
+.ui-pop {
+	.pop-bd {
+		.ui-form {
+			padding-top:rem(10);
+		}	
+	}
+}
+
+//自提
+.mod-selfzt,
+.mod-coupon,
+.mod-discount {
+    .list-hd {
+        .hd-r {
+            .text {
+                width: rem(480);
+            }
+            .arrow {
+                font-size: inherit;
+            }
+            .empty {
+                color: #ccc;
+            }
+        }
+    }
+}
+

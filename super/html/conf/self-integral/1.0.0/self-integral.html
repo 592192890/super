@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>自助积分</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//ssl.bbgstatic.com/super/css/conf/self-integral/1.0.0/self-integral.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <!-- 我的会员卡 begin -->
+    <div class="page-view">
+        <div class="wrap">
+
+            <div class="img-card" style="display: none">
+                <span class="card-level">银卡会员</span>
+                <span class="card-id">NO:1202151202541520154120052</span>
+            </div>
+            <div class="unlogin-img" ></div>
+            <ul class="mod-select-store" id="jSelect">
+                <li>积分门店：<span id="jCurrent">步步高梅西新天地</span>
+                    <i class="iconfontmod icon">&#xe79e;</i>
+                    <i style="display: none" class="iconfontmod icon">&#xe79b;</i>
+                </li>
+            </ul>
+            <ul class="mod-select-store add" id="jChoose">
+                <li class="active">步步高梅西新天地</li>
+                <li>步步高梅西</li>
+                <li>步步天地</li>
+                <li>步西新天地</li>
+                <li>步步高梅西新天地</li>
+                <li>步步高梅西新天地</li>
+            </ul>
+            
+            <div class="mod-shoot" id="jShoot">拍摄小票</div>
+            <div class="mod-check">不知如何积分？看看<a href="">自助积分手册</a></div>
+            <img src="//s1.bbgstatic.com/super/images/conf/self-integral/1.0.0/line.png" alt="" class="line"/>
+            <a class="my-integral" href="">
+                <div class="pic">
+                    <i class="iconfontmod icon integral">&#xe62f;</i>
+                </div>
+                <div class="item">
+                    <div class="ctn">我的积分</div>
+                    <i class="iconfontmod icon">&#xe76d;</i>
+                </div>
+            </a >
+            <a class="my-integral" href="">
+                <div class="pic upload">
+                    <i class="iconfontmod icon integral">&#xe62e;</i>
+                </div>
+                <div class="item upload">
+                    <div class="ctn">小票上传记录</div>
+                    <i class="iconfontmod icon">&#xe76d;</i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!-- #include file="/super/html/common/statistics.html" -->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url']={
+            // allCity: 'http://wx.yunhou.com/super/point/getAllCity',//城市信息
+            // giftPage: 'http://wx.yunhou.com/super/point/getGiftPage'
+        };
+        require(['conf/self-integral/1.0.0/self-integral']);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+/**
+* @file birth-privilege.scss
+* @synopsis  birth-privilege
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-05-27
+*/
+
+@import "common/common";
+@import "common/box/2.0.0/box";
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+body{
+    background-color: #f5e7e2;
+}
+.birth-privilege{
+    width:$wFull;
+    position: $abso;
+    height:$hFull;
+    background-color: #f5e7e2;
+    // margin:0 rem(20);
+}
+.privilege-inf{
+    max-width:$wMax;
+    margin:0 auto;
+    padding:rem(32) rem(20) rem(68);
+    li{
+        // width:$wFull;
+
+        height:rem(180);
+        display:block;
+        margin-bottom:rem(5);
+        background-color: #fff;
+        border-radius:rem(8);
+        // line-height: rem(180);
+        
+        .left{
+            float:left;
+            height:$hFull;
+            img{
+                display:block;
+                width:rem(74);
+                float:left;
+                margin:rem(54) rem(40) rem(0) rem(42);
+                // top:rem(54);
+            }
+            .text-inf{
+                float:left;
+                width:rem(312);
+                margin-top:rem(30);
+                padding-right:rem(60);
+                border-right:1px solid #f6f6f6;
+            }
+            h3{
+                
+                font-size:rem(30);
+                line-height: rem(50);
+            }
+            p{
+                font-size:rem(26);
+                line-height: rem(36);
+            }
+        }
+        .right{
+            float:right;
+            height:$hFull;
+            line-height: rem(180);
+            padding-right:rem(42);
+            color:#f85e5b;
+            font-size:rem(28);
+        }
+        .disable{
+            color:#999;
+        }
+    }
+}
+.identity-inf{
+    max-width:$wMax;
+    
+    margin:0 auto;
+    padding:0 rem(20);
+    .headwear{
+        position:$abso;
+        left:50%;
+        margin-left:rem(-31);
+        margin-top:rem(-31);
+        border-radius:50%;
+        border:5px solid #fff;
+        background-color: #ffb3b1;
+        width:rem(62);
+        height:rem(62);
+        background-image: url(//ssl.bbgstatic.com/super/images/conf/birth-privilege/1.0.0/star.png) ;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:60% 60%;
+        
+    }
+}
+li{
+    position:$rela;
+}
+.no-identity{
+    background-color: #fff;
+    border-radius:rem(20);
+    height:rem(182);
+    text-align:center;
+    line-height: rem(182);
+    p,a{
+        color:#f95e5d;
+        font-size:rem(30);
+        a{
+            text-decoration: underline;
+        }
+    }
+}
+.yes-identity{
+    background-color: #fff;
+    border-radius:rem(20);
+    height:rem(245);
+    text-align:center;
+    vertical-align: middle;
+    
+    .inf{
+        position:$rela;
+        font-size:rem(26);
+        height:rem(26);
+        line-height: rem(26);
+        color:#999;
+        padding-top:rem(60);
+    }
+    .inf:after,.inf:before{
+        content:"";
+        position:$abso;
+        width:rem(230);
+        border:1px dotted #e7e7e7;
+        margin-top:rem(13);
+    }
+    .inf:after{
+        right:rem(10);
+
+    }
+    .inf:before{
+        left:rem(10);
+        
+    }
+    .name{
+        font-size:rem(36);
+        color:#333;
+        height:rem(36);
+        line-height: rem(36);
+        margin-top:rem(30);
+    }
+    .id{
+        font-size:rem(34);
+        color:#999;
+        height:rem(44);
+        line-height: rem(44);
+        margin-top:rem(20);
+    }
+
+}

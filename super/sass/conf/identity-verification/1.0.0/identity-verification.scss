@@ -1,0 +1,118 @@
+/**
+* @file identity-verification.scss
+* @synopsis  身份认证
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-05-31
+*/
+
+@import "common/common";
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+.identity-verification{
+
+}
+form{
+    padding:0 rem(20) rem(32);
+    background-color: #FFF;
+    input{
+        width:$wFull;
+        display: block;
+        border:none;
+        height:rem(78);
+        border-radius:rem(8);
+        background-color: #f8f8f8;
+        margin-top:rem(32);
+        box-sizing: border-box;
+        padding: 0 rem(20);
+    }
+    .first{
+        margin-top:0;
+    }
+    .select{
+        float:right;
+        margin-top:rem(-60);
+        font-size:rem(34);
+        color:#999;
+        margin-right:rem(20);
+    }
+    .tips{
+        height:rem(104);
+        line-height: rem(104);
+        color:#f95d5b;
+        font-size:rem(26);
+        .iconfontmod{
+            font-size:rem(34);
+            line-height: rem(34);
+            vertical-align: middle;
+        }
+    }
+}
+.button{
+    padding:0 rem(20);
+    margin-top:rem(32);
+    .ui-btn-line{
+        color:#ccc;
+    }
+}
+//证件列表遮罩层样式
+.shad-contact{
+    display:none;
+    position:fixed;
+    width:100%;
+    z-index: 1024;
+    bottom:rem(50);
+    // margin:0 rem(20);
+    // left:50%;
+    // margin-left:rem(-250);
+    // width:rem(500);
+    // height:rem(800);
+    // border:1px solid #000;
+    .lists{
+        // border-radius:rem(20);
+        // background-color: #FFF;
+        margin:0 rem(20);
+    }
+    .item{
+        height:rem(100);
+        text-align:center;
+        line-height:rem(100);
+        font-size:rem(30);
+        color:#333;
+        background-color: #FFF;
+    }
+    .item:first-child{
+        border-radius:rem(20) rem(20) 0 0;
+    }
+    .item:last-child{
+        border-radius:0 0 rem(20) rem(20);
+    }
+    .cancel{
+        // margin-top:rem(20);
+        height:rem(100);
+        text-align:center;
+        line-height:rem(100);
+        font-size:rem(30);
+        color:#333;
+        margin:rem(20) rem(20) 0;
+        border-radius:rem(20);
+        background-color:#fff;
+    }
+    .item:active{
+        background-color:#efefef;
+    }
+}
+//证件选择
+.hide-all{
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    background-color:#000;
+    opacity:.5!important;
+
+}

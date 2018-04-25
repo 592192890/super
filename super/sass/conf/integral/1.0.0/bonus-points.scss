@@ -1,0 +1,143 @@
+/**
+* @file bonus-points.scss
+* @synopsis  会员积分
+* @author zhouguangcheng,  zgc7788@gmail.com 
+* @version 1.0.0
+* @date 2017-05-24
+*/
+@import "common/common";
+@import "module/integral-detail/1.0.0/list-style";
+//@import "compass/css3";
+.page-view{
+    background-color:#f2f3f7;
+    max-width:rem(750);
+    margin:0 auto;
+}
+header{
+    height: rem(340);
+    background-image:image-url('//ssl.bbgstatic.com/super/images/conf/bonus-points/1.0.0/bg.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    text-align:center;
+    .integral-rules{
+        width:rem(140);
+        height:rem(44);
+        font-size:rem(26);
+        color:#fff;
+        background:#ff7728;
+        position:absolute;
+        right:0;
+        top:rem(14);
+        border-radius:rem(22) 0 0 rem(22);
+    }
+    .integral-text{
+        width:100%;
+        position:absolute;
+        top:rem(90);
+        .mod-integral-total{
+            font-size:rem(90);
+            font-weight: 400;
+            //font-family: cursive;
+            color:#ff5a00;
+            line-height:rem(90);
+            margin-bottom:rem(10);
+        }
+        .mod-integral-dec{
+            font-size:rem(24);
+            color:#ffb96c;
+            line-height:rem(24);
+        }
+    }
+     .get-point{
+        display: inline-block;
+        width:rem(160);
+        height:rem(60);
+        margin-top:rem(30);
+        line-height:rem(60);
+        border-radius:rem(45);
+        box-shadow:0 0 30px #f9dddd;
+        background:#fff;
+     }
+    .nav{
+        width:rem(614);
+        height:rem(90);
+        line-height:rem(90);
+        background:#fff;
+        z-index:10;
+        position:absolute;
+        left:rem(70);
+        bottom:rem(-46);
+        border-radius:rem(45);
+        box-shadow:0 0 30px #f9dddd;
+        ul{
+           height:rem(28);
+           margin-top:rem(30); 
+        
+            li{
+                line-height:rem(28);
+                text-align:center;
+            }
+            .integral-shop{
+                width:rem(212);
+            }
+            .convert-record{
+                width:rem(192);
+                border-left:1px solid #ffe4c7;
+                border-right:1px solid #ffe4c7;
+            }
+            .get-integral{
+                width:rem(204);
+            }
+            a{
+                color:#6f6458;
+                //padding:10px;
+            }
+        }
+    }
+    
+}
+.mod-integral{
+        width:100%;
+        height:rem(174);
+        background:#fff;
+        border-bottom:1px solid #f9f9fb;
+        a{
+            width:50%;
+            margin-top:rem(86);
+            text-align:center;
+            img{
+                vertical-align:middle;
+                margin-right:rem(26);
+            }
+            span{
+                font-size:rem(28);
+                color:#333;
+                vertical-align:middle;
+            }
+        }
+    }
+    /* 积分详情 */
+.mod-integral-detail{
+    //margin-top:rem(20);
+    .detail-head{
+        height:rem(90);
+        line-height:rem(90);
+        background-color:#fff;
+        .detail-txt{
+            font-size:rem(30);
+            color:#333;
+            margin-left:rem(20);
+        }
+        .detail-more{
+            font-size:rem(24);
+            margin-right:rem(22);
+            color:#999;
+            height:rem(80);
+            i{
+                font-size:rem(26);
+                margin-left:rem(10);
+            }
+        }
+    }
+}

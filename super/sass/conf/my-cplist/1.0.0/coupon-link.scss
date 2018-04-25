@@ -1,0 +1,52 @@
+/**
+* @file coupon-link.scss
+* @synopsis  coupon-link
+* @author leaytam
+* @version 1.0.0
+* @date 2017-06-01
+*/
+
+@import "common/common";
+
+.mod-link{
+	padding: rem(20) 0;
+	a{
+		@include flexbox((display: box));
+		padding: 0 rem(20);
+		height: rem(88);
+		line-height: rem(88);
+		background-color: #fff;
+		border-bottom: 1px solid #f2f2f2;
+		color: #666;
+		text-decoration: none;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	.icon{
+		display: block;
+		width: rem(50);
+		font-style: normal;
+		font-size: rem(44);
+		vertical-align: middle;
+	}
+	.name{
+		display: block;
+		width: 100%;
+		@include flexbox((box-flex:1));
+	}
+	.tips{
+		color: #f95d5b;
+		width: rem(300);
+		display: block;
+		text-align: right;
+		&:after{
+			display:inline-block;
+			vertical-align:middle;
+			font-size: rem(34);
+			font-family: "iconfontmod";
+			content: "\e772";
+			color:#acacac;
+		}
+	}
+}

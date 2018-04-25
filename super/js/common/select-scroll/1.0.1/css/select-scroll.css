@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* global env vars */
+/* ui components customize consts */
+/* common includes */
+/* 选中状态 */
+/**
+* @file _select-scroll.scss
+* @synopsis  select-scroll
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-06-28
+*/
+.mod-select-scroll {
+  background: #fff; }
+  .mod-select-scroll .scroll-hd {
+    height: 1.6rem;
+    background: #f6f6f6;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-box-pack: justify;
+    box-pack: justify;
+    justify-content: space-between; }
+    .mod-select-scroll .scroll-hd .btn {
+      display: block;
+      padding: 0 0.64rem;
+      font-size: 0.59733rem; }
+      .mod-select-scroll .scroll-hd .btn:nth-child(3) {
+        color: #fc5c57; }
+  .mod-select-scroll .scroll-bd {
+    display: -webkit-box;
+    display: box;
+    position: relative;
+    padding: 0.42667rem 0.64rem; }
+    .mod-select-scroll .scroll-bd .bd-item {
+      -webkit-box-flex: 1;
+      box-flex: 1;
+      overflow: hidden;
+      position: relative;
+      width: 100%; }
+      .mod-select-scroll .scroll-bd .bd-item .item-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+        .mod-select-scroll .scroll-bd .bd-item .item-mask:before, .mod-select-scroll .scroll-bd .bd-item .item-mask:after {
+          position: absolute;
+          top: -0.64rem;
+          width: 100%;
+          height: 50%;
+          background: #fff;
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+          opacity: 0.8;
+          content: ''; }
+        .mod-select-scroll .scroll-bd .bd-item .item-mask:after {
+          top: auto;
+          bottom: -0.64rem; }
+      .mod-select-scroll .scroll-bd .bd-item ul {
+        overflow: hidden; }
+        .mod-select-scroll .scroll-bd .bd-item ul li {
+          display: block;
+          height: 1.28rem;
+          line-height: 1.28rem;
+          font-size: 0.55467rem;
+          color: #333333;
+          padding: 0 0.128rem;
+          -moz-transition: all 0.1s ease-in;
+          -o-transition: all 0.1s ease-in;
+          -webkit-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in; }
+          .mod-select-scroll .scroll-bd .bd-item ul li.selected {
+            font-size: 0.64rem; }
+
+.mod-select-scroll-3 .bd-item {
+  height: 3.84rem; }
+
+.mod-select-scroll-5 .bd-item {
+  height: 6.4rem; }

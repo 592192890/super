@@ -1,0 +1,51 @@
+/**
+* @file _item.scss
+* @synopsis  模块
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-06
+*/
+
+.mod-item {
+    background: #fff;
+    margin-top: rem(20);
+    .item-hd {
+        height: rem(87);
+        line-height: rem(87);
+		padding:0px rem(20);
+		position:relative;
+		display:block;
+		input[type="checkbox"] {
+			vertical-align:middle;	
+		}
+        .icon, .text {
+            display: inline-block;
+			font-size:rem(28);
+			vertical-align:middle;
+			margin-top:rem(-4);
+        }
+		.icon {
+			color:#bbc0c4;
+			font-size:rem(34);
+			height:rem(34);
+			line-height:rem(34);
+			overflow:hidden;
+			margin-top:rem(-2);
+		}
+		.text {
+			margin-left:rem(4);
+		}
+		.hd-r {
+			position:absolute;	
+			top:0;
+			right:rem(20);
+			height:100%;
+			input[type="checkbox"] {
+				position:absolute;	
+				top:50%;
+				margin-top:rem(-20);
+				right:0px;
+			}
+		}
+    }
+}

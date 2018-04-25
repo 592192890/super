@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- @author 吕永华 -->
+
+<html>
+
+<head>
+    <title>重置手机号码</title>
+    <meta charset="utf-8" />
+    <script>
+    // flexible.js
+    !function(e){function h(){var a=f.getBoundingClientRect().width;640<a/b&&(a=640*b);a/=16;f.style.fontSize=a+"px";e.rem=a}function k(a,b,c,e){var d;return function(){var f=e||this,g=arguments,h=c&&!d;clearTimeout(d);d=setTimeout(function(){d=null;c||a.apply(f,g)},b);h&&a.apply(f,g)}}var b,a,d,c=e.document,g=e.navigator,f=c.documentElement,i=c.querySelector('meta[name="viewport"]');d=c.querySelector('meta[name="flexible"]');i?(d=i.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/))&&(a=parseFloat(d[2]),b=parseInt(1/a)):d&&(d=d.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/))&&(b=parseFloat(j[2]),a=parseFloat((1/b).toFixed(2)));!b&&!a&&(b=e.devicePixelRatio,b=g.appVersion.match(/android/gi)||g.appVersion.match(/iphone/gi)?3<=b?3:2<=b?2:1:1,a=1/b);f.setAttribute("data-dpr",b);i||(a='<meta name="viewport" content="width=device-width, initial-scale='+a+", maximum-scale="+a+", minimum-scale="+a+', user-scalable=no" />',f.firstElementChild?(g=c.createElement("div"),g.innerHTML=a,f.firstElementChild.appendChild(g.firstChild)):c.write(a));e.dpr=b;e.addEventListener("resize",k(h,50),!1);e.addEventListener("pageshow",k(function(a){a.persisted&&h()},300),!1);"complete"===c.readyState?c.body.style.fontSize=12*b+"px":c.addEventListener("DOMContentLoaded",function(){c.body.style.fontSize=12*b+"px"},!1);h()}(window);
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//ssl.bbgstatic.com/m-login/css/conf/authentication/1.0.0/authentication.css" type="text/css" charset="utf-8">
+</head>
+
+
+<body>
+    <!-- 身份验证 begin -->
+    <div class="page-view authentication">
+        <div class="mod-status">
+            <span class="step-one line"><i class="icon iconfontmod">&#xe621;</i></span><span class="step-one text">验证身份</span>
+            <img src="//ssl.bbgstatic.com/m-login/images/reset-phone/arrows.png" alt="" />
+            <span class="step-two arrow"><i class="icon iconfontmod">&#xe6f0;</i></span><span class="step-two text right">设置新手机</span>
+        </div>
+        <div class="mod-input">
+            <div class="input-area phone-num">
+                <span>原手机</span>
+                <input type="text"  disabled value="15576974746" data-val="15576974746" id="mobile"/>
+            </div>
+            <div class="input-area auth-code">
+                <span>验证码</span>
+                <input type="text" placeholder="请输入验证码" id="captcha" autocomplete="on"/>
+                <button id="jGetCode" class="get ui-btn-primary-line right" data-url="http://m.yunhou.com/member/orders">获取验证码</button>
+                <button class="sec ui-btn-line right" id="jReGet" disabled>60s</button>
+                <div class="ui-loading" id="jLoading">
+                    <div class="tips-img"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-inf">温馨提示：为了您的账户安全，需要验证您的原始手机和修改后的手机。</div>
+        <div class="submit">
+            <button class="ui-btn-primary ui-btn-block disable" id="jLoginBtn" type="button" disabled data-url="http://m.yunhou.com/member/orders">提交</button>
+        </div>
+    </div>
+    <!-- 身份验证 end -->
+    <script src="//ssl.bbgstatic.com/lib/require/2.1/require.js" crossorigin="*" data-cdn="lib/require/2.1/require.js"></script>
+    <script src="//ssl.bbgstatic.com/m-login/js/app.js" crossorigin="*" data-cdn="super/js/app.js"></script>
+    <!-- #include file="/super/html/common/statistics.html" -->
+    <script>
+        // window[$PAGE_DATA]=window[$PAGE_DATA] || {};
+        // window[$PAGE_DATA]['url']={
+        //     ordersUrl: '//m.yunhou.com/member/orders'
+        // };
+        require(['conf/authentication/1.0.0/authentication']);
+    </script>
+</body>
+
+</html>

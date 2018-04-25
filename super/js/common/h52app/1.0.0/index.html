@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>h52app</title>
+    <!--#include file="/h5-lib/app/include/html/common.html"-->
+    <link href="http://page.com/h5-lib/app/common/button/2.0.0/css/button.css" rel="stylesheet"
+    />
+    <style>
+        .fresh-btn {
+            position: fixed;
+            right: 0;
+            top: 0;
+            background: #31b0d5;
+            color: #fff;
+        }
+        .mod-code {
+            word-wrap: break-word;
+            padding: 0.5rem;
+        }
+        .mod-code code {
+            display: block;
+        }
+        .mod-code input[type="text"] {
+            height: 1rem;
+            width: 5.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-view">
+        <button class="ui-btn-line fresh-btn" onclick="location.reload()">刷新</button>
+        <div class="mod-code" style="margin-top:2rem;">
+            <input type="text" placeholder="functionname" id="jFunctionName" value="goodsProductIndex"
+            />
+            <input type="text" placeholder="args" id="jArgs" value='{"prdouctid":"29684000014"}'
+            />
+            <button class="jBtn">修改参数</button>
+            <code style="display:none;">
+				$(this).closest('body').find('.jFunctionName').filter(function(){return $(this).text()==$('#jFunctionName').val()}).parent().find('.jArgs').text($('#jArgs').val())
+			</code>
+        </div>
+        <div class="mod-code">
+            <button class="ui-btn-line jBtn">显示下载浮层,同时锁住界面</button>
+            <code>h52app.showTopPop('goodsProductIndex','{"prdouctid":"29684000014"}')</code>
+        </div>
+        <div class="mod-code">
+            <button class="ui-btn-line jBtn">商品详情</button>
+            <code>h52app.open('<span class="jFunctionName">goodsProductIndex</span>','<span class="jArgs">{"prdouctid":"29684000014"}</span>')</code>
+        </div>
+        <div class="mod-code">
+            <button class="ui-btn-line jBtn">活动页</button>
+            <code>h52app.open('<span class="jFunctionName">vWeb</span>','<span class="jArgs">{"url":"http://www.baidu.com"}</span>')</code>
+        </div>
+    </div>
+</body>
+<!-- 加载文件 -->
+
+<script type="text/javascript">
+    //input (属性: data-max 表示最大值)
+    require(['common/h52app/1.0.0/h52app',
+        'css!common/h52app/1.0.0/css/h52app.css', 'jquery'
+    ], function(h52app, _, $)
+    {
+        $('.jBtn').click(function()
+        {
+            if (!h52app.guidePop())
+            {
+                var $wrap = $(this).closest('.mod-code');
+                var code = $wrap.find('code').text();
+                eval('(' + code + ')');
+            }
+        })
+    });
+</script>
+
+</html>

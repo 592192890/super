@@ -1,0 +1,52 @@
+@import "common/common";
+@import "common/button/2.0.0/button";
+@import "module/park/1.0.0/coupon";
+
+// header{
+//     height: rem(100);
+//     width: 100%;
+//     background: #fff;
+//     input{
+//         width: rem(622);
+//         height: rem(62);
+//         margin: rem(18) 0 rem(18) rem(26);
+//         border: none;
+//         background: #f2f3f7;
+//         border-radius: rem(12);
+//         text-indent: rem(20);
+//         &::-webkit-input-placeholder{
+//             font-size: rem(28);
+//             color: #c0c0c0;
+//         }
+//     }
+//     span{
+//         padding: rem(20);
+//         color: $red;
+//     }
+// }
+// .prompt{
+//     margin-left: rem(30);
+//     line-height: rem(64);
+//     font-size: rem(24);
+//     color: #999;
+// }
+.mod-coupon-item{
+    margin-top: rem(20);
+}
+.coupon-title{
+    margin:rem(12) 0 0 rem(30);
+    line-height: rem(68);
+    font-size: rem(28);
+    color: #666;
+}
+.mod-coupon-item .item-bd .cp-money{
+    font-size: rem(58);
+    line-height: rem(84);
+    em{
+        font-size: rem(32);
+    }
+}
+.disuse-coupon{
+    margin: rem(20);
+    font-size: rem(30);
+}

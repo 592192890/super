@@ -1,0 +1,255 @@
+/**
+* @file self-integral.scss
+* @author yanghaitao
+* @version 1.0.0
+* @date 2017-12-08
+*/
+
+@import "common/common";
+@import "common/box/2.0.0/box";
+
+.wrap{
+    margin:0 auto;
+    max-width:rem(690);
+    background-color: #FFF;
+    border-radius:rem(10);
+    margin-top:rem(20);
+    border:1px solid #e4e4e4;
+    padding-top:rem(16);
+    padding-bottom:rem(150);
+    .unlogin-img{
+        position:relative;
+        margin:0 auto;
+        width:rem(634);
+        height:rem(366);
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100% 100%;
+        background-image:url('/super/images/conf/self-integral/1.0.0/default.png');
+    }
+    .img-card{
+        position:relative;
+        margin:0 auto;
+        width:rem(634);
+        height:rem(366);
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100% 100%;
+        background-image:url('/super/images/conf/self-integral/1.0.0/card.png');
+        .card-level{
+            position:absolute;
+            top:rem(36);
+            right:rem(50);
+            font-size:rem(28);
+            color:#fff;
+        }
+        .card-id{
+            position:absolute;
+            bottom:rem(38);
+            right:rem(44);
+            font-size:rem(24);
+            color:#fff;
+        }
+    }
+    .mod-select-store{
+        width:rem(600);
+        border-radius:rem(14);
+        margin:rem(20) auto 0;
+        overflow:hidden;
+        box-sizing:border-box;
+        &.change-class{
+            border-radius:rem(14) rem(14) 0 0;
+            border:rem(1) solid #ccc;
+        }
+        &.add{
+            border:rem(1) solid #ccc;
+            position:fixed;
+            top:rem(491);
+            left: 50%;
+            margin-left: rem(-300);
+            border-radius:0 0 rem(14) rem(14);
+            max-height:rem(352);
+            overflow-y: scroll;
+            border-top:none;
+            display:none;
+            li{
+                background: #f8f8f8;
+                text-indent:rem(140);
+                border-top:rem(1) solid #ccc;
+                &.active{
+                    color:#f95d5b;
+                }
+                &.loading{
+                    text-align:inherit;
+                }
+            }
+        }
+        li{
+            position:relative;
+            height:rem(88);
+            display:block;
+            line-height:rem(88);
+            padding: 0 20px;
+            box-sizing:border-box;
+            color:#333;  
+            font-size: rem(28);    
+            background: #f8f8f8;  
+            i{
+                position:absolute;
+                color:#ccc; 
+                right:rem(20);
+                top:rem(4);
+                font-size: rem(28);
+            }
+        }
+    }
+    .mod-shoot{
+        width:rem(240);
+        height:rem(60);
+        line-height:rem(60);
+        text-align:center;
+        margin:0 auto;
+        color:#f95d5b;  
+        font-size: rem(28);
+        border:rem(1) solid #f95d5b;
+        border-radius:rem(10);
+        margin-top:rem(30);
+    }
+    .mod-check{
+        width:100%;
+        text-align:center;
+        color:#999;  
+        font-size: rem(26);
+        padding:rem(30) 0 rem(40);
+        a{
+            color:#f95d5b;
+            text-decoration:underline
+        }
+    }
+    .my-integral{
+        display:block;
+        width:100%;
+        @include flexbox((display: box));
+        .pic{
+            width:rem(50);
+            height:rem(50);
+            margin-left:rem(30);
+            &.upload{
+                margin-top:rem(20);
+            }
+            .integral{
+                color:#999;  
+                font-size: rem(34);
+            }
+        }
+        .item{
+            border-bottom:rem(2) solid #f2f3f7;
+            @include flexbox((box-flex: 1));
+            overflow:hidden;
+            padding-bottom:rem(14);
+            &.upload{
+                padding-top:rem(20);
+            }
+            .ctn{
+                color:#333;  
+                font-size: rem(28);
+                float:left
+            }
+            i{
+                float:right;
+                color:#ccc;  
+                font-size: rem(26);
+                margin-right:rem(30);
+            }
+        }
+    }
+    .line{
+        width:100%;
+    }
+}
+
+
+// 下拉弹框
+.shoot-box {
+    background:#fff;
+    width:100%;
+    padding-bottom:rem(40);
+    .item {
+        padding-left:rem(40);
+        width:100%;
+        height: rem(88);
+        line-height: rem(88);
+        font-size: rem(28);
+        color: #333;
+        border-bottom:rem(1) solid #f2f2f2;
+        box-sizing:border-box;
+        &.album{
+            i{
+                top:rem(6);
+                left:rem(-8);
+                padding-right:rem(16);
+            }
+        }
+        i{
+            font-size: rem(34);
+            color: #999;
+            position:relative;
+            top:rem(4);
+            padding-right:rem(20);
+        }
+    }
+    .btn {
+        width: rem(340);
+        height: rem(76);
+        line-height: rem(76);
+        background-color: #f95d5b;
+        text-align: center;
+        border-radius: rem(10);
+        color: #fff;
+        font-size: rem(30);
+        margin: rem(40) auto 0;
+    }
+}
+
+
+// 规则弹框
+.rule-box {
+    background:#fff;
+    width:100%;
+    .title{
+        width:100%;
+        text-align:center;
+        font-size:rem(30);
+        color:#000;
+        font-weight:bold;
+        padding-bottom:rem(20);
+    }
+    ul{
+        width:rem(580);
+        box-sizing:border-box;
+        padding-left:rem(20);
+        li{
+            list-style-type:square;
+            width:100%;
+            padding:rem(10) 0 0;
+            font-size: rem(28);
+            color: #ccc;
+            text-align:left;
+            box-sizing:border-box;
+            span{
+                color:#333;
+            }
+        }
+    }
+}
+.ui-pop{
+    .pop-ft{
+        border-top: 1px solid #ccc;
+        .btn{
+            color:#46c7c8;
+            &:nth-child(2){
+                border-left: 1px solid #ccc;
+            }
+        }
+    }
+} 

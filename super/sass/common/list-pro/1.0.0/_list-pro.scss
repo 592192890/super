@@ -1,0 +1,179 @@
+/**
+* @file _list-pro.scss
+* @synopsis  商品列表
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-07
+*/
+.mod-list-pro {
+    font-size:rem(28);
+	background:#f8f8f8;
+	border-bottom:1px solid #fff;
+    .list-bd {
+        padding:rem(20) 0px;
+		position:relative;
+        .bd-chk {
+            width: rem(40);
+            text-align: center;
+			position:absolute;
+			left:rem(20);
+			top:50%;
+			margin-top:rem(-20);
+        }
+		.bd-flag {
+            width: rem(40);
+            text-align: center;
+			position:absolute;
+			left:rem(20);
+			top:50%;
+			margin-top:rem(-14);
+			background: #D8D5D5;
+			color: #fff;	
+			font-size:rem(16);
+			border-radius:rem(2);
+			height:rem(30);
+			line-height:rem(30);
+		}
+        .bd-img {
+            width: rem(160);
+			padding-left:rem(20);
+			position:absolute;
+			top:rem(20);
+			left:0;
+            .img-box {
+                height: rem(160);
+                line-height: rem(160);
+                vertical-align: middle;
+                overflow: hidden;
+                background-color: #fff;
+				position:relative;
+				display:block;
+				img {
+                    width: rem(160);
+                    height: rem(160);
+                    line-height: rem(160);
+                    border: none;
+                }
+				.flag {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: rem(34);
+					height: rem(34);
+					line-height: rem(34);
+					background-color: #f85d5b;
+					color: #fff;
+					text-align: center;
+					font-size: rem(24);
+					border-radius: rem(4);	
+					z-index:1;
+				}
+				.img-mask {
+					position: absolute;
+					color: #fff;
+					bottom: 0;
+					height: rem(30);
+					line-height: rem(30);
+					font-size: rem(22);
+					width: 100%;
+					text-align: center;
+					background-color: rgba(0, 0, 0, 0.4);	
+				}
+            }
+        }
+        .bd-ctn {
+            vertical-align: top;
+            padding-left: rem(200);
+			padding-right:rem(20);
+            .ctn-box {
+                position:relative;
+                min-height:rem(160);
+                .box-title {
+					font-size: rem(28);
+                    color: #333333;
+                    line-height: normal;
+					display:block;
+					font-weight:normal;
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .box-tips {
+                    font-size: rem(22);
+                    color: #999999;
+                    @extend .txt-overflow;
+                }
+                // 称重商品
+                .box-weight {
+                    padding: rem(10) 0 rem(45);
+                    span {
+                        font-size: rem(22);
+                        line-height: normal;
+                        display: block;
+                    }
+                    .cprice {
+                        color: #f85d5b;
+                    }
+                }
+                .box-txt {
+                    position:absolute;
+                    left:0;
+                    bottom:0;
+                    line-height:normal;
+                    color:#f85d5b;
+                    .txt-del {
+                        color:#999999;
+                        margin-left:rem(16);
+                        text-decoration:line-through;
+                    }
+					.txt-sub {
+                        margin-left:rem(16);
+						color:#999999;
+					}
+                }
+                .box-num {
+                    position:absolute;
+					right:0;
+					bottom:rem(-4);
+					color:#ccc;
+					font-size:rem(26);
+					&.icon {
+						font-size:rem(40);
+						width:rem(40);
+						height:rem(40);
+						line-height:rem(40);
+						overflow:hidden;
+					}
+                }
+				//数量增减
+				.box-change-num {
+                    position:absolute;
+                    right:rem(-20);
+                    bottom:rem(-20);
+				}
+            }
+        }
+    }
+	&:last-child {
+		border-bottom:0px;
+	}
+}
+// checkbox
+.mod-list-pro-chk {
+    .list-bd {
+		.bd-img	{
+			left:rem(60);	
+		}
+		.bd-ctn {
+			padding-left: rem(260);		
+		}
+	}
+}
+//失效状态
+.mod-list-pro-disabled {
+	@include opacity(0.8);
+	.list-bd .bd-img .img-box .flag {
+		background:#999;	
+	}
+}

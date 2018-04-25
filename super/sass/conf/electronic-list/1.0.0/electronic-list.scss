@@ -1,0 +1,176 @@
+/**
+* @file my-message.scss
+* @synopsis  electronic-list
+* @author liuhui, 13786279737@163.com
+* @version 1.0.0
+* @date 2017-03-07
+*/
+
+@import "common/common";
+@import "common/nav/back2top";
+@import "common/page-tips/1.0.0/page-tips";
+@import "common/tab/2.0.0/tab";
+html{
+	background: #f6f6f6;
+}
+.mod-tab{
+	width: 100%;
+	background-color:#fff;
+	.tab-hd{
+		// border-bottom: none;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		// left: 15%;
+		.hd-item{
+			width: 50%;
+			color: #999;
+			&.active {
+				color: #666;
+			}
+		}
+	}
+}
+.tab-bd{
+	margin-top:0!important;
+	background-color:#f6f6f6;
+	padding-top:rem(2);
+}
+.mod-item{
+	margin: rem(20) rem(20) 0 rem(20); 
+	background-color: #fff;
+	border-radius: 10px;
+	height: rem(150);
+	display: -webkit-box;
+	box-shadow: 0px 10px 10px rgba(238, 238, 238, 0.3);
+	&.already-billing {
+		background-image: url('https://ssl.bbgstatic.com/super/images/conf/electronic-ticket/1.0.0/bill-new.png');
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: rem(81) rem(72);
+	}
+	.item-line{
+		width: rem(8);
+		height: rem(150);
+		// background-color: #feb0ab;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		-webkit-box-flex: 1.0;
+	}
+	.item-lf{
+		max-width: rem(186);
+		-webkit-box-flex: 22.5;
+		border-right: rem(2) dashed #f1f4f6;
+		text-align: center;
+		padding: rem(36) 0 0 0;
+		.lf-prace{
+			font-size: rem(36);
+			line-height: rem(40);
+			font-weight: 400;
+			overflow: hidden;
+			span{
+				font-size: rem(22);
+			}
+		}
+		.lf-desc{
+			font-size: rem(26);
+			color: #999;
+			line-height: rem(30);
+		}
+	}
+	.item-rt{
+		max-width: rem(482);
+		-webkit-box-flex: 53.0;
+		margin: rem(30) 0 0 rem(40);
+		position: relative;
+		p{
+			line-height: rem(44);
+			font-size: rem(28);
+			color: #333;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: rem(480);
+			i{
+				font-size: rem(38);
+				vertical-align: inherit;
+			}
+			&.one-mark{
+				max-width: rem(364);	
+			}
+			&.two-mark{
+				max-width: rem(264);	
+			}
+		}
+		p:last-child{
+			i{
+				font-size: rem(38);
+				vertical-align: inherit;
+			}
+			line-height: rem(44);
+			font-size: rem(28);
+			color: #333;
+		}
+		.tag-box{
+			position: absolute;
+			right: rem(20);
+			top: rem(10);
+			span{
+				width: rem(94);
+				height: rem(28);
+				line-height: rem(28);
+				font-size: rem(24);
+				color: #f95d5b;
+				border: 1px solid #fb5c57;
+				border-radius: rem(14);
+				text-align: center;
+				margin-left: rem(10);
+			}
+		}
+	}
+}
+
+/* 电子小票列表为空 */
+.mod-list-empty{
+	.empty-img{
+		width: 40%;
+		margin: 0 auto;
+		padding: rem(100) 0 0 0;
+		text-align: center;
+		img{
+			width: 100%;
+		}
+	}
+	.empty-description{
+		width: 100%;
+		text-align: center;
+		color: #999;
+		font-size: rem(24);
+	}
+}
+
+/* 加载中... */
+.loading {
+    font-size: rem(24);
+    text-align: center;
+    color: #999;
+	position:relative;
+	padding: rem(50) 0 0 0;
+	// background-color:#f6f6f6;
+    &:before {
+        content: " ";
+        vertical-align: middle;
+		position:absolute;
+		top:50%;
+		margin-top:rem(-16);
+    }
+}
+.mod-tab .tab-hd .hd-item.active{
+	color:#333!important;
+}
+.mod-tab .tab-hd .hd-item{
+	color:#666!important;
+}
+.gray{
+	color: #999;
+}

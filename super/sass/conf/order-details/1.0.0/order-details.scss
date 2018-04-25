@@ -1,0 +1,776 @@
+/**
+* @file order-details.scss
+* @synopsis  订单详情页
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-03-07
+*/
+
+@import "common/common";
+@import "common/button/1.0.0/button";
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+$modColor:#fff;
+em,b,i{
+    font-style:normal;
+	font-weight:normal;
+}
+.order-details{
+    background-color:#f2f3f7;
+    width:$wFull;
+    height:$hFull;
+    // position:absolute;
+}
+
+/* 订单状态 */
+.mod-order-status{
+    position:$rela;
+    max-width:$wMax;
+    width:$wFull;
+    height:rem(166);
+    margin:0 auto;
+    background-color:$modColor;
+    overflow:hidden;
+    .status{
+        position:$abso;
+        top:rem(40);
+        left:rem(20);
+        line-height:rem(30);
+        display:inline-block;
+        span{
+            color:#f95d5b;
+            font-size:rem(30);
+            // margin-bottom:rem(30);
+            em{
+                font-size:rem(28);
+                color:#f95d5b;
+            }
+        }
+        .active{
+            color:#333;
+        }
+        // em{
+        //     color:#9a9a9a;
+        //     font-size:rem(30);
+        // }
+    }
+    .time-remaining{
+        position:$abso;
+        top:rem(40);
+        right:rem(20);
+        display:inline;
+        color:#f95d5b;
+        font-size:rem(26);
+        line-height:rem(26);
+        span{
+            color:#f95d5b;
+        }
+    }
+    .order-number{
+        position:$abso;
+        left:rem(20);
+        bottom:rem(40);
+        display:inline;
+        color:#999;
+        font-size:rem(26);
+        line-height:rem(26);
+    }
+    .date{
+        position:$abso;
+        right:rem(20);
+        bottom:rem(40);
+        display:inline;
+        color:#333;
+        font-size:rem(26);
+        line-height:rem(26);
+    }
+}
+/* 订单提货方式 */
+.mod-pick-method{
+    background-color:#fff;
+    width:$wFull;
+    max-width:$wMax;
+    margin:rem(20) auto rem(0);
+}
+.by-self{
+    margin:0 rem(20);
+    border-bottom:1px solid #f2f3f7;
+    padding:rem(40) 0 rem(10);
+    .by-self-hd{
+        line-height:rem(30);
+        font-size:rem(30);
+        color:#999;
+        .icon{
+            font-size:rem(38);
+            // margin-top:rem(10);
+            color:#bcc3c6;
+            vertical-align:middle;
+        }
+        .text{
+            margin-left:rem(10);
+        }
+    }
+    .by-self-bd{
+        position:$rela;
+        margin-top:rem(40);
+        font-size:rem(30);
+        p{
+            padding-left:rem(50);
+            line-height:rem(30);
+            margin-bottom:rem(20);
+        }
+        span{
+            color:#666;
+            font-size:rem(28);
+        }
+        em{
+            display:inline-block;
+            width:rem(510);
+            color:#333;
+            font-style:normal;
+            padding-left:rem(20);
+            font-size:rem(28);
+            vertical-align:text-top;
+        }
+    }
+}
+.by-send{
+    margin:0 rem(20);
+    border-bottom:1px solid #f2f3f7;
+    padding:rem(40) 0 rem(10);
+    .by-send-hd{
+        line-height:rem(30);
+        font-size:rem(30);
+        color:#999;
+        .icon{
+            font-size:rem(38);
+            // margin-top:rem(10);
+            color:#bcc3c6;
+            vertical-align:middle;
+        }
+        .text{
+            margin-left:rem(10);
+        }
+    }
+    .by-send-bd{
+        position:$rela;
+        margin-top:rem(40);
+        font-size:rem(30);
+        p{
+            padding-left:rem(50);
+            line-height:rem(30);
+            margin-bottom:rem(20);
+        }
+        span{
+            color:#666;
+            font-size:rem(28);
+        }
+        em{
+            color:#333;
+            font-style:normal;
+            font-size:rem(26);
+        }
+    }
+}
+.logistics{
+    padding:rem(30) rem(20) rem(40);
+    .logistics-hd{
+        font-size:rem(30);
+        line-height:rem(30);
+        color:#989898;
+        .icon{
+            font-size:rem(38);
+            vertical-align:middle;
+            color:#bcc3c6;
+        }
+        .text{
+            margin-left:rem(10);
+        }
+    }
+    .logistics-bd{
+        position:$rela;
+        margin-top:rem(40);
+        line-height:rem(26);
+        border-left:1px solid #dcdcdc;
+        margin-left:rem(18); 
+        span{
+            padding-left:rem(32);
+            line-height:rem(25);
+            margin:0;
+        }
+        .main-inf{
+            border-left:1px solid #dcdcdc;
+            padding-top:rem(35);
+        }
+        li{
+            display:none;
+        }
+        li:first-child{
+            padding-top:0;
+        }
+        li .inf{
+            display:block;
+            position:$rela;
+            font-size:rem(26);
+            color:#333;
+            margin-bottom:rem(20);
+        }
+        li:first-child .inf{
+            border-left:1px solid #fff;
+        }
+        /* 基于伪类实现物流地址前部红点小坐标 */
+        li .inf:before{
+            content:" ";
+            position:$abso;
+            border-radius:50%;
+            // border:1px solid #000;
+            top:rem(18);
+            left:rem(-11);
+            z-index:101;
+            width:rem(20);
+            height:rem(20);
+            background-color:#bcc3c6;
+        }
+        li:first-child .inf:before{
+            content:" ";
+            position:$abso;
+            border-radius:50%;
+            // border:1px solid #000;
+            top:rem(18);
+            left:rem(-10.5);
+            z-index:101;
+            width:rem(20);
+            height:rem(20);
+            background-color:#fa5e5c;
+        }
+
+        // after伪类遮罩多余border
+        li:first-child .inf:after{
+            content:" ";
+            position:$abso;
+            // border:1px solid #dcdcdc;
+            top:rem(-2);
+            left:rem(-10);
+            z-index:100;
+            height:rem(20);
+            width:rem(20);
+            background-color:#fff;
+        }
+        .date,.time{
+            font-size:rem(24);
+            line-height:rem(24);
+            color:#ccc;
+        }
+        .time{
+            padding-left:0;
+        }
+        .more{
+            // z-index:0;
+            position:$abso;
+            top:rem(10);
+            right:rem(20);
+            color:#b6b6b6;
+            font-size:rem(30);
+        }
+    }
+}
+.open{
+    //!important覆盖element.style样式
+    -ms-transform:rotate(180deg)!important;     /* IE 9 */
+    -moz-transform:rotate(180deg)!important;    /* Firefox */
+    -webkit-transform:rotate(180deg)!important; /* Safari 和 Chrome */
+    -o-transform:rotate(180deg)!important; 
+    transform:rotate(180deg)!important;
+        }
+.close{
+    //!important覆盖element.style样式
+    -ms-transform:rotate(360deg)!important;     /* IE 9 */
+    -moz-transform:rotate(360deg)!important;    /* Firefox */
+    -webkit-transform:rotate(360deg)!important; /* Safari 和 Chrome */
+    -o-transform:rotate(360deg)!important; 
+    transform:rotate(360deg)!important;
+}
+.moreAdress{
+	animation:spin180 1s 1 forwards;
+	-webkit-animation:spin180 1s 1 forwards;
+}
+.lessAdress{
+	animation:spin360 1s 1 forwards;
+	-webkit-animation:spin360 1s 1 forwards;	
+}
+.flex{
+	animation:show 0.5s 1 forwards;
+	-webkit-animation:show 0.5s 1 forwards;
+}
+@keyframes show{
+	from {
+		display:none;
+		}
+	to {
+		display:flex;
+		}
+}
+
+@-webkit-keyframes show{
+	from {
+		display:none;
+		}
+	to {
+		display:flex;
+		}
+}
+@keyframes spin360{
+	from {
+		transform:rotate(180deg);
+		z-index:1;
+		}
+	to {
+		transform:rotate(360deg);
+		z-index:0;
+		}
+}
+
+@-webkit-keyframes spin360{
+	from {
+		transform:rotate(180deg);
+		z-index:1;
+		}
+	to {
+		transform:rotate(360deg);
+		z-index:0;
+		}
+}
+@keyframes spin180{
+	from {
+		transform:rotate(360deg);
+		z-index:0;
+		}
+	to {
+		transform:rotate(180deg);
+		z-index:1;
+		}
+}
+
+@-webkit-keyframes 180{
+	from {
+		transform:rotate(360deg);
+		z-index:0;
+		}
+	to {
+		transform:rotate(180deg);
+		z-index:1;
+		}
+}
+/* 订单商品详情 */
+.mod-product-des{
+    position:$rela;
+    width:$wFull;
+    max-width:$wMax;
+    margin:rem(20) auto 0;
+    background-color:#fff;
+    .product-des-hd{
+        padding:0 rem(20);
+        height:rem(90);
+        color:#666;
+        font-size:rem(28);
+        line-height:rem(90);
+        .icon{
+            font-size:rem(34);
+            color:#bbc1c5;
+        }
+        .text{
+            margin-left:rem(10);
+        }
+    }
+    .product-des-bd{
+        display:flex;
+        padding:rem(20) rem(20);
+        background-color:#f8fbfb;
+        .img{
+            height:rem(160);
+        }
+        img{
+            width:rem(160);
+            height:rem(160);
+        }
+        .group-status{
+            position:$abso;
+            right:rem(20);
+            top:rem(20);
+        }
+        .gd-title{
+            position:$abso;
+            font-size:rem(24);
+            color:#fff;
+            span{
+                display:inline-block;
+                border-radius:rem(2);
+                width:rem(38);
+                height:rem(38);
+                line-height:rem(38);
+                text-align:center;
+            }
+            .tag-yushou{
+                background-color:#50c385;
+            }
+            .tag-tuangou{
+                background-color:#f85e5b;
+            }
+        }
+        .inf{
+            position:$rela;
+            flex-grow:1;
+            height:rem(160);
+            .description{
+                line-height:rem(35);
+                display:block;
+                font-size:rem(28);
+                color:#333;
+                margin-left:rem(20);
+                word-break: break-all;
+                text-overflow: ellipsis;
+                display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+                -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                -webkit-line-clamp: 2; /** 显示的行数 **/
+                overflow: hidden;  /** 隐藏超出的内容 **/
+            }
+            .category{
+                display:block;
+                font-size:rem(24);
+                color:#999;
+                margin-left:rem(20);
+            }
+            .price{
+                position:$abso;
+                display:block;
+                font-size:rem(28);
+                line-height:rem(28);
+                color:#666;
+                margin-left:rem(20);
+                bottom:rem(10);
+            }
+            .original-price{
+                font-size:rem(18);
+                color:#b5b5b5;
+                margin-left:rem(10);
+                text-decoration:line-through;
+            }
+            .count{
+                position:$abso;
+                color:#ccc;
+                font-size:rem(24);
+                bottom:0;
+                right:rem(20);
+            }
+        }
+    }
+    .product-detail{
+        display:none;
+    }
+    .product-des-ft{
+        position:$rela;
+        // margin:0 rem(20);
+    }
+    .mode-payment,.invoice,.discount,.single-pay{
+        // height:rem(90);
+        padding:0 rem(20);
+        position:$rela;
+        // line-height:rem(90);
+        font-size:rem(28);
+        color:#666;
+        // text-align:justify;
+        span{
+            line-height:rem(90);
+        }
+    }
+    .single-pay{
+        // display:flex;
+        // justify-content:flex-end;
+        height:rem(125);
+        border-bottom:1px solid #f3f3f6; 
+        text-align:right;
+        // line-height:rem(69);
+        // padding-top:rem(28);
+        span{
+            // float:right;
+            line-height:rem(50);
+            font-size:rem(28);
+            color:#333;
+            display:block;
+            em{
+                color:#f85e5b;
+            }
+        }
+        span:first-child{
+            margin-top:rem(28);
+        }
+    }
+    .mode-payment{
+        border-bottom:1px solid #f3f3f6;
+    }
+    .invoice{
+        text-align:right;
+        span{
+            display:block;
+            // line-height:rem(28);
+        }
+        .company{
+            display:inline-block;
+            line-height:rem(28);
+            padding-bottom:rem(30);
+            // padding-bottom:rem(30);
+        }
+    }
+    .discount{
+        border-top:1px solid #f3f3f6;
+    }
+    .left{
+        float:left;
+        // line-height:rem(90);
+    }
+    .right{
+        float:right;
+    }
+    .bill-inf{
+        line-height:rem(28);
+    }
+    .wrap-more{
+            width:$wFull;
+            height:rem(40);
+            display:none;
+    }
+    .order-more{
+            position:$abso;
+            display:none;
+            width:rem(102);
+            height:rem(38);
+            top:rem(2);
+            left:50%;
+            margin-left:rem(-51);
+            background-color:#f8f8f8;
+            text-align:center;
+            vertical-align:middle;
+            .icon{
+                color:#fff;
+                font-size:rem(40);
+            }
+    }
+
+}
+/* 订单费用详情 */
+.mod-order-cost{
+    width:$wFull;
+    max-width:$wMax;
+    margin:rem(20) auto 0;
+    padding:rem(40) 0 0;
+    background-color:#fff;
+    p{
+        margin:0 rem(20) rem(20);
+        font-size:rem(28);
+        line-height:rem(28);
+        color:#666;
+    }
+    .last{
+        padding-right:rem(20);
+        margin:0;
+        height:rem(90);
+        color:#333;
+        line-height:rem(90);
+        border-top:1px solid #f3f3f6;
+        .left{
+            margin-left:rem(20);
+        }
+        // .right:{
+        //     padding-right:rem(20);
+        // }
+    }
+    .right{
+        float:right;
+        color:#f95d5b;
+    }
+}
+/* 支付款项类别 */
+.mod-payment-button{
+    width:$wFull;
+    max-width:$wMax;
+    background-color:#f1f4f6;
+    margin:0 auto;
+    padding:rem(40) 0 rem(110);
+    .wrop{
+        // position:$rela;
+        // overflow:hidden;
+        width:100%;
+        max-width:rem(710);
+        margin:0 auto;
+        padding:0 rem(20);
+    }
+    .ui-button{
+        font-size:rem(30);
+        height:rem(88);
+		line-height:rem(88);
+        border-radius:rem(8);
+        margin-bottom:rem(30);
+        background-color:#f95d5b;
+
+        // margin:0 auto rem(30);
+
+    }
+    .ui-button:active{
+        background-color:#fb7674;
+    }
+    .last{
+        margin-bottom:0;
+    }
+    .check{
+        background-color:#fff;
+        border:2px solid #ccc;
+        color:#333;
+    }
+    .check:active{
+        background-color:#fff;
+    }
+    .again{
+        background-color:#fff;
+        border:2px solid #ccc;
+        color:#333;
+    }
+    .again:active{
+        background-color:#fff;
+    }
+	.cancel{
+        background-color:#fff;
+        border:2px solid #ccc;
+        color:#333;		
+	}
+    .cancel:active{
+        background-color:#fff;
+    }
+}
+.disable,.disable:active,.disable:hover{
+    cursor: text;
+    background-color: #fff!important;
+    border-color: #ebebeb;
+    color: #bfbfbf;
+}
+.ui-contnt{
+	width:rem(500);
+}
+.ui-select {
+    vertical-align: middle;
+    display: inline-block;
+    resize: none;
+    position: relative;
+	margin-top:rem(50);
+    width: 100%; 
+    font-size:rem(24);
+}
+.ui-select:after {
+    position: absolute;
+    right: rem(20);
+    top: rem(24);
+    font-size: rem(30);
+    font-family: "iconfont";
+    content: "\e605";
+    height: rem(28);
+    line-height: rem(28);
+    overflow: hidden;
+    color: #ccc;
+}
+.ui-select select {
+    position: relative;
+    cursor: pointer;
+    width: rem(476);
+    height: rem(76);
+    line-height: rem(76);
+    background-color: #f8f8f8;
+    border-radius: 0px;
+    padding: 0px rem(20);
+    font-size: rem(28);
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    color: #ccc; 
+    border:none;
+	border-radius:rem(10);
+}
+.ui-select select option {
+    font-weight: normal;
+	color:#ccc;
+    display: block;
+    white-space: pre;
+    min-height: 0.85333rem; 
+}
+.ui-wrop {
+    vertical-align: middle;
+    display: inline-block;
+    resize: none;
+    position: relative;
+    width: 100%; 
+	margin-top:rem(30);
+    font-size:rem(24);
+}
+.ui-wrop .ui-wrop-input{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    position: relative;
+    cursor: pointer;
+    width: rem(476);
+    height: rem(76);
+    line-height: rem(76);
+    background-color: #f8f8f8;
+    border-radius: 0px;
+    margin: 0px auto;
+    font-size: rem(28);
+	text-align:left;
+	padding-left:rem(30);
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    color: #666; 
+    border:none;
+	border-radius:rem(10);
+	&::-webkit-input-placeholder{
+		color:#ccc;
+		font-weight:normal;
+	}
+}
+//联系商家遮罩层样式
+.shad-contact{
+    display:none;
+    z-index: 1024;
+    position:fixed;
+    bottom:rem(130);
+    left:50%;
+    margin-left:rem(-250);
+    width:rem(500);
+    // height:rem(800);
+    // border:1px solid #000;
+    .item{
+        width:rem(500);
+        height:rem(100);
+        background-color:#fff;
+        border-radius:rem(20);
+        text-align:center;
+        line-height:rem(100);
+        font-size:rem(30);
+        margin-top:rem(2);
+        color:#333;
+    }
+    .cancel{
+        margin-top:rem(20);
+    }
+    .item:active{
+        background-color:#efefef;
+    }
+}
+.hide-all{
+    display:none;
+    position:fixed;
+    width:100%;
+    // height:100%;
+    top:0;
+    background-color:#000;
+    opacity:.3!important;
+
+}

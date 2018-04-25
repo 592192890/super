@@ -1,0 +1,112 @@
+ /**
+* @file activity.scss
+* @synopsis  支付成功
+* @author liuhui, 13786279737@163.com
+* @version 1.0.0
+* @date 2017-03-29
+*/
+
+@import "common/common";
+@import "common/box/1.0.0/box";
+@import "common/button/1.0.0/button";
+@import "common/item/1.0.0/item";
+@import "common/list/1.0.0/list";
+
+.item-info{
+	background-color: #f2f3f7;
+	.info-tips{
+		font-size:rem(30);
+		padding:rem(40) 0 rem(50) 0;
+		text-align:center;
+		border-bottom: 1px solid #e5e5e5;
+		background-color: #fff;
+		.tips-txt{
+			font-size:rem(30);
+			line-height:rem(30);
+			font-weight:normal;
+			padding-top:rem(40);
+			color: #333;
+		}
+		.tips-detail{
+			color: #999;
+			margin: rem(20) 0 0 0;
+		}
+	}
+	.info-detail{
+		position: relative;
+		padding: rem(30) 0 rem(15) 0;
+		background-color: #fff;
+		.list-hd{
+			padding:0px 0px rem(20) 0px;
+			.hd-l{
+				font-size: rem(28);
+				color: #666;
+			}
+			.hd-place{
+				color: #333;
+				font-size: rem(30);
+			}
+			.hd-r{
+				font-size: rem(28);
+				color: #333;
+				line-height: rem(46);
+				span{
+					font-size: rem(38);
+					color: #f85e5b;					
+				}
+			}
+		}
+		.info-txt{
+			padding:rem(54) 0px rem(20) 0px;
+			.hd-r{
+				top: rem(54);
+			}
+		}
+		.hd-txt{
+			width: 100%;
+			text-align: right;
+			position: absolute;
+			top: rem(86);
+			color: #b8b8b8;
+			right: rem(20);
+		}
+	}
+	.info-button{
+		margin: rem(32) rem(20);
+		.button-order{
+			background-color: #fff;
+			color:#ff6666;
+			margin: 0 0 rem(20) 0; 
+			border: rem(2) solid #f85d5b;
+		}
+		.button-home{
+			background-color: #fff;
+			color: #5d5d5d;
+			border: rem(2) solid #ccc;
+		}
+	}
+}
+.mod-item{
+	margin: 0;
+}
+/*body end*/
+/*支付状态图标-成功 begin*/
+.tips-success{
+	&:after{
+		content: "\e617";
+		color:#f85d5b;
+		font-size:rem(105);
+		line-height:rem(105);
+	}
+}
+/*支付状态图标-成功 end*/
+/*支付状态图标-失败 begin*/
+.tips-error{
+	&:after{
+		content: "\e61b";
+		color:#f85d5b;
+		font-size:rem(105);
+		line-height:rem(105);
+	}	
+}
+/*支付状态图标-失败 end*/

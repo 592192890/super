@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<!-- @author 吕永华 -->
+
+<html>
+
+<head>
+    <title>我的订单</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/all-order/1.0.0/all-order.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <!-- 订单详情页面 begin -->
+    <div class="page-view all-order jLazy">
+        <!-- 菜单栏 start -->
+        <div class="ui-tab ui-tab-default jWrap">
+            <div class="tab-hd">
+                <a class="hd-item active" href="#0" role="tabItem" data-url="/member/orders?category=0"><span class="item-line">全部</span></a>
+                <a class="hd-item" href="#1" role="tabItem" data-url="/member/orders?category=1"><span class="item-line">待付款<em>0</em></span></a>
+                <a class="hd-item" href="#3" role="tabItem" data-url="/member/orders?category=3"><span class="item-line">待发货<em>0</em></span></a>
+                <a class="hd-item" href="#4" role="tabItem" data-url="/member/orders?category=4"><span class="item-line">待收货</span></a>
+            </div>
+        </div>
+        <!-- 菜单栏 end -->
+        <div id="jOrderList" class="order-list">
+        <!-- 订单1 start -->
+            <div class="mod-product-des">
+            <a href="#">
+                <div class="product-des-hd store">
+                    <i class="icon iconfontmod">&#xe7c1;</i><span class="text">云猴全球购自营店</span><span class="status">待付款</span>
+                </div>
+                <ul>
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                </ul>
+            </a>
+                <div class="product-des-ft">
+                    <div class="wrap-more jWrapMore">
+                        <div class="order-more jOrderMore" data-status="close">
+                            <i class="icon iconfontmod">&#xe774;</i>
+                        </div>
+                    </div>
+                    <div class="inf">
+                        <span><em data-end-time="1492769092000" class="count-down jCountTime">24:20:23</em></span><span class="right">尾款:<em>￥280.00</em></span>
+                    </div>
+                    <div class="payment">
+                        <button class="disable  ui-button ui-button-white">支付尾款</button>
+                    </div>
+                    <div class="order-more jOrderMore" data-status="close">
+                        <i class="icon iconfontmod">&#xe774;</i>
+                    </div>
+                </div>
+            </div>
+            <!-- 订单1 end -->
+            <!-- 订单2 start -->
+            <div class="mod-product-des">
+                <div class="product-des-hd store">
+                    <i class="icon iconfontmod">&#xe7c1;</i><span class="text">云猴全球购自营店</span><span class="status">待付款</span>
+                </div>
+                <ul>
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                </ul>
+                <div class="product-des-ft">
+                    <div class="wrap-more jWrapMore">
+                        <div class="order-more jOrderMore" data-status="close">
+                            <i class="icon iconfontmod">&#xe774;</i>
+                        </div>
+                    </div>
+                    <div class="inf">
+                        <span><em data-end-time="1492240300000" class="count-down jCountTime">24:20:23</em></span><span class="right">定金:<em>￥280.00</em></span>
+                    </div>
+                    <div class="payment">
+                        <button class="ui-button">支付尾款</button>
+                        <button class="check jAbort ui-button ui-button-white">取消订单</button>
+                    </div>
+                    <div class="order-more jOrderMore" data-status="close">
+                        <i class="icon iconfontmod">&#xe774;</i>
+                    </div>
+                </div>
+            </div>
+            <!-- 订单2 end -->
+            <!-- 订单3 start -->
+            <div class="mod-product-des">
+                <div class="product-des-hd store">
+                    <i class="icon iconfontmod">&#xe7c1;</i><span class="text">云猴全球购自营店</span><span class="status">已完成</span>
+                </div>
+                <ul>
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                </ul>
+                <div class="product-des-ft">
+                    <div class="wrap-more jWrapMore">
+                        <div class="order-more jOrderMore" data-status="close">
+                            <i class="icon iconfontmod">&#xe774;</i>
+                        </div>
+                    </div>
+                    <div class="inf">
+                        <span><em data-end-time="1492029800000" class="count-down jCountTime">24:20:23</em></span><span class="right">合计:<em>￥280.00</em></span>
+                    </div>
+                    <div class="payment">
+                        <button class="check ui-button ui-button-white">再次购买</button>
+                        <button class="check ui-button ui-button-white">查看订单</button>
+                    </div>
+                    <div class="order-more jOrderMore" data-status="close">
+                        <i class="icon iconfontmod">&#xe774;</i>
+                    </div>
+                </div>
+            </div>
+            <!-- 订单3 end -->
+            <!-- 订单4 start -->
+            <div class="mod-product-des">
+                <div class="product-des-hd store">
+                    <i class="icon iconfontmod">&#xe7c1;</i><span class="text">云猴全球购自营店</span><span class="status">已发货</span>
+                </div>
+                <ul>
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                    <!--#include file="/super/html/module/all-order/mod_brief/1.0.0/order-brief.html"-->
+                </ul>
+                <div class="product-des-ft">
+                    <div class="wrap-more jWrapMore">
+                        <div class="order-more jOrderMore" data-status="close">
+                            <i class="icon iconfontmod">&#xe774;</i>
+                        </div>
+                    </div>
+                    <div class="inf">
+                        <span><em data-end-time="1492248800000" class="count-down jCountTime">24:20:23</em></span><span class="right">合计:<em>￥280.00</em></span>
+                    </div>
+                    <div class="payment">
+                        <a class="jAffirm check ui-button ui-button-white">确认收货</a>
+                        <button class="check ui-button ui-button-white">再次购买</button>
+                        <button class="check ui-button ui-button-white">查看订单</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 订单4 end -->
+        </div>
+    </div>
+    <!-- 订单详情页面 end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+        // window[$PAGE_DATA]=window[$PAGE_DATA] || {};
+        // window[$PAGE_DATA]['url'] = {
+        //     ordersUrl: 'http://m.yunhou.com/member/orders'
+        // };
+        require(['conf/all-order/1.0.0/all-order']);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* global env vars */
+/* ui components customize consts */
+/* common includes */
+/* 选中状态 */
+.ui-layer-mask {
+  opacity: 0.3; }
+
+.mod-jump-page {
+  width: 12.8rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 0.21333rem;
+  padding: 0.42667rem 0.42667rem 0.64rem;
+  font-size: 0.512rem;
+  background: url("http://img1.bbgstatic.com/15c1feef44f_bc_d7b1ed279ce7c680bf3b19b8828cb692_567x295.jpeg") #fff 50% 0 no-repeat;
+  background-size: 100%; }
+  .mod-jump-page .bd-cover {
+    width: 6.18667rem;
+    height: 4.69333rem;
+    margin: 2.56rem auto 1.28rem; }
+    .mod-jump-page .bd-cover img {
+      display: block;
+      width: 6.18667rem;
+      height: 4.69333rem; }
+  .mod-jump-page .page-bd {
+    padding-top: 1.06667rem; }
+    .mod-jump-page .page-bd .ui-btn-pr {
+      display: inline-block;
+      text-align: center;
+      border-radius: 0.93867rem;
+      box-sizing: border-box;
+      background-color: #fb7674;
+      border-color: #fb7674;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.21333rem 1.36533rem;
+      font-size: 0.64rem; }
+    .mod-jump-page .page-bd .link {
+      display: inline-block;
+      font-size: 0.46933rem;
+      margin: 0.21333rem 0 0.42667rem; }
+  .mod-jump-page .page-ft {
+    display: flex; }
+    .mod-jump-page .page-ft .ft-item {
+      flex: 1; }
+      .mod-jump-page .page-ft .ft-item .icon {
+        display: inline-block;
+        width: 1.87733rem;
+        height: 1.87733rem; }
+        .mod-jump-page .page-ft .ft-item .icon img {
+          display: block;
+          width: 1.87733rem;
+          height: 1.87733rem; }

@@ -1,0 +1,37 @@
+/* 公用项目字体引用 */
+@font-face {
+  font-family: "iconfont";
+  src: font-url('common/1.0.0/iconfont.eot', false, true);
+  src: font-url('common/1.0.0/iconfont.eot#iefix', false, true) format('embedded-opentype'),
+      font-url('common/1.0.0/iconfont.woff', false, true) format('woff'),
+      font-url('common/1.0.0/iconfont.ttf', false, true) format('truetype'),
+      font-url('common/1.0.0/iconfont.svg', false, true) format('svg');
+}
+.iconfont {
+  font-family: iconfont;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*mod*/
+//本项目字体引用
+@font-face {
+  font-family: "iconfontmod";
+  src: font-url('module/1.0.0/iconfont.eot', false, true);
+  src: font-url('module/1.0.0/iconfont.eot#iefix', false, true) format('embedded-opentype'),
+      font-url('module/1.0.0/iconfont.woff', false, true) format('woff'),
+      font-url('module/1.0.0/iconfont.ttf', false, true) format('truetype'),
+      font-url('module/1.0.0/iconfont.svg', false, true) format('svg');
+}
+.iconfontmod {
+  font-family: iconfontmod;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+

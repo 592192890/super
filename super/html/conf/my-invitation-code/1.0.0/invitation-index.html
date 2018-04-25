@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+<head>
+    <title>我的邀请码</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/my-invitation-code/1.0.0/invitation-index.css" type="text/css" charset="utf-8" data-cdn="//s1.bbgstatic.com/super/css/conf/my-invitation-code/1.0.0/invitation-index.css">
+</head>
+
+<body>
+    <div class="page-view">  
+        <!-- 顶部banner -->
+        <header></header>
+        <!-- 个人信息  -->
+        <div class="mod-invite-info bg-and-mg">
+          <ul class="invite-list">
+            <li>
+                <span class="f-l">步步高员工（1000031681）</span>
+                <span class="f-r green">已认证</span>
+            </li>
+            <li>
+              <span class="f-l">我的邀请码</span>
+              <span class="f-r">888888</span>
+            </li>
+            <li>
+              <span class="f-l">已成功邀请3人</span>
+              <a href="./invitation-list.html" class="f-r red">查看详情<i class="iconfontmod icon right-arrow">&#xe76d;</i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- 邀请码  -->
+        <div class="mod-inviter bg-and-mg jInviteCodeBox">
+            <ul class="invite-list list-longline">
+                <li>
+                    <span class="f-l">助力邀请人</span>
+                </li>
+                <li class="inviter-from">
+                    <input type="num" name="" value="" class="invite-code-input f-l jInviteCode" placeholder="请填写邀请码">
+                    <button type="button" class="ui-btn-primary-line f-l jInviteBtn">确定</button>
+                </li>
+            </ul>
+        </div>
+        <!-- 邀请人  -->
+        <div class="mod-inviter-already bg-and-mg jInviterBox">
+          <ul class="invite-list list-longline">
+            <li>
+              <span class="f-l">我的助力邀请人</span>
+              <span class="f-r jInviteText">18657584567</span>
+            </li> 
+          </ul>
+        </div>
+        <!-- 邀请攻略  -->
+        <div class="mod-invite-strategy bg-and-mg">
+            <ul class="invite-list list-longline">
+                <li>
+                    <span class="f-l">好友邀请攻略</span>
+                </li>
+            </ul>
+            <div class="qr-code clearfix">
+                <img src="//s1.bbgstatic.com/super/images/conf/my-invitation-code/1.0.0/qr-code.png" class="f-l" alt="二维码">
+                <div class="qr-code-dec f-l">长按识别二维码，关注【步步高大会员】公众账号，注册填写邀请码，就能助力您的好友哦！</div>
+            </div>
+            <div class="warm-prompt clearfix">
+                <i class="f-l iconfontmod icon bulb">&#xe76e;</i>
+                <span class="f-l">温馨提示：首次登录未提交邀请码，可在7天有效期内，进入【会员中心】-【我的邀请码】中填写哦！</span>
+            </div>
+        </div>
+        <!-- 分享按钮  -->
+        <div class="mod-invite-btn">
+            <button type="button" class="ui-btn-primary ui-btn-block jShareBtn">呼朋唤友</button>
+        </div>
+        <!-- 遮罩层  -->
+        <div class="mod-mask-layer jMaskLayer"></div> 
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+        window['$PAGE_DATA'] = window['$PAGE_DATA'] || {
+            'shareData':{
+                'title':'我的邀请码',
+                'desc':'关注【步步高大会员】公众账号，注册填写邀请码，就能助力您的好友哦！',
+                'imgUrl':'//s1.bbgstatic.com/super/images/conf/my-invitation-code/1.0.0/zl-share.jpg',
+                'link':'//wx.yunhou.com/super/member?channel=&inviteCode=130107'
+            }
+        };
+        window['$PAGE_DATA']['url'] = {
+            addInviteCodeUrl: 'http://localhost:3003/getjson/inviteCode',
+        };
+        require(['conf/my-invitation-code/1.0.0/invitation-index']);
+    </script>
+</body>
+
+</html>

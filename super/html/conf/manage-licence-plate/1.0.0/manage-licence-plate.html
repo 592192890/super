@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>管理车牌</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/manage-licence-plate/1.0.0/manage-licence-plate.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- 搜索车牌 -->
+        <div class="mod-search-form clearfix">
+            <div class="area f-l jArea">
+                <span class="jAreaTxt">湘A</span>
+                <i class="iconfontmod icon">&#xe793;</i>
+            </div>
+            <div class="license-number f-l">
+                <input type="text" class="jLicenseNum" placeholder="车牌后5位" maxlength="5">
+            </div>
+            <div class="search-btn f-r jBind">绑定</div>
+        </div>
+        <div class="mod-licence-address jAreaBox">
+            <!-- 省份 -->
+            <ul class="province clearfix">
+                <li class="active">湘</li>
+                <li>湘</li>
+                <li>京</li>
+                <li>粤</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+                <li>湘</li>
+            </ul>
+            <!-- 城市 -->
+            <ul class="city clearfix" style="display:none;">
+                <li class="active">A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+            </ul>
+        </div>
+        <!-- 有车牌 -->
+        <!-- <div class="mod-has-licence jHasLicence">
+            <div class="remain-msg">您还可以绑定<i class="red jRemainNum">0</i>个车牌（最多添加2个车牌）</div>
+            <ul class="licence-plate-list">
+                <li class="licence-plate-item clearfix">
+                    <div class="licence-plate-num f-l jLicenseTxt">湘A88888</div>
+                    <div class="handle f-l">
+                        <i class="iconfontmod icon jDelete">&#xe78f;</i>删除
+                    </div>
+                </li>
+                <li class="licence-plate-item clearfix">
+                    <div class="licence-plate-num f-l jLicenseTxt">湘A88888</div>
+                    <div class="handle f-l">
+                        <i class="iconfontmod icon jDelete">&#xe78f;</i>删除
+                    </div>
+                </li>
+            </ul>
+            <div class="goback jGoBack">返回</div>
+        </div> -->
+        
+        <!-- 没有车牌 -->
+        <div class="none-licence-plate jNoLicence">
+            <img src="//s1.bbgstatic.com/super/images/conf/park/1.0.0/none-licence-plate.png" alt="">
+            <p>暂无历史车牌~</p>
+            <p class="gray">您还可以绑定<i class="red jRemainNum">2</i>个车牌（最多添加2个车牌）</p>
+            <div class="ui-btn-line ui-btn-radius goback-btn jGoBack">返回上一级</div>
+        </div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA || {};
+        window['$PAGE_DATA']['shopId'] = '0';
+        window['$PAGE_DATA']['url'] = {
+            'pay':'http://wx.yunhou.com/super/park/pay',
+            'addcar':'http://wx.yunhou.com/super/park/oprate/add',
+            'deletecar':'http://wx.yunhou.com/super/park/oprate/delete',
+        };
+        require(['conf/manage-licence-plate/1.0.0/manage-licence-plate']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+/**
+* @file application-ticket.scss
+* @synopsis  申请开票
+* @author zhouguangcheng,  zgc7788@gmail.com 
+* @version 1.0.0
+* @date 2017-10-16
+*/
+@import "common/common";
+@import 'common/box/2.0.0/box';
+@import "common/list/1.0.0/list";
+
+$red:#f95d5b;
+$gray:#f6f6f6;
+.page-view {
+    background-color: $gray;
+    max-width: rem(750);
+    margin: 0 auto;
+}
+.disable{
+    display: none;
+}
+header{
+    height: rem(222);
+    background-color: #fff7f7;
+    background-image:image-url('//ssl.bbgstatic.com/super/images/conf/application-ticket/1.0.0/dfk.png');
+    background-repeat:no-repeat;
+    background-size: rem(226) rem(166);
+    background-position:rem(436) rem(26);
+    p{
+        margin-left: rem(20);
+        &.receipt-num{
+            line-height: rem(36);
+            font-size: rem(36);
+            color: $red;
+            padding-top: rem(52);
+        }
+        &.actually-paid{
+            line-height: rem(24);
+            font-size: rem(24);
+            color: $red;
+            padding:rem(12) 0 rem(30) 0;
+        }
+        &.trade-date{
+            line-height: rem(24);
+            font-size: rem(24);
+            color: #999;
+        }
+    }
+}
+.mod-edit-invoice{
+    border-top: rem(20) solid $gray;
+    background: #fff;
+    .text{
+        color: #666;
+    }
+    .invoice-type-title{
+        height: rem(98);
+        line-height: rem(98);
+        font-size: rem(28);
+        margin: 0 rem(20);
+        &:first-child{
+            border-bottom: 1px solid #f2f3f7;
+        }
+        i{
+            font-size: rem(36);
+            color: #bbc1c5;
+        }
+    }
+    .invoice-type{
+        margin: rem(26) 0;
+        .invoice{
+            height: rem(76);
+            line-height: rem(76);
+        }    
+        .type-txt{
+            margin-left: rem(58);
+            b{
+                font-style: normal;
+                font-weight: 500;
+                font-size: rem(24);
+                color: #999;
+            }
+        }
+        i {
+            height: rem(76);
+            margin-right: rem(20);
+            color: #bbc1c5;
+            &:after{
+                content: "\e616";
+                font-family: "iconfontmod";
+                font-size: rem(36);
+            }
+            &.active {
+                color: $red;
+                &:after{
+                    content: "\e617";
+                }
+            }
+        }
+    }
+    .invoice-rise{
+        height: rem(90);
+        line-height: rem(90);
+        font-size: rem(28);
+        padding: 0 rem(20);
+        border-top: 1px solid #f2f3f7;
+        .right-btn{
+            height: rem(90);
+            text-align: right;
+            .jRiseName{
+                display: inline-block;
+                width: rem(500);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                float: left;
+            }
+        }
+        i{
+            font-size: rem(36);
+            color: #bbc1c5;
+            &:first-child{
+                color: #bbc1c5;
+            }
+            &:last-child{
+                color: #ccc;
+            }
+        }
+        .required{
+            width: rem(500);
+            height: rem(90);
+            line-height: rem(90);
+            text-align: right;
+            font-size: rem(24);
+            color: #999;
+            border: none;
+            &:-webkit-input-placeholder{
+                font-size: rem(24);
+                color: #999;
+            }
+        }
+    }
+}
+.mod-remark{
+    background: #fff;
+    padding: rem(20);
+    border-top: rem(20) solid $gray;
+    border-bottom: rem(20) solid $gray;
+    .attention{
+        line-height: rem(66);
+        font-size: rem(22);
+        color: $red;
+    }
+    .remark-title{
+        height: rem(28);
+        line-height: rem(28);
+        margin-top: rem(8);
+        i{
+            font-size: rem(36);
+            color: #bbc1c5;
+        }
+    }
+    .remark-input{
+        width: rem(710);
+        height: rem(240);
+        line-height: rem(46);
+        background: #f8f8f8; 
+        border: none;
+        border-radius: rem(6);
+        margin-top: rem(20);
+        resize : none;
+        //text-indent: rem(20);
+        padding: rem(20);
+        box-sizing: border-box;
+        &::-webkit-input-placeholder{
+            color:#999;
+        }
+    }
+}
+.rise-name{
+    width: rem(480);
+    height: rem(76);
+    background: #f8f8f8;
+    color:#999;
+    border: none;
+    border-radius: rem(6);
+    text-indent: rem(20);
+    &::-webkit-input-placeholder{
+        font-size:rem(28);
+        color:#999;
+        font-weight:normal;
+    }
+}
+.risetype-box{
+    // margin: rem(40);
+    text-align: initial;
+    div{
+        height: rem(76);
+        line-height: rem(76);
+    }    
+    .type-txt{
+        b{
+            font-style: normal;
+            font-weight: 500;
+            font-size: rem(24);
+            color: #999;
+        }
+    } 
+    i {
+        height: rem(70);
+        color: #bbc1c5;
+        &:after{
+            content: "\e616";
+            font-family: "iconfontmod";
+            font-size: rem(36);
+        }
+        &.active {
+            color: $red;
+            &:after{
+                content: "\e617";
+            }
+        }
+    }
+}
+.mod-submit-btn{
+    padding: rem(20);
+    background: #fff;
+}
+//收货地址
+.bd-item{
+    background:#f8f8f8;
+    color:#999;
+    margin:0 rem(20) 0 rem(58);
+    border-radius:rem(6);
+}
+.ui-list {
+    .list-hd{
+        padding: 0;
+        .address-empty{
+            padding: rem(8) 0;
+        }
+    }
+    .has-address{
+        color:#333;
+    }
+    .arrow{
+        &:after{
+        font-size:rem(36);
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/**
+* @file float-layer.scss
+* @synopsis  底部固定层
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-07
+*/
+
+body {
+	padding-bottom:rem(160);
+}
+.mod-float-layer {
+    background: #f0f0f4;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-size: rem(30);
+    z-index: 1;
+    .layer-bd {
+		padding:0px rem(20);
+		min-height: rem(100);
+		line-height: rem(100);
+		position:relative;
+        .layer-r {
+            position: absolute;
+            top: rem(4);
+            right: rem(20);
+			.r-text {
+				display:inline-block;	
+				vertical-align:middle;
+				line-height:rem(34);
+				height:rem(78);
+				.sub-text {
+					color:#545861;	
+					font-size:rem(24);
+					text-align:right;
+				}
+			}
+        }
+    }
+	.text {
+		margin-left:rem(10);
+	}
+	.ui-button {
+		width:auto;
+		margin-left:rem(10)
+	}
+	input[type="radio"],input[type="checkbox"] {
+		margin-right:rem(10);
+	}
+}

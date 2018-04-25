@@ -1,0 +1,168 @@
+/**
+* @file order-payment.scss
+* @synopsis  order-payment
+* @author zhouwei, 1097009033@qq.com
+* @version 1.0.0
+* @date 2017-03-08
+*/
+
+@import "common/common";
+@import "common/checkbox/1.0.0/checkbox";
+
+.page-view {
+    margin: 0 auto;
+    min-width: rem(320);
+    max-width: rem(750);
+    font-size: rem(26);
+}
+
+//支付
+.pay {
+    // 头部
+    .hd {
+        height: rem(375);
+
+        // 提示信息
+        .writer {
+            background-color: #f85d5b;
+            height: rem(388);
+            padding-top: rem(60);
+            overflow: hidden;
+            //图标
+            .iconfontmod {
+                color: #fff;
+                font-size: rem(100);
+            }
+            //第一行文字
+            p {
+                text-align: center;
+                margin-bottom: rem(40);
+                line-height: rem(100);
+                height: rem(100);
+                overflow: hidden;
+            }
+            //第二行文字
+            .text {
+                height: rem(176);
+                color: #fff;
+                //倒计时
+                p {
+                    overflow: hidden;
+                    margin: rem(14) 0;
+                    text-align: center;
+                    line-height: rem(30);
+                    height: rem(30);
+                    font-size: rem(30);
+
+                    span {
+                        color: #fff;
+
+                        b, i, em {
+                            font-weight: normal;
+                            font-style: normal;
+                        }
+                    }
+                }
+
+                .font-small {
+                    font-size: rem(26);
+                }
+
+                .order-back {
+                    margin: rem(30) 0;
+                    text-align: center;
+                    height: rem(36);
+
+                    a {
+                        width: rem(98);
+                        font-size: rem(26);
+                        color: #fcbab9;
+                        border-bottom: 1px solid #fcbab9;
+                    }
+                }
+            }
+        }
+    }
+
+    // 订单列表
+    .mod-order {
+        margin: rem(10) rem(20);
+        height: rem(216);
+        font-size: rem(28);
+
+        .order-cnt {
+            padding: rem(40) rem(34);
+            background: #fff;
+            border: 1px solid #fff;
+            border-radius: 8px;
+
+            ul {
+                overflow: hidden;
+                height: rem(130);
+                line-height: rem(130);
+
+                .text-color {
+                    color: #999;
+                }
+
+                // 订单左部
+                .order-l {
+                    overflow: hidden;
+                    float: left;
+                    width: rem(450);
+                    height: rem(130);
+
+                    & > div {
+                        overflow: hidden;
+                        margin: rem(6) 0 rem(18) 0;
+                        height: rem(28);
+                        line-height: rem(28);
+
+                        & > span {
+                            display: inline-block;
+                            float: left;
+                            width: rem(104);
+                            height: rem(28);
+                            text-align: justify;
+                            line-height: rem(28);
+                            color: #999;
+
+                            &:after {
+                                display: inline-block;
+                                overflow: hidden;
+                                width: 100%;
+                                height: 0;
+                                margin: 0;
+                                content: '';
+                            }
+                        }
+
+                        & > div {
+                            float: left;
+                            padding-left: rem(16);
+                            word-break: break-word;
+                            line-height: rem(28);
+                            font-size: rem(28);
+                            color: #333;
+                        }
+                    }
+                }
+
+                // 订单右部
+                .order-r {
+                    float: right;
+                    text-align: center;
+                    width: rem(160);
+                    height: rem(130);
+                    border-left: 1px solid #f2f3f7;
+
+                    a {
+                        margin-left: rem(32);
+                        line-height: rem(26);
+                        color: #f85d5b;
+                    }
+                }
+            }
+        }
+    }
+}

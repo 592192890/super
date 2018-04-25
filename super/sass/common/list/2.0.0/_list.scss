@@ -1,0 +1,50 @@
+/**
+* @file _list.scss
+* @synopsis Horizontal list 
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-05-22
+*/
+
+//横向列表
+.ui-list-row {
+	padding:rem(20);
+	position:relative;
+	@include flexbox((display: box));
+	align-items: baseline;
+	/* justify-content: flex-end; */
+	overflow:hidden;
+	.icon {
+		font-size:rem(30);
+		width:rem(30);
+		height:rem(30);
+		line-height:rem(30);
+		overflow:hidden;
+		color:#ccc;
+		margin-right:rem(10);
+	}
+	.txt {
+		@include flexbox((box-flex:1));
+	}
+	.arrow {
+		margin-right:0;
+	}
+	&.line {
+		border-bottom:1px solid #f2f3f7;
+	}
+	&.line-2 {
+		&:after {
+			content:'';
+			position:absolute;
+			left:rem(20);
+			bottom:0px;
+			border-bottom:1px solid #f2f3f7;
+			width:100%;
+		}	
+	}
+}
+
+.ui-list-title {
+	padding: 0px rem(20);
+}
+

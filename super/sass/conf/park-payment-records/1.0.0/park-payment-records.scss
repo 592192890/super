@@ -1,0 +1,67 @@
+ /**
+* @file 
+* @synopsis  缴费历史记录
+* @author zgc, 839153198@qq.com
+* @version 1.0.0
+* @date 2017-09-18
+*/
+
+@import "common/common";
+@import "common/nav/back2top";
+
+body {
+    background: #f2f3f7; //
+} //公用头部
+.parking-hd {
+    height: rem(78);
+    line-height: rem(78);
+    font-size: rem(28);
+    padding: 0 rem(20);
+    border-bottom: 1px solid #f4f4f4;
+    i {
+        font-size: rem(34);
+        color: #999;
+    }
+}
+.none-licence-plate{
+    text-align: center;
+    background: #f2f3f7;
+    min-height: rem(1200);
+    img{
+        width: rem(263);
+        margin: rem(344) 0 0 0;
+    }
+    p{
+        font-size:  rem(24);
+        line-height: rem(36); 
+        &.gray{
+            color: #999;
+        }
+    }
+    .add-plate-btn{
+        width: rem(238);
+        height: rem(72);
+        line-height: rem(72);
+        margin-top: rem(24);
+    }
+}
+.mod-parking-msg {
+    background: #fff;
+    margin-top: rem(20);
+    .parking-msg-content {
+        font-size: rem(28);
+        padding: rem(20);
+        p {
+            line-height: rem(48);
+            .parking-space {
+                margin-left: rem(88);
+            }
+            .red {
+                color: #f95d5b;
+            }
+        }
+    }
+}
+.loading:before{
+    content:"";
+}

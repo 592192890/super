@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>梅溪新天地</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <meta http-equiv ="proma" content = "no-cache"/>
+    <meta http-equiv="cache-control" content="no cache" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/meixi-index/1.0.0/meixi-index.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+
+        <!-- 头部 -->
+        <nav class="mod-nav" id="jNavi">
+            <div class="nav-location" id="jLocation"><i class="icon iconfontmod">&#xe7e1;</i></div>
+            <div class="nav-title">步步高梅溪新天地</div>
+            <div class="nav-scan" id="jScan"><i class="icon iconfontmod">&#xe7f1;</i></div>
+        </nav>
+        
+        <!-- 轮播图begin -->
+        <header class="mod-header" id="jBanner" ></header>
+        
+
+        <!-- 调转模块 -->
+        <section class="mod-block" id="jBlock"></section>
+        
+        <!-- 秒杀 -->
+        <section class="mod-sec-kill" id="jSec"></section>
+
+        <!-- 预售 -->
+        <section class="mod-presale" id="jPreGroup"></section>
+
+        <!-- 专场 -->
+        <section class="mod-special" id="jPage"></section>
+
+        <!-- 底部 -->
+        <footer class="mod-tab" id="jTab">
+            <a class="home active" href="//wx.yunhou.com/super/index.html">
+                <i class="icon iconfontmod ico-home"></i>
+                <span>首页</span>
+            </a>
+            <a class="goshopping" href="//wx.yunhou.com/super/html/cart/cart.html">
+                <i class="icon iconfontmod ico-goshopping"></i>
+                <span>购物车</span>
+                <b class="nums txt-overflow">2</b>
+            </a>
+            <a class="aboutme" href="//wx.yunhou.com/super/member">
+                <i class="icon iconfontmod ico-aboutme"></i>
+                <span>我的</span>
+                <b class="circle"></b>
+            </a>
+        </footer>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA ||
+        {};
+        $PAGE_DATA['url'] = {
+            'secKill': '//wx.yunhou.com/super/appdata',
+            'circle': 2,
+            'payToUrl':'//wx.yunhou.com/super/api/getUser',
+            'login':'//wx.yunhou.com/super/passport/login/h5?returnURL='
+        };
+        require(['conf/meixi-index/1.0.0/meixi-index']);
+    </script>
+</body>
+
+</html>

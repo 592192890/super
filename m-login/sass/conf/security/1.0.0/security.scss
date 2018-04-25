@@ -1,0 +1,47 @@
+/**
+* @file security.scss
+* @synopsis  账户安全
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-04-18
+*/
+
+@import "common/common";
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+.security {
+    width: $wFull;
+    max-width: $wMax;
+    margin: rem(20) auto 0;
+    span {
+        color: #333;
+    }
+    .row {
+        display: block;
+        height: rem(88);
+        line-height: rem(88);
+        background-color: #fff;
+        font-size: rem(26);
+        padding: 0 rem(20);
+    }
+    .icon {
+        font-size: rem(30);
+        color: #999;
+        margin-left: rem(5);
+        float: right;
+    }
+    .change-phone {
+        height: rem(88);
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .change-password {
+        height: rem(88);
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .appeal {
+        height: rem(88);
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>物流信息</title>
+<!--#include file="/super/html/common/intro.html"-->
+<link href="//s1.bbgstatic.com/super/css/conf/after-sale/1.0.0/flow-info.css" data-cdn="conf/item/1.0.0/flow-info.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-view">
+
+    <div class="mode-flow-info">
+        <div class="flow-hd">
+            <img src="//s1.bbgstatic.com/super/images/module/after-sale/1.0.0/flow-head-color.png" alt="" />
+        </div>
+        
+        <div class="flow-bd" id="jFlowInfo">
+            <div class="tip">
+                快递正在飞速寄向商家，请耐心等待
+            </div>
+            <div class="hr-line"></div>
+            <div class="information first">
+                <span class="left">退货地址</span><span>：</span>
+                <span class="right"> 湖南长沙雨花区劳动路赤岗村436号</span>
+            </div>
+            <div class="information">
+                <span class="left">联系电话</span><span>：</span>
+                <span class="right">11111111111/22222222222</span>
+            </div>
+            <div class="information">
+                <span class="left special">收 货 人</span><span>：</span>   
+                <span class="right">周丽/黄连</span>
+            </div>
+            <div class="information">
+                <span class="left">邮　　编</span><span>：</span>
+                <span class="right">430000</span>
+            </div>
+            <div class="information">
+                <span class="left">物流公司</span><span>：</span>   
+                <span class="right">顺丰快</span>
+            </div>
+            <div class="information last">
+                <span class="left">物流单号</span><span>：</span>   
+                <span class="right">1111111111111111111111111111</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#include file="/super/html/common/outro.html"-->
+
+<script>
+window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+window['$PAGE_DATA']['url']={'getFlowInfo':'/flow/info'}
+require(['conf/after-sale/1.0.0/flow-info']);
+</script>
+</body>
+</html>

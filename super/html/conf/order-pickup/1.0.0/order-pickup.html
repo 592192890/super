@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>订单详情页</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/order-pickup/1.0.0/order-pickup.css" type="text/css" charset="utf-8">
+</head>
+<body>
+<div class="mod-use-orderpickup">
+    <div class="pickup-hd g-content-wrap g-split-line clearfix">
+        <div class="g-lf order-state">
+            <label>待付款</label>
+            <label class="time">00：58：56</label>
+        </div>
+        <div class="g-rg">
+            <img src="//s1.bbgstatic.com/super/images/conf/order-pickup/pickup-01.jpg" width="240" height="185">
+        </div>
+    </div>
+    <div class="pickup-order-info g-block-padding">
+        <div class="g-content-wrap clearfix">
+            <label class="g-lf">订单号：201405120214</label>
+            <span class="g-rg">
+                <span class="g-button size-small">商家电话<i class="icon-tel iconfontmod">&#xe781;</i></span>
+                <span class="g-button size-small" id="copyOrderNum" data-clipboard-text="201405120214">复制订单号</span>
+            </span>
+        </div>
+    </div>
+    <div class="pickup-store g-block-padding g-split-line g-block">
+        <div class="g-content-wrap">
+            <p class="t"><i class="icon-area iconfontmod">&#xe7dd;</i>到店自提</p>
+            <div class="info clearfix">
+                <div class="info-left g-lf">
+                    <!--<p><label class="item">自提地址</label> <a href="pickup-address.html" class="g-button size-small">选择自提门店</a></p>-->
+                    <p><label class="item">自提地址</label>湖南省长沙市岳麓区麓谷大道658号A栋17层</p>
+                    <p><label class="item">联&nbsp;&nbsp;系&nbsp;&nbsp;人</label>张先生 13812345678</p>
+                    <p><label class="item">自&nbsp;&nbsp;提&nbsp;&nbsp;码</label>UFS563</p>
+                </div>
+                <div class="info-right g-rg">
+                    <img id="showQrCode" src="//s1.bbgstatic.com/super/images/conf/order-pickup/qrcode-btn.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pickup-picktime g-block-padding g-split-line g-block">
+        <div class="g-content-wrap clearfix">
+            <span class="g-lf t"><i class="icon-pickuptime iconfontmod">&#xe7dd;</i>自提/配送时间</span>
+            <span class="g-rg">及时送</span>
+        </div>
+    </div>
+    <div class="pickup-timeline g-block-padding">
+        <div class="pickup-timeline-ctrl" id="timelineCtrl"><i class="iconfontmod up">&#xe79b;</i><i class="iconfontmod down">&#xe79e;</i></div>
+        <ul class="time-line">
+            <li class="timeline-stone active">
+                <div class="list-content">
+                    <span class="title">交易成功</span>
+                    <span class="time">2014-12-28 12:37:30</span>
+                </div>
+            </li>
+            <li class="timeline-stone">
+                <div class="list-content">
+                    <span class="title">用户签收</span>
+                    <span class="time">2014-12-28 12:20:30</span>
+                </div>
+            </li>
+            <li class="timeline-stone">
+                <div class="list-content">
+                    <span class="title">已拣货打包</span>
+                    <span class="time">2014-12-28 11:40:30</span>
+                </div>
+            </li>
+            <li class="timeline-stone">
+                <div class="list-content">
+                    <span class="title">您的订单已经通过系统确认</span>
+                    <span class="time">2014-12-28 11:38:30</span>
+                </div>
+            </li>
+            <li class="timeline-stone">
+                <div class="list-content">
+                    <span class="title">您提交了订单，请等待系统确认</span>
+                    <span class="time">2014-12-28 11:37:30</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="pickup-goodslist g-block-padding g-split-line g-block">
+        <div class="g-content-wrap">
+            <p class="t"><i class="icon-store iconfontmod">&#xe7dd;</i>步步高梅溪新天地</p>
+            <ul class="goods-list">
+                <li class="clearfix">
+                    <span class="g-lf"><img src="//s1.bbgstatic.com/super/images/conf/order-pickup/pickup-02.jpg" class="goods-img"></span>
+                    <div class="g-rg info">
+                        <label class="title">韩国官方授权韩国妹纸都翻墙来抢黑熊家族</label>
+                        <label class="attr">10号色</label>
+                        <span class="price clearfix"><b>￥138.00</b><label class="line-through">￥138.00</label><label class="num g-rg">x1</label></span>
+                    </div>
+                </li>
+            </ul>
+            <p class="express-price">运费:￥0.00</p>
+            <p class="count-price">商品合计:￥138.00</p>
+        </div>
+    </div>
+    <div class="g-block-padding g-split-line g-block">
+        <div class="g-content-wrap clearfix">
+            <span class="g-lf t">发票信息 </span>
+            <span class="g-rg t">不开发票</span>
+        </div>
+    </div>
+    <div class="g-block-padding g-split-line g-block">
+        <div class="g-content-wrap clearfix">
+            <span class="g-lf t">支付方式 </span>
+            <span class="g-rg t">在线支付</span>
+        </div>
+    </div>
+    <div class="order-discount g-block-padding g-split-line g-block">
+        <div class="g-content-wrap clearfix">
+            <span class="g-lf t">订单优惠 </span>
+            <div class="discount-list g-rg">
+                <label class="t">满100减20</label>
+                <label class="t">50元优惠券</label>
+                <label class="t">手机专享价</label>
+            </div>
+        </div>
+    </div>
+    <div class="pickup-footer g-content-wrap">
+        <span class="g-button size-full primary">待付款</span>
+        <span class="g-button size-full primary">确认收货</span>
+        <span class="g-button size-full subprimary">申请售后</span>
+        <span class="g-button size-full subprimary">再次购买</span>
+        <span class="g-button size-full gray">取消订单</span>
+    </div>
+</div>
+<!--#include file="/super/html/common/outro.html"-->
+<script>
+//    window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+//    window['$PAGE_DATA']['url'] = {
+//        orderUrl: '//wx.yunhou.com/super/checkout/getCoupons', //查询优惠券
+//        useOffers: '//wx.yunhou.com/super/checkout/useCoupon', // 优惠券--使用
+//        cancelOffers: '//wx.yunhou.com/super/checkout/cancelCoupon', // 优惠券--取消
+//        directOrder:'wx.yunhou.com/super/html/order/buy-at-once.html',
+//        normalOrder:'wx.yunhou.com/super/html/order/order.html',
+//    };//http://localhost:8080/123.php
+
+    require(['module/order-pickup/1.0.0/order-pickup']);
+</script>
+</body>
+</html>

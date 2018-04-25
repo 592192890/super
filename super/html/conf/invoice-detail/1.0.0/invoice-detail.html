@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>发票详情</title>
+	<!--#include file="/super/html/common/intro.html"-->
+	<meta content="3.6" name="pageid" />
+	<link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/invoice-detail/1.0.0/invoice-detail.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+	<div class="page-view">
+		<!-- 发票状态 -->
+		<div class="mod-invoice-status">
+			<div class="invoice-status clearfix">
+				<span class="status f-l jStatus">开票中</span>
+				<a class="invoice-history f-r">开票记录<i class="iconfontmod icon">&#xe772;</i></a>
+			</div>
+			<!-- 电子发票推送 -->
+			<!-- 未生成 -->
+			<!-- <div class="invoice-push">
+				<p class="push-hd">
+					发票推送
+					<span class="comment">（开具电子发票需要2-10分钟，请耐心等待~）</span>
+				</p>
+			</div> -->
+			<!-- 已生成 -->
+			<div class="invoice-push jInvoicePush">
+				<p class="push-hd">
+					发票推送
+					<span class="comment">（电子发票只可推送1次，请认真填写接受邮箱~）</span>
+				</p>
+				<input type="email" placeholder="请输入可用的邮箱地址" class="push-email jEmailIpt">
+				<div class="push-now clearfix">
+					<button class="ui-btn-primary-line f-r push-btn jPushBtn">立即推送</button>
+				</div>
+			</div>
+			<!-- 已发送 -->
+			<!-- <div class="invoice-push">
+				<p class="push-hd">发票推送</p>
+				<div class="push-bd">
+					<p>电子发票已经发送至<span class="red jEmail">839153198@qq.com</span>邮箱，</p>
+					<p>请至该邮箱查看或下载电子发票~</p>
+				</div>
+			</div> -->
+			<!-- 纸质发票推送 -->
+			<!-- <div class="invoice-paper-push">
+				<p class="push-hd">
+					发票推送
+					<span class="comment"></span>（开具纸质发票需要1-2天时间，请耐心等待~）</span>
+					<span class="comment"></span>（纸质发票从打印到寄出需要1-2天时间，请耐心等待~）</span>
+					<span class="comment"></span>（纸质发票从邮寄到用户手中需要3-5天时间，请耐心等待~）</span>
+				</p>
+				<div class="push-bd">
+					<div class="receipt-info">
+						<div class="bd-dscrpt">
+							<span class="dscrpt-lt">收&ensp;货&ensp;人：</span><span>谭娟</span>
+							<span class="dscrpt-rt">13812345678</span>
+						</div>
+						<div class="bd-dscrpt">
+							<span class="dscrpt-lt f-l">收货地址：</span>
+							<span class="receipt-address">湖南省长沙市岳麓区岳麓大道168号麓谷信息港A栋17楼</span>
+						</div>
+						<a href="">
+							<i class="iconfontmod icon f-r">&#xe772;</i>
+						</a>
+					</div>
+				</div>
+			</div> -->
+		</div>
+		<!-- 发票信息 -->
+		<div class="mod-ticket">
+			<!-- 头部图片样式 begin-->
+			<div class="ticket-head clearfix">
+				<img src="//s1.bbgstatic.com/super/images/conf/electronic-ticket/1.0.0/border-2.png" alt="">
+			</div>
+			<!-- 头部图片样式 end-->
+			<!-- 购买详情 begin -->
+			<div class="ticket-detail">
+				<!-- 详情列表 begin -->
+				<ul class="goods-list">
+					<li class="list-description">
+						<div class="list-r">小票编号</div>
+						<div class="list-l jProdNum">562386888</div>
+					</li>
+					<li class="list-description">
+						<div class="list-r">实付金额</div>
+						<div class="list-l">¥54.26</div>
+					</li>
+					<li class="deal-time list-description">
+						<div class="list-r">交易日期</div>
+						<div class="list-l">2017-03-10&nbsp;15:06</div>
+					</li>
+				</ul>
+
+				<div class="list-bg">
+					<img src="//s1.bbgstatic.com/super/images/conf/electronic-ticket/1.0.0/bg.png" alt="">
+				</div>
+				<ul class="goods-list">
+					<li class="list-description list-border">
+						<div class="list-r">发票类型</div>
+						<div class="list-l">电子增值税普通发票</div>
+					</li>
+					<li class="list-description ">
+						<div class="list-r">发票抬头</div>
+						<div class="list-l">谢娜</div>
+					</li>
+				</ul>
+				<div class="list-bg">
+					<img src="//s1.bbgstatic.com/super/images/conf/electronic-ticket/1.0.0/bg.png" alt="">
+				</div>
+				<ul class="goods-list">
+					<li class="list-description list-border">
+						<div class="list-r">备注</div>
+						<div class="list-l">尽快邮寄</div>
+					</li>
+				</ul>
+				<div class="detail-ft">
+					<img src="//s1.bbgstatic.com/super/images/conf/electronic-ticket/1.0.0/bg-bottom.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<a href="javascript:void(0)" class="ui-btn-primary ui-btn-block detail-btn">查看小票明细</a>
+		<a href="javascript:void(0)" class="ui-btn-primary-line ui-btn-block modifi-btn">修改小票</a>
+		<!-- body end -->
+		<!--#include file="/super/html/common/outro.html"-->
+		<!-- #include file="/super/html/common/statistics.html"-->
+		<script>
+			window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+			window['$PAGE_DATA']['id'] = '666';
+			window['$PAGE_DATA']['url'] = {
+				pushEmailUrl: '//wx.yunhou.com/super/member/billing_push'
+			};
+			require(['conf/invoice-detail/1.0.0/invoice-detail']);
+		</script>
+	</div>
+</body>
+
+</html>

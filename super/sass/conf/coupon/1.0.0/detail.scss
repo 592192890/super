@@ -1,0 +1,81 @@
+/**
+* @file detail.scss
+* @synopsis  coupon detail
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-05-22
+*/
+
+@import "common/common";
+@import "common/checkbox/1.0.0/checkbox";
+@import "common/list/2.0.0/list";
+
+.mod-pic {
+	height:rem(245);
+	line-height:rem(245);
+	text-align:center;
+	padding:rem(55) 0;
+	img {
+		display:inline-block;
+		max-height:rem(245);
+		vertical-align:middle;
+	}
+}
+
+.mod-shop {
+	.arrow {
+		@include transition(all 0.2s ease-in);
+		display:block;
+		margin-top:rem(6);
+	}
+	ul {
+		height:rem(50);
+		overflow:hidden;
+		@include transition(all 0.2s ease-in);
+	}
+	&.selected {
+		.arrow {
+			@include transform(rotate(180deg));	
+		}
+		ul {
+			/* height:auto; */
+		}
+	}
+}
+
+//车牌列表
+.mod-plate-list {
+	text-align:left;
+	.pop-hd {
+		padding-bottom:rem(20);	
+		font-size:rem(30);
+		font-weight:500;
+	}
+	.pop-bd {
+		margin-bottom:0px!important;
+		padding:0px rem(20);
+		max-height:rem(400);
+		overflow:auto;
+	}
+	label{
+		height:rem(100);
+		line-height:rem(100);
+		border-top:1px solid #eee;
+		padding:0;
+		@include flexbox((display: box));
+		&.checked {
+			color: #fc5d51;
+		}
+		span {
+			@include flexbox((box-flex:1));
+			text-align:left;
+			display:block;
+			&:nth-child(2) {
+				text-align:right;	
+			}
+		}
+		&:first-child {
+			border-bottom:0px;	
+		}
+	}
+}

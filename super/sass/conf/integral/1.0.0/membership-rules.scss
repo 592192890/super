@@ -1,0 +1,118 @@
+/**
+* @file membership-rules.scss
+* @synopsis  会员规则
+* @author zhouguangcheng,  zgc7788@gmail.com 
+* @version 1.0.0
+* @date 2017-05-31
+*/
+@import "common/common";
+html{
+    background:#fff;
+    word-spacing:rem(4);
+    .page-view{
+        max-width:rem(750);
+        margin:0 auto;
+    }
+    h1,h2{
+        font-weight:100;
+        margin:0;
+    }
+}
+
+header{
+    border-bottom:rem(1) solid #e5e5e5;
+    //改用tab插件
+    h1{
+        color:#666;
+        font-size:rem(30);
+        //font-weight: 500;
+        height: rem(80);
+        line-height:rem(80);
+        box-sizing:border-box;
+        cursor:pointer;
+        &.f-l{
+            margin-left:rem(110);
+        } 
+        &.f-r{
+            margin-right:rem(116);
+        }
+        &.active{
+            color:#ff5a00;
+            border-bottom:rem(3) solid #ff5a00;
+        }     
+    }
+}
+.wrap{
+    margin:0 rem(20) rem(30);
+    &.equityWrap{
+        display:none;
+    }
+    h2{
+        font-size:rem(30);
+        color:#000;
+        line-height:rem(30);
+        margin:rem(50) 0 rem(30) 0;
+    }
+    table{
+        width:100%;
+        font-size:rem(28);
+        color:#666;
+        text-align:center;
+        margin-bottom:rem(26); 
+        thead{
+            background:#f5f0ec;
+            border-bottom:rem(2) solid #fff;
+            td{
+                height:rem(80);
+            }
+            .half{
+                width:50%;
+            }
+        }
+        tbody{          
+            background:#faf8f6;
+            td{
+                height:rem(122);
+                padding:0 rem(20);
+            }
+        }
+        tbody.equityTable{
+           td{
+                height:rem(80);
+            }
+        }
+        td{
+            border:rem(2) solid #fff;
+        }
+    }
+    ul{
+        font-size:rem(28);
+        color:#666;
+        .dot{
+            float: left;
+            display:inline-block;
+            width:rem(10);
+            height:rem(10);
+            border-radius:rem(5);
+            background:#ccc;
+            margin:rem(8);
+            margin-top:rem(16);
+        }
+        .white{
+            background:#fff;
+        }
+        li{
+            line-height:rem(42);
+            div{
+                overflow: hidden;
+            }
+        }
+    }
+    .rlues{
+        color:#000;
+        font-size:rem(28);
+        line-height:rem(28);
+        padding-left:rem(18);
+        margin:rem(40) 0;
+    }
+}

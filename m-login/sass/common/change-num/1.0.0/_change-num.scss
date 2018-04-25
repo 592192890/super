@@ -1,0 +1,91 @@
+/* 数量增减 */
+.ui-add-num {
+    %box-btn {
+        width: rem(60);
+        height: rem(56);
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #dedede;
+        @include tap-highlight;
+        .icon {
+            color: #333;
+            font-size: rem(28);
+            width: rem(28);
+			font-family: "iconfont";
+			font-style:normal;
+			vertical-align:middle;
+        }
+    }
+    %box-zone {
+        float: left;
+        padding: rem(20);
+    }
+    .num-l {
+        @extend %box-btn;
+        @include border-radius(rem(6) 0 0 rem(6));
+		.icon:after {
+			content: "\e60a";
+		}
+		.icon-delete:after {
+			content: "\e60a";
+		}
+		.icon-trash:after {
+			content: "\e603";	
+		}
+    }
+    .num-m {
+        border: solid #dedede;
+        border-width: 1px 0;
+        background-color: #fff;
+        height: rem(56);
+        @include tap-highlight;
+        input {
+            width: rem(90);
+            height: rem(56);
+            font-size: rem(24);
+            color: #333;
+            border: 0px;
+            text-align: center;
+            border-radius: 0;
+            box-shadow: none;
+            background: none;
+            outline: none;
+			display:block;
+        }
+    }
+    .num-r {
+        @extend %box-btn;
+        @include border-radius(0 rem(6) rem(6) 0);
+		.icon:after {
+			content: "\e604";
+			color:#ffab17;
+		}
+    }
+    /* 扩大点击区域 */
+    .zone {
+        &-l {
+            @extend %box-zone;
+			padding-right:rem(0);
+        }
+        &-m {
+            @extend %box-zone;
+			padding-left:rem(0);
+			padding-right:rem(0);
+        }
+        &-r {
+            @extend %box-zone;
+			padding-left:rem(0);
+        }
+    }
+	&.disabled {
+		.num-m input {
+			/* color:#ccc; */
+		}
+        .icon {
+            color:#f0f0f4;
+			&:after {
+				color:#ccc;
+			}
+        }
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>停车列表</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/park/1.0.0/park-list.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <header></header>
+        <div class="mod-park-list">
+            <div class="park-item">
+                <!-- 停车信息 -->
+                <div class="park-msg">
+                    <h3>梅溪新天地·智慧停车场</h3>
+                    <p>
+                        <i class="iconfontmod icon">&#xe78e;</i>
+                        <span>剩余车位:</span>
+                        <span><u class="now-carport">172</u> / 300</span>
+                    </p>
+                    <p>
+                        <i class="iconfontmod icon">&#xe789;</i>
+                        <span>开放时间:</span>
+                        <span>10:00-24:00</span>
+                    </p>
+                    <div class="parking-address">
+                        <span class="f-l">
+                            <i class="iconfontmod icon">&#xe786;</i>
+                            <span>地址：</span>
+                        </span>
+                        <div class="address">梅溪湖国际新城 · 枫林三路与东方红路交汇处西与东方红路交汇南B2层</div>
+                    </div>
+                </div>
+                <!-- 停车操作 -->
+                <div class="park-handle">
+                    <a href="">
+                        <span>
+                            <i class="iconfontmod icon">&#xe784;</i>
+                            到这里去
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="find-car">
+                            <i class="iconfontmod icon">&#xe792;</i>
+                            停车找车
+                        </span>
+                    </a>
+                    <!-- 有多个车牌就弹ul -->
+                    <a class="payment jPayment">
+                        <span>
+                            <i class="iconfontmod icon">&#xe798;</i>
+                            我要缴费
+                        </span>
+                    </a>
+                </div>
+                <!-- 收费标准 -->
+                <div class="park-fees-up clearfix jParkFees">
+                    <div class="fees-des f-l">收费标准：消费满200抵10，满500抵15，满800抵 20（封顶）；消费小票当然有效；小票微信抵用后，再 出场时不能重复使用；</div> 
+                    <i class="iconfontmod icon f-l jFeesBtn">&#xe774;</i>
+                    <i class="iconfontmod icon f-l jFeesBtn" style="display:none;">&#xe7bb;</i>
+                </div>
+            </div>
+            
+        </div>
+        <div class="coupon-split">会员限量领取</div>
+        <div class="mod-coupon-item jItemBox coupon-" data-value="coupon.code">
+            <!-- 优惠券头部边框 -->
+            <div class="item-hd"></div>
+            <!-- 已使用图戳 -->
+            <!-- <img src="//s1.bbgstatic.com/super/images/conf/my-cplist/1.0.0/cpUsed.png" alt="已使用" class="used-img"> -->
+            <!-- 选中状态 -->
+            <!-- <div class="selected">
+                <b class="triangle"><i class="iconfontmod">&#xe614;</i></b>
+            </div> -->
+            <!-- 优惠券主体 -->
+            <div class="item-bd jCouponItem">
+                <!-- 剩余停车券 -->
+                <div class="remain-coupon">
+                    <div class="remain-percent jRemainPercent"></div>
+                    <div class="buy-now">立即抢购</div> 
+                </div>
+                <!-- 优惠券价格 -->
+                <div class="cp-money">
+                    <em>￥</em>20
+                </div>
+                <!-- 优惠券名字 -->
+                <div class="cp-name txt-overflow">
+                    <span>停车</span>
+                    停车券-20停车抵用券
+                </div>
+                <!-- 优惠券时间 -->
+                <div class="cp-time">
+                    使用时间：2016.09.31 ~ 2016.12.31
+                </div>
+            </div>
+            <!-- 优惠券齿轮边 -->
+            <div class="cp-spilt">
+                <span class="left-circle"></span>
+                <span class="right-circle"></span>
+            </div>
+            <!-- 使用规则 -->
+            <div class="jShowCouponInfo cp-rule">
+                <div class="rule-title clearfix">
+                    <i class="ico-circle "></i>使用规则
+                    <i class="iconfontmod animate f-r jCouponArrow">&#xe774;</i>
+                </div>
+                <div class="rule-bd jItemCtn">
+                    <p class="">使用规则使用规则使用规使用规则使用规则使用规则使用规则使用规则使用规则则</p>
+                    <!-- 占位让图标显示 -->
+                    <p class="icon"><i class="iconfontmod">&#xe7bb;</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    
+    <script>
+        var $PAGE_DATA = 
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            'getCars':'http://wx.yunhou.com/super/park/mycars',
+            'loginUrl':'http://wx.yunhou.com/super/passport/login?returnUrl=',
+        };
+        require(['conf/park/1.0.0/park-list']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>活动详情</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/active/1.0.0/details.css" data-cdn="weshop/css/conf/active/1.0.0/details.css">
+</head>
+
+<body>
+    <div class="page-view">
+        <div class="page-view-body">
+            <input type="hidden" id="jactivityId" value="1" />
+            <!--  轮播 start -->
+            <!--#include file="/super/html/module/active/mod-details/1.0.0/silder.html"-->
+            <!--  轮播 end   -->
+            <!--  活动信息 start -->
+            <!--#include file="/super/html/module/active/mod-details/1.0.0/act-msg.html"-->
+            <!--  活动信息 end   -->
+            <!--  活动详情 start -->
+            <!--#include file="/super/html/module/active/mod-details/1.0.0/act-details.html"-->
+            <!--  活动详情 end   -->
+            <!--  活动优惠券 start -->
+            <!--#include file="/super/html/module/active/mod-details/1.0.0/act-coupon.html"-->
+            <!--  活动优惠券 end   -->
+            <!--  活动报名 start -->
+            <!--#include file="/super/html/module/active/mod-details/1.0.0/act-sign.html"-->
+            <!--  活动报名 end   -->
+        </div>
+        <!--#include file="/super/html/common/outro.html"-->
+        <script>
+            window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+            window['$PAGE_DATA']['url'] = {
+                InitCp: '//wx.yunhou.com/o2o/activity/couponstatus', //获取优惠券状态
+                GetCp: '//wx.yunhou.com/o2o/activity/couponrecieve', //获取优惠券
+                Login: '//wx.yunhou.com/#/login', //登录
+                defaultImgUrl: '//s3.bbgstatic.com/pub/img/blank.gif', //商品详情图片默认地址
+                GetActiveInfo: '//wx.yunhou.com/o2o/activity/status/', //获取活动状态
+                GetActivePlaces: '//wx.yunhou.com/o2o/activity/signup' //活动报名 支付
+            };
+            require(['conf/active/1.0.0/details']);
+        </script>
+        <!--#include file="/super/html/common/statistics.html"-->
+    </div>
+</body>
+
+</html>

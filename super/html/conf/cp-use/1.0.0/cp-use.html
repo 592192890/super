@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <!-- 使用优惠券 周伟 -->
+    <head>
+        <title>使用优惠券</title>
+        <!--#include file="/super/html/common/intro.html"-->
+        <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/cp-use/1.0.0/cp-use.css" type="text/css" charset="utf-8">
+    </head>
+    <body>
+        <div class="page-view">
+            <div class="mod-use-coupon" id="jUseCoupon">
+                <!-- 搜索框 -->
+                <div class="coupon-form">
+                    <input type="text" placeholder="   请输入优惠码" id="jCouponInput" />
+                    <a class="btn-submit-coupon" id="jSubBtn">提交</a>
+                </div>
+                <!-- 优惠码提示 -->
+                <div class="coupon-form-desc">通过站外方式获得的优惠码，请直接输入号码</div>
+                <!-- 选择提示 -->
+                <span class="coupon-list-header">
+                    选择可用优惠券
+                </span>
+                <div class="mod-cp" id="jAvailableCouponList">
+                    <!-- 优惠券列表 -->
+                    <section id="jAvailableCouponItems" class="jCouponList">
+                    </section>
+                </div>
+                <!-- 按钮 -->
+                <div class="btn btn-position" id="jBtnCancelCoupon">
+                    <a class="ui-button-white" href="javascript:;">不使用优惠券</a>
+                </div>
+            </div>
+        </div>  
+        <!--#include file="/super/html/common/outro.html"-->
+        <script>
+        window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            orderUrl: '//wx.yunhou.com/super/checkout/getCoupons', //查询优惠券
+            useOffers: '//wx.yunhou.com/super/checkout/useCoupon', // 优惠券--使用
+            cancelOffers: '//wx.yunhou.com/super/checkout/cancelCoupon', // 优惠券--取消
+            directOrder:'wx.yunhou.com/super/html/order/buy-at-once.html',
+            normalOrder:'wx.yunhou.com/super/html/order/order.html',
+        };//http://localhost:8080/123.php
+        require(['conf/cp-use/1.0.0/cp-use']);
+        </script>
+        <!-- #include file="/super/html/common/statistics.html"-->
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数据懒加载</title>
+    <!--#include file="/h5-lib/app/include/html/common.html"-->
+    <style>
+        .mod-list-detail {
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-view">
+        <div class="jPage" style="min-height:15872px;">
+            <div class="mod-list-detail">
+                默认内容
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 加载文件 -->
+<script>
+    require(['common/lazystream/1.0.0/js/lazystream'], function(LazyStream)
+    {
+        var lay = new LazyStream('.jPage',
+        {
+            plUrl: 'http://test.data.com/integral/get_page_data.php',
+            /* 参数传递 */
+            paramFormater: function(n)
+            {
+                var data = {};
+                data.pageNo = n;
+                return data;
+            },
+            page: 2,
+            errorText: '<div class="loading">网络错误，点击重试</div>',
+            loadingClass: 'loading',
+            loadingText: '<div class="loading"><img src="//ssl.bbgstatic.com/gshop/images/public/load.gif" class="load-gif" />正在加载，请稍后...</div>',
+            load: function(el) {},
+            noAnyMore: '<div class="loading">仅显示最近90天的记录</div>'
+        });
+		window.scrollTo(0,15872);
+		lay.update();
+    });
+</script>
+
+</html>

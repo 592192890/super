@@ -1,0 +1,114 @@
+/**
+* @file _list.scss
+* @synopsis  普通列表
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-06
+*/
+.ui-list {
+	width:100%;
+	&.line {
+		border-bottom:1px solid #f2f3f7;	
+	}
+	//右边箭头
+    .arrow {
+        font-size: rem(30);
+        height: rem(30);
+        line-height: rem(30);
+        overflow: hidden;
+        color: #ccc;
+        &:after{
+            font-family: "iconfont";
+            content: "\e605";
+        }
+    }
+	//朝下箭头
+	.arrow-down {
+        &:after{
+            content: "\e610";
+        }
+	}
+	//朝上箭头
+	.arrow-up {
+        &:after{
+            content: "\e611";
+        }
+	}
+	//切换的箭头
+	.active {
+		.arrow {
+			&:after{
+				font-family: "iconfont";
+				content: "\e611";
+			}
+		}
+	}
+	.list-hd {
+		padding:rem(24) 0px rem(24) 0px;	
+		position:relative;
+		min-height:rem(40);
+		.hd-l {
+			padding-left:rem(20);
+			padding-right:rem(40);
+			label {
+				color:#676767;	
+			}	
+		}
+		.hd-r {
+			position:absolute;	
+			top:0;
+			right:rem(20);
+			height:100%;
+			line-height:100%;
+			.text {
+				position:absolute;
+				top:50%;
+				right:0px;
+				margin-top:rem(-16);
+				width:rem(300);
+				text-align:right;
+				color:#333;
+				display:block;
+			}
+			.arrow {
+				position:absolute;	
+				top:50%;
+				margin-top:rem(-16);
+				right:0px;
+			}
+			input[type="text"],input[type="checkbox"] {
+				position:absolute;	
+				top:50%;
+				margin-top:rem(-39);
+				right:0px;
+			}
+			input[type="checkbox"] {
+				margin-top:rem(-20);
+			}
+		}
+	}
+}
+
+//横向列表
+.ui-list-hor {
+	position:relative;
+	min-height:rem(70);
+	em{
+		font-style:normal;
+	}
+	.hor-r {
+		position:absolute;
+		top:50%;
+		right:rem(20);
+		margin-top:rem(-16);
+		width:rem(300);
+		text-align:right;
+		color:#333;
+		display:block;
+		height:rem(30);
+		line-height:rem(30);
+	}
+	&.line {
+		border-bottom:1px solid #f2f3f7;	
+	}
+}

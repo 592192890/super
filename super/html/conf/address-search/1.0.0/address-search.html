@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>地址搜索</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/address-search/1.0.0/address-search.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <div id="jContainer"></div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&libraries=drawing"></script>
+		<script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA ||
+        {};
+				//$PAGE_DATA['businessDistrictId']='1'; //商圈id
+				$PAGE_DATA['url'] = {
+					getArea: './data/getArea.php', //获取商圈范围
+					isDeliveryUrl:'./data/success.php'//是否在配送范围之内
+				};
+        require(['conf/address-search/1.0.0/address-search']);
+    </script>
+    <!-- [>#include file="/super/html/common/statistics.html"<] -->
+</body>
+
+</html>

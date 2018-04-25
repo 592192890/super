@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+<head>
+    <title>申请开票</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/application-ticket/1.0.0/application-ticket.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="page-view">
+        <header>
+            <p class="receipt-num">
+                <span>小票编号：</span><span class="jTticketNo">562386888</span>
+            </p>
+            <p class="actually-paid">
+                <span>实付金额：</span><span>¥87.80</span>
+            </p>
+            <p class="trade-date">
+                <span>交易日期：</span><span>2016-02-17   01：02：52</span>
+            </p>
+        </header>
+        <div class="mod-edit-invoice">
+            <div class="invoice-type-title">
+                <i class="iconfontmod icon">&#xe62b;</i>
+                <span class="text">发票类型</span>
+                <!-- <i class="iconfontmod icon f-r">&#xe772;</i> -->
+            </div>
+            <div class="invoice-type jInvoiceType" invoiceType="1">
+                <div class="electronic invoice">
+                    <span class="type-txt">电子发票</span>
+                    <i class="iconfontmod icon f-r active jElectronic"></i>
+                </div>
+                <div class="papery invoice">
+                    <span class="type-txt">纸质发票<b>（开具纸质小票需收取用户10元邮费）</b></span>
+                    <i class="iconfontmod icon f-r jPapery"></i>
+                </div>
+                <div class="bd-item jReceiveAddress" role="tabPanel">
+                    <div class="ui-list " onclick="location.href='//wx.yunhou.com/super/member/address_list?source=direct'">
+                        <!-- <div class="list-hd">
+                            <div class="hd-l">
+                                <p class="address-empty">客官的收货地址没有收录在我势力范围内，新增</p>
+                            </div>
+                            <div class="hd-r">
+                                <span class="arrow"></span>
+                            </div>
+                        </div> -->
+                        <div class="list-hd has-address jHasAddress">
+                            <div class="hd-l">
+                                <p id="jAddrDiv" data-is-old="0">
+                                    <label class="jName">周周</label>&nbsp;&nbsp;&nbsp;<span class="jTel">18229952439</span></p>
+                                <p class="jAddress">湖南长沙市岳麓区麓谷街道6</p>
+                            </div>
+                            <div class="hd-r">
+                                <span class="arrow"></span>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <!-- 发票抬头 -->
+            <div class="invoice-rise">
+                <i class="iconfontmod icon">&#xe636;</i>
+                <span class="text">发票抬头</span>
+                <div class="f-r right-btn jInvoiceRise">
+                    <span class="jRiseName"></span>
+                    <i class="iconfontmod icon">&#xe772;</i>
+                </div>
+            </div>
+            <!-- 发票抬头类型 -->
+            <div class="invoice-rise">
+                <i class="iconfontmod icon">&#xe637;</i>
+                <span class="text">发票抬头类型</span>
+                <div class="f-r right-btn jInvoiceRiseType">
+                    <span class="jRiseType" risetype="1"></span>
+                    <i class="iconfontmod icon">&#xe772;</i>
+                </div>
+            </div>
+            <!-- 企业税号 -->
+            <div class="invoice-rise jInvoiceNum">
+                <i class="iconfontmod icon">&#xe635;</i>
+                <span class="text">企业税号</span>
+                <input type="text" class="required f-r jRevenueNum" placeholder="必填，请填入企业纳税人识别号" maxlength="18" onkeyup="value=value.replace(/[^\w\/]/ig,'')">
+            </div>
+        </div>
+        <div class="mod-remark">
+            <p class="attention">根据最新增值税管理办法，如需企业抬头发票，请填写有效税号信息! </p>
+            <div class="remark-title">
+                <i class="iconfontmod icon">&#xe633;</i>
+                <span class="text">备注</span>
+            </div>
+            <textarea type="text" class="remark-input jRemark" placeholder="请输入备注"></textarea>
+        </div>
+        <div class="mod-submit-btn">
+            <button class="ui-btn-primary ui-btn-block jSubmit">提交申请</button>
+        </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['carrieCd'] = '123456';
+        window['$PAGE_DATA']['posNum'] = '888888';
+        window['$PAGE_DATA']['url'] = {
+            'submitInvoice' : 'http://wx.yunhou.com/super/item/',
+            'billingInfo' : 'http://wx.yunhou.com/super/item/'
+        };
+        require(['conf/application-ticket/1.0.0/application-ticket']);
+    </script>
+</body>
+</html>

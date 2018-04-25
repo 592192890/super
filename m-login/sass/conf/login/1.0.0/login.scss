@@ -1,0 +1,228 @@
+/**
+ * @file login.scss
+ * @synopsis 大会员登录界面（php）
+ * @author yanghaitao, 178224406@qq.com
+ * @version 1.0.0
+ * @date 2017-03-20
+ */
+
+@charset 'utf-8';
+@import "common/common";
+@import "common/rem/1.0.0/rem";
+@import "common/reset/1.0.0/reset";
+@import "fonts/common/1.0.0/common";
+@import "common/box/1.0.0/box";
+
+html,body{
+    width:100%;
+    height:100%
+}
+/* warpper */
+
+body, .page-view {
+    font: 300 1rem/1rem "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #333;
+    font-size:rem(28);
+}
+a,a:active,
+a:hover {
+    color: #333;
+}
+
+
+//  输入框
+@mixin login(){
+    width:rem(570);
+    height: rem(76);
+    margin: 0 auto;
+    background: #f8f9fb;
+    border-radius:rem(10);
+    margin-bottom:rem(30);
+}
+
+@mixin input(){    
+    width:100%;
+    height:100%;
+    line-height:100%;
+    border:none;
+    background:none;
+    padding:0 rem(22);
+    box-sizing:border-box;
+}
+
+
+
+
+.page-view{
+    width:rem(750);
+    height:100%;
+    background-image: image-url('login-bg.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mod-login{
+    width: rem(690);
+    margin:0 auto;
+    padding-top:rem(243);
+    .login-telephone{
+        @include login();
+        .u-form-input-text{
+            @include input();
+        }
+    }
+    .login-sms{
+        @include login();
+        position:relative;
+        .u-form-input-text{
+            @include input()
+        }
+        .limit-time{
+            position:absolute;
+            font-size:rem(28);
+            color:#f95d5b;
+            right:rem(20);
+            top: rem(0);
+            height:100%;
+            .sendSms{
+                float:left;
+                padding:rem(15) 0;
+                height:100%;
+                box-sizing:border-box;
+            }
+            .sec{
+                float:left;
+                padding:rem(15) 0;
+                height:100%;
+                box-sizing:border-box;
+                display:none;
+            }
+        }
+    }
+    .login-btn{
+        @include login();
+        margin-top:rem(60);
+        color:#fff;
+        background:#fdbebd;
+        .mod-login{
+            @include input();
+        }
+        &.active{
+           background:#f85d5b; 
+        }
+    }
+    .agreement{
+        @include login();
+        background: none;
+        font-size:rem(26);
+        color:#c2c4ce;
+        line-height:rem(40);
+        a{
+            color:#f95d5b;
+            text-decoration:underline;
+            padding:0 rem(2);
+        }
+    }
+    .join-yili{
+        display: none;
+        @include login();
+        background: none;
+        font-size:rem(26);
+        label{
+            font-size:rem(26);
+        }
+        input{
+            width: rem(20);
+            height: rem(20);
+            margin-right: rem(10);
+        }
+    }
+}
+
+// 协议提示
+.mod-protocal{
+    display:none;
+    width:rem(750);
+    height:100%;
+    padding:rem(50) rem(30);
+    position:fixed;
+    left:0;
+    top:0;
+    box-sizing:border-box;
+    background-color:rgba(0,0,0,0.4);
+    .protocal-frm{
+        width:rem(690);
+        height:100%;
+        border-radius:rem(10);
+        background-color:#fff;
+        overflow:scroll;
+        &::-webkit-scrollbar{width:0px}
+        .protocal-title{
+            width:100%;
+            font-size:rem(32);
+            color:#333;
+            padding:rem(55) 0 rem(30);
+            text-align:center;
+        }
+        .protocal-ctn{
+            width:100%;
+            padding:0 rem(30);
+            box-sizing:border-box;
+            font-size:rem(28);
+            color:#959595;
+        }
+        .closeBtn{
+            position:absolute;
+            right:rem(40);
+            top:rem(70);
+            font-size:rem(40);
+            font-weight:100;
+            color:#ccc;
+        }
+
+    }
+}
+
+
+// 微信登录
+.mod-wx{
+    position:fixed;
+    bottom:rem(40);
+    width:rem(396);
+    left:rem(162);
+    .wx-line{
+        width:rem(396);
+        height:rem(17);
+        position:relative;
+        img{
+            display:block;
+            width:100%;
+            height:100%;
+        }
+    }
+    .wx-login{
+        width:100%;
+        margin:rem(10) 0 0;
+        dt{
+            width:rem(80);
+            height:rem(80);
+            margin:0 auto;
+            i{
+                width:rem(80);
+                height:rem(80);
+                color:#e5e5e5;
+                font-size:rem(80);
+                top:rem(25);
+                position:relative;
+            }
+        }
+        dd{
+            width:100%;
+            text-align:center;
+            color:#999;
+            font-size:rem(24);
+            margin:0;
+        }
+    }
+}

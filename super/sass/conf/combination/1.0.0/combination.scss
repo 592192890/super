@@ -1,0 +1,95 @@
+/**
+* @file combination.scss
+* @synopsis  城市选择
+* @author yanghaitao,
+* @version 1.0.0
+* @date 2017-12-20
+*/
+@import "common/common";
+
+.mod-header{
+    width:100%;
+    height:rem(68);
+    line-height:rem(68);
+    padding:0 rem(20);
+    box-sizing:border-box;
+    background:#fff8f8;
+    overflow:hidden;
+    border-top:rem(1) solid #e5e5e5;
+    border-bottom:rem(1) solid #e5e5e5;
+    .promotion{
+        float:left;
+        .name{
+            float:left;
+            width:rem(54);
+            height:rem(32);
+            line-height:rem(32);
+            text-align:center;
+            color:#fff;
+            font-size:rem(24);
+            margin:rem(18) rem(12) 0 0;
+            background-color:#f95d5b;
+        }
+        .ctn{
+            float:left;
+            color:#333;
+            font-size:rem(24);
+        }
+    }
+    .total{
+        float:right;
+        color:#f95d5b;
+        font-size:rem(34);
+    }
+}
+
+.mod-list{
+    background-color:#fff;
+    width:100%;
+    li{
+        border-bottom:rem(1) solid #e5e5e5;
+        width:100%;
+        padding:rem(30) rem(20);
+        box-sizing:border-box;
+        @include flexbox((display: box));
+        .pic{
+            width:rem(180);
+            height:rem(180);
+            background-color:#f00;
+            img{
+                display:block;
+                width:100%;
+                height:100%;
+            }
+        }
+        .des{
+            @include flexbox((box-flex: 1));
+            margin-left:rem(20);
+            color:#333;
+            font-size:rem(28);
+            line-height:rem(32);
+            overflow:hidden;
+        }
+    }
+}
+
+.mod-footer{
+    width:100%;
+    padding:rem(20);
+    box-sizing:border-box;
+    background-color:rgba(255,255,255,0.8);
+    position:fixed;
+    left:0;
+    bottom:0;
+    border-top:rem(1) solid #e5e5e5;
+    .addCar{
+        width:100%;
+        height:rem(76);
+        line-height:rem(76);
+        color:#fff;
+        font-size:rem(28);
+        background-color:#f95d5b;
+        text-align:center;
+        border-radius:rem(10);
+    }
+}

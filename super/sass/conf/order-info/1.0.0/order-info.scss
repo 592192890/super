@@ -1,0 +1,150 @@
+/**
+* @file order-info.scss
+* @synopsis  二维码以及订单信息
+* @author yanghaitao, 178224406@qq.com
+* @version 1.0.0
+* @date 2018-01-19
+*/
+
+@import "common/common";
+
+.mod-qrcode{
+    width: rem(670);
+    margin: rem(30) auto;
+    background: #fff;
+    padding-bottom: rem(40);
+    border-radius: rem(24);
+    box-shadow:rem(10) rem(10) rem(10) #e8e9ed;
+    -webkit-box-shadow:rem(10) rem(10) rem(10) #e8e9ed;
+    overflow: hidden;
+    position: relative;
+    .order-state{
+        position: absolute;
+        width: rem(140);
+        height: rem(164);
+        right: 0;
+        top: rem(300);
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100% 100%;
+        &.expired{
+            background-image:url('/super/images/conf/order-info/1.0.0/expired.png');
+        }
+        &.pickup{
+            background-image:url('/super/images/conf/order-info/1.0.0/pickup.png');
+        }
+        &.invalid{
+            background-image:url('/super/images/conf/order-info/1.0.0/invalid.png');
+        }
+    }
+    .qrcode-head{
+        width: rem(656);
+        height: rem(50);
+        line-height: rem(50);
+        margin: 0 auto;
+        text-align: center;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100% 100%;
+        background-image:url('/super/images/conf/order-info/1.0.0/info-head.jpg');
+        color: #fff;
+        font-size: rem(30);
+        .location{
+            color:#fff; 
+            font-size: rem(30); 
+            padding-right: rem(10);
+        }
+    }
+    .bar-code{
+        width: 100%;
+        margin-top: rem(50);
+        border-bottom: rem(2) dashed #e5e5e5;
+        dt{
+            width: rem(562);
+            margin: 0 auto;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        dd{
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            padding: rem(24) 0 rem(40);
+            color:#333;
+            font-size: rem(30);
+            margin: 0;
+        }
+    }
+    .qrcode-img{
+        width: rem(324);
+        height: rem(324);
+        margin: rem(40) auto 0;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+.mode-pickup{
+    width: 100%;
+    background: #fff;
+    .pickup-title{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: rem(36);
+        color:#333;
+        font-size: rem(30);
+        height: rem(90);
+        line-height: rem(90);
+        border-bottom: rem(1) solid #e5e5e5;
+    }
+    ul{
+        width: 100%;
+        padding:0 0 rem(50) rem(36);
+        box-sizing: border-box;
+        li{
+            width: 100%;
+            border-bottom: rem(2) dashed #e5e5e5;
+            padding: rem(30) 0;
+            overflow: hidden;
+            &:last-child{
+                border-bottom: none;
+            }
+            img{
+                float: left;
+                width:rem(100);
+                height: rem(100);
+                border-radius: rem(10);
+                overflow: hidden;
+            }
+            .order-ctn{
+                float: left;
+                width:rem(430);
+                margin-left: rem(24);
+                .text{
+                    width: rem(400);
+                    display: block;
+                    color: #333;
+                    font-size: rem(26);
+                }
+                .price{
+                    color: #333;
+                    font-size: rem(30);
+                }
+            }
+            .quantity{
+                float: right;
+                width: rem(46);
+                margin-right:rem(30);
+                color: #333;
+                font-size: rem(30);
+                font-weight: bold;
+                padding-top: rem(24)
+            }
+        }
+    }
+}
+

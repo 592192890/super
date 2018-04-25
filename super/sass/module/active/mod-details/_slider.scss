@@ -1,0 +1,46 @@
+
+.mod-slider {
+  width: 100%;
+  height: rem(400);
+  .ui-slider {
+    height: rem(400);
+
+    .ui-slider-navigation {
+      display: none;
+    }
+  }
+  .ui-slider-slide {
+
+    img {
+      width: 100%;
+      font-size: 0;
+    }
+  }
+  .ui-slider .ui-slider-pagination {
+    li {
+      display: inline-block;
+      height: rem(24);
+      margin-right: 5px;
+      margin-left: 5px;
+
+      a {
+        margin-top: 2px;
+        width: rem(14);
+        height: rem(14);
+        line-height: rem(20);
+        float: left;
+        background-color: rgba(34, 40, 51, 0.3);
+        opacity: 1;
+        float: left;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+
+        &.active {
+          margin-top: 2px;
+          background-color: rgba(34, 40, 51, 0.8);
+		  border:2px solid rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+}

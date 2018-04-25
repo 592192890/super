@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>优惠券</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/coupon/1.0.0/list.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- <div style="height:400px;overflow:auto;border:1px solid red;" class="jPage"></div> -->
+        <div class="mod-tab jWrap">
+            <ul class="tab-hd">
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>全部</span>
+                </li>
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>商场券</span>
+                </li>
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>商家券</span>
+                </li>
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>超市券</span>
+                </li>
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>其他</span>
+                </li>
+                <li class="hd-line" role="line"></li>
+            </ul>
+            <div class="tab-bd">
+                <div class="bd-inner" role="tabInner">
+                    <div class="bd-item" role="tabPanel" data-type="0">
+						<a href="http://www.baidu.com">
+                        <!-- 商品 begin -->
+                        <div class="mod-pro-list mod-coupon jCoupon" data-id="1">
+                            <div class="coupon-line"><i></i><i></i>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-img">
+                                    <img src="http://img2.bbgstatic.com/15c616b77ba_bc_319c1f514575125bec4e6b723c2227ad_269x240.png"
+                                    class="jImg">
+                                </div>
+                                <div class="list-ctn">
+                                    <h3><span class="label">母婴</span>纸尿裤</h3>
+                                    <p class="ctn-tips">2017.1.1 ~ 2017.12.12</p>
+                                    <p class="ctn-txt color-primary">
+                                        ￥<span class="font-large">39.96<span>
+						</p>
+						<span class="ctn-r-b"><button class="ui-btn-primary ui-btn-mini ui-btn-radius jReceive">立即领取</button></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- 商品 end -->
+					</a>
+                        <!-- 失效优惠券 begin -->
+                        <div class="mod-pro-list mod-coupon jCoupon coupon-disabled" data-id="1">
+                            <div class="coupon-line"><i></i><i></i>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-img">
+                                    <img data-src="http://img2.bbgstatic.com/15c616b77ba_bc_319c1f514575125bec4e6b723c2227ad_269x240.png"
+                                    class="jImg">
+                                </div>
+                                <div class="list-ctn">
+                                    <h3><span class="label">母婴</span>纸尿裤</h3>
+                                    <p class="ctn-tips">2017.1.1 ~ 2017.12.12</p>
+                                    <p class="ctn-txt color-primary">
+                                        ￥<span class="font-large">39.96<span>
+						</p>
+						<span class="ctn-r-b"><button  class="ui-btn-primary ui-btn-mini ui-btn-radius jReceive disabled" >已抢完</button></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- 失效优惠券 end -->
+                    </div>
+                    <div class="bd-item " role="tabPanel" data-type="1"></div>
+                    <div class="bd-item" role="tabPanel" data-type="2"></div>
+                    <div class="bd-item" role="tabPanel" data-type="3"></div>
+                    <div class="bd-item" role="tabPanel" data-type="4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="jt"></div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA ||
+        {};
+        $PAGE_DATA['url'] = {
+            //receiveCoupon: './data/success.php',
+            getCoupon: './data/data.php'
+        };
+        require(['conf/coupon/1.0.0/list']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/**
+* @file group-buying.scss
+* @synopsis  团购聚合页
+* @author zhouguangcheng,  zgc7788@gmail.com 
+* @version 1.0.0
+* @date 2017-03-28
+* @modify leaytam
+* @function goods-item layout
+* @Date 2017-05-10
+*/
+@import "common/common";
+@import "common/nav/back2top";
+
+$btn-color: #f85e59;
+
+.goods-list{
+    max-width:rem(750);
+    margin:0 auto;
+}
+/* 团购产品 */
+.goods-item{
+    background:#fff;
+    border-bottom:1px solid #f3f3f6;
+    display:-moz-box; /* Firefox */
+    display:-webkit-box; /* Safari and Chrome */
+    display:box;
+    .item-img{
+        width:rem(290);
+        height:rem(290);
+        text-align:center;
+        margin-right:rem(10);
+        img{
+            width: rem(250);
+            height: rem(250);
+            margin-top:rem(20);
+        }
+    }
+    /* 产品描述 */
+    .item-des{
+        -moz-box-flex:1.0; /* Firefox */
+        -webkit-box-flex:1.0; /* Safari and Chrome */
+        box-flex:1.0;
+        height:rem(290);
+        margin-right:rem(20);
+        font-size:0;
+        .item-des-title{
+            font-size:rem(30);
+            line-height:rem(30);
+            color:#222;
+            margin-top:rem(40);
+            white-space:nowrap; 
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+        .item-des-txt{
+            font-size:rem(28);
+            height:rem(70);
+            line-height:rem(36);
+            margin:rem(8) 0 rem(6) 0;
+            color:#999;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 限制两行 */
+            -webkit-box-orient: vertical;
+        }
+        /* 团购人数 */
+        .group-size{
+            width:rem(90);
+            line-height:rem(20);
+            font-size:rem(20);
+            border: rem(1) solid #f85e59;/* 解决小屏叠线 */
+            border-radius:rem(3);
+            color: #f85e59;
+            padding:rem(6);
+            text-align:center;
+        }
+        .item-des-ft{
+            height:rem(60);
+            line-height:rem(60);
+            margin-top:rem(23);
+            i{font-style:normal;}
+            /* 价格 */
+            .price-box{
+               height:rem(60);
+               max-width:rem(350);
+            }
+            .cur-price-box{
+                font-size:rem(26);
+                margin-right:rem(15);
+                color: #f85e59;
+            }
+            .old-price-box{
+                font-size:rem(20);           
+                color:#ccc;
+                text-decoration: line-through;
+                .old-price{
+                    font-weight:400;
+                }
+            }
+            /* 按钮 */
+            .ui-button{
+                width:rem(154);
+                height:rem(56);
+                line-height:rem(56);
+                font-size:rem(26);
+                padding:0;
+                border-radius:rem(10);
+            }
+            .ui-button-red{
+                background-color: $btn-color;
+                border: rem(2) solid $btn-color;
+            }
+            .ui-button-red-border{
+                color: $btn-color;
+                border: rem(2) solid $btn-color;
+            }
+            .ui-button-white {
+                color: #999;
+                border: rem(2) solid #ccc;
+            }
+        }
+    }
+}
+.loading:before{
+    content:"";
+}

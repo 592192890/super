@@ -1,0 +1,61 @@
+/**
+* @file _tab.scss
+* @synopsis  tab
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-05-22
+*/
+
+.mod-tab {
+	._animation-all {
+		@include transition(all 0.2s ease-in);
+	}
+	._animation-none {
+		@include transition(all 0s ease-in);
+	}
+    .tab-hd {
+		@include flexbox((display: box));
+        position: fixed;
+		border-bottom:1px solid #e8e9ea;
+		background:#fff;
+		width:100%;
+		top:0;
+		left:0;
+		z-index:1;
+        .hd-item {
+            @include flexbox((box-flex:1));
+            text-align: center;
+            height: rem(80);
+            line-height: rem(80);
+            span {
+                display: inline-block;
+                height: rem(80);
+                line-height: rem(80);
+            }
+			&.active {
+				color:#f95d5b;	
+				transform:scale(1.2, 1.2);
+			}
+        }
+        .hd-line {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 0px;
+            border-bottom: rem(4) solid #f95d5b;
+			
+        }
+    }
+	.tab-bd {
+		margin-top:rem(100);
+		.bd-inner {
+			.bd-item {
+				display:none;
+				&:first-child {
+					display:block;
+				}
+			}	
+		}
+	}
+}
+

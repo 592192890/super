@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- @author 刘慧 -->
+<html>
+
+<head>
+    <title>电子小票</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/electronic-list/1.0.0/electronic-list.css" type="text/css"
+        charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- 小票列表 begin -->
+        <div class="mod-tab jWrap">
+            <ul class="tab-hd">
+                <li class="hd-item" href="javascript:;" data-type="1" role="tabItem">
+                    <span>超市购物</span>
+                </li>
+                <li class="hd-item" href="javascript:;" data-type="2" role="tabItem">
+                    <span>百货及其他</span>
+                </li>
+                <li class="hd-line" role="line"></li>
+            </ul>
+            <div class="mod-cp tab-bd">
+                <div class="bd-inner" role="tabInner">
+                    <div class="bd-item" role="tabPanel" data-type="1">
+                        <!-- 测试dom -->
+                        <div>
+                            <a href='/super/member/ticketsDetail?billNo=180220692223&posId=O2O&storeId=120238&isSiebelPos=1' class='mod-item already-billing'>
+                                <!-- <div class='item-line'></div> -->
+                                <div class='item-lf'>
+                                    <p class='lf-prace'>
+                                        <span>¥</span>1000.00</p>
+                                    <p class='lf-desc'>实付金额</p>
+                                </div>
+                                <div class='item-rt'>
+                                    <p><i class='icon iconfontmod'>&#xe7c2;</i>&nbsp;江西鄱阳店</p>
+                                    <p><i class='icon iconfontmod'>&#xe632;</i>&nbsp;2018-02-02 08:22:25</p>
+                                    <div class="tag-box clearfix">
+                                        <span class="f-r">已兑礼</span>
+                                        <span class="f-r">已退货</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bd-item " role="tabPanel" data-type="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+        window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            listUrl: '/super/member/tickets?isAjax=1'
+        };
+        require(['conf/electronic-list/1.0.0/electronic-list']);
+    </script>
+</body>
+
+</html>

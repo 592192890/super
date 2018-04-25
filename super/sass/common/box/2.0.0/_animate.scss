@@ -1,0 +1,125 @@
+/* common animations {{{1 */
+  .ui-animated {
+	  @include animation-fill-mode(both);
+ }
+  .ui-speed-normal,.ui-speed-500 {
+	  @include animation-duration(0.5s);
+  }
+  .ui-speed-fast,.ui-speed-200 {
+	  @include animation-duration(0.2s);
+  }
+  .ui-speed-slow,.ui-speed-1000 {
+	  @include animation-duration(1s);
+  }
+
+/* bounceIn */
+@include keyframes(bounceIn){
+    0% { @include transform(scale(.5)); @include opacity(0); }
+    70% { @include transform(scale(1.03)); }
+    100% { @include transform( scale(1)); }
+};
+.ui-ani-bounceIn {
+	@include animation-name(bounceIn);
+}
+
+
+/* bounceOut */
+@include keyframes(bounceOut){
+    100% { @include transform(scale(.7)); @include opacity(0); }
+    30% { @include transform(scale(1.03)); }
+    0% { @include transform( scale(1)); }
+};
+.ui-ani-bounceOut {
+	@include animation-name(bounceOut);
+}
+
+/* shake */
+@include keyframes(shake){
+    0%,100% { @include transform(translateX(0)); }
+    10%, 30%, 50%, 70%, 90% { @include transform(translateX(-10px)); }
+    20%, 40%, 60%, 80% { @include transform(translateX(10px)); }
+};
+.ui-ani-shake {
+	@include animation-name(shake);
+}
+
+/* fadeIn */
+@include keyframes(fadeIn){
+    from { @include opacity(0); }
+    to { @include opacity(1); } 
+};
+.ui-ani-fadeIn {
+	@include animation-name(fadeIn);
+}
+
+/* fadeOut */
+@include keyframes(fadeOut){
+    from { @include opacity(1); }
+    to { @include opacity(0); } 
+};
+.ui-ani-fadeOut {
+	@include animation-name(fadeOut);
+}
+
+/* fadeInUp */
+@include keyframes(fadeInUp){
+    from { @include opacity(0); @include transform( translateY(100%)); }
+    to { @include opacity(1); @include transform(none); } 
+};
+.ui-ani-fadeInUp {
+	@include animation-name(fadeInUp);
+}
+
+/* fadeOutDown */
+@include keyframes(fadeOutDown){
+    from { @include opacity(1); @include transform(none); }
+    to { @include opacity(0); @include transform(translateY(100%)); } 
+};
+.ui-ani-fadeOutDown {
+	@include animation-name(fadeOutDown);
+}
+
+/*rotate*/
+@include keyframes(rotate){
+    0% { @include transform(rotate(0deg)); }
+    100% { @include transform(rotate(360deg)); } 
+};
+.ui-ani-rotate {
+	@include animation-name(rotate);
+}
+
+/* upPop */
+@include keyframes(upPop){
+    from { @include transform(translateY(100%)); }
+    to { @include transform(translateY(0)); } 
+} 
+.ui-ani-upPop {
+	@include animation-name(upPop);
+}
+
+/* downPop */
+@include keyframes(downPop){
+    from { @include transform(translateY(0)); }
+    to { @include transform(translateY(100%)); } 
+} 
+.ui-ani-downPop {
+	@include animation-name(downPop);
+}
+
+/* leftPop */
+@include keyframes(leftPop){
+    from { @include transform(translateX(-100%)); }
+    to { @include transform(translateX(0)); } 
+} 
+.ui-ani-leftPop {
+	@include animation-name(leftPop);
+}
+
+/* rightPop */
+@include keyframes(rightPop){
+    from { @include transform(translateX(0)); }
+    to { @include transform(translateX(-100%)); } 
+} 
+.ui-ani-rightPop {
+	@include animation-name(rightPop);
+}

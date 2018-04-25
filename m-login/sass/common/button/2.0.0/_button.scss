@@ -1,0 +1,109 @@
+/**
+* @file btn.scss
+* @synopsis  按钮
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-29
+*/
+
+/* 没有样式的btn */
+.btn {
+	background:none;
+	border:0px;
+}
+
+// ui-btn mixin defines
+@mixin ui-btn(
+	$name:"",
+	$color: #333,
+	$background-color: #fff, 
+	$border-color: #fff,
+	$hover-color:#333,
+	$hover-bg: #fff,
+	$hover-border-color: #fff,
+	$disabled-color:#ccc,
+	$disabled-bg: #fff,
+	$disabled-border-color: #fff
+) {
+	@if $name !='' {
+		$name : '-'+$name;	
+	}
+	.ui-btn#{"" + $name} {
+		display: inline-block;
+		text-align: center;
+		width: auto;
+		/* font: 400 .75rem/1.6rem sans-serif; */
+		cursor: pointer;
+		outline: none;
+		text-decoration: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		@include border-radius(rem(8));
+		@include box-sizing(border-box);
+		color: $color;
+		background-color: $background-color;
+		border: rem(2) solid $border-color;
+		font-size: rem(30);
+		height: rem(76);
+		line-height:rem(76);
+		padding:0px rem(30);
+		&:active, &:hover {
+		  background-color: $hover-bg;
+		  border-color:$hover-border-color;
+		  color: $hover-color;
+		  text-decoration: none;
+		}
+		&:disabled, &.disabled {
+			/* @include opacity(0.3); */
+			cursor:text;
+		  background-color: $disabled-bg;
+		  border-color:$disabled-border-color;
+		  color: $disabled-color;
+		}
+	}
+}
+
+/* btn icon */
+.ui-btn .icon {
+    margin-right: 5px;
+    font-size: 0.7rem;
+    line-height: 15px;
+    -webkit-text-stroke-width: 0;
+}
+
+//默认按钮
+@include ui-btn();
+/* .ui-btn-primary*/
+@include ui-btn("line", #333, #fff, #ccc, #333, #fff, #ccc, #bfbfbf , #fff, #ebebeb);
+
+@include ui-btn("primary", #fff, #f85d5b, #f85d5b, #fff, #fb7674, #fb7674, #fff , #fdbebd, #fdbebd);
+
+@include ui-btn("primary-line", #f85d5b, #fff, #f85d5b, #f85d5b, #fff, #f85d5b, #fdc8c8, #fff, #fdbebd);
+
+
+/*** 按钮大小(高,宽,padding) *****************************************/
+@mixin ui-btn-h-w-p(
+	$name:"primary",
+	$height:76,
+	$font-size:30,
+	$padding: 30 //上下默认为0 左右为$padding
+){
+	.ui-btn-#{"" + $name} {
+		font-size: rem($font-size);
+		height: rem($height);
+		line-height:rem($height);
+		padding:0px rem($padding);
+	}
+}
+//宽高规格
+@include ui-btn-h-w-p();
+@include ui-btn-h-w-p("large",88, 32, 40);
+@include ui-btn-h-w-p("small", 60, 28, 20);
+
+/*** 按钮100%(代码放置底部,保证优先级) ********************************************/
+.ui-btn-block {
+	display:block;
+	width:100%;
+}

@@ -1,0 +1,165 @@
+.mod-areas-wrap{
+	position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	min-height:rem(100);
+	&.disabled {
+		.empty {
+			display:block!important;
+		}	
+		.ctn {
+			display:none;
+			overflow:hidden;
+		}
+		.areas-rit {
+			.ui-btn-primary, .ui-btn-primary-line{
+				background-color:#cccccc;	
+				border:1px solid #ccc;
+				&:nth-child(2) {
+					background-color:#fff;	
+					color:#999999;
+				}
+			}
+		}
+	}
+}
+.mod-areas {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index:4;
+	font-size:rem(28);
+	background: #fff;
+	height:rem(100);
+	.areas-hd {
+		height: rem(100);
+		line-height: rem(100);
+		border-top:1px solid #c4ccd9;
+		.empty {
+			color:#999999;
+			display:none;	
+		}
+		.ctn {
+			position:relative;
+			.icon {
+				position: absolute;
+				right: rem(50);
+				top: 0px;
+				color:#999999;
+				background-color: #fff;
+				// box-shadow: -40px 0 20px -20px #fafafa;
+				width:rem(80);
+				text-align:center;
+				display:block;
+				height:rem(100);
+				.icon-arrow {
+					position:absolute;
+					display:block;
+					left:rem(20);
+					&:after {
+						font-size: rem(40);
+						display:inline-block;
+						vertical-align:middle;
+						height:rem(40);
+						line-height:rem(50);
+						overflow:hidden;
+					}	
+				}
+			}
+		}
+		.areas-lft {
+			margin-right: rem(300);
+			padding:0px rem(70) 0px rem(20);
+			text-align:left;
+		}
+		.areas-rit {
+			position: absolute;
+			right: rem(20);
+			top:rem(4);
+			.ui-btn-primary-line {
+				width: auto;
+				&:nth-child(2){
+					margin-left:rem(10);
+				}
+			}
+		}
+		
+	}
+}
+.mod-areas-pop{ 
+	position:absolute;	
+	top:0px;
+	bottom:0px;
+	width:100%;
+	.pop-bd {
+		position:absolute;
+		bottom:rem(100);
+		left:0px;
+		width:100%;
+		background:#fff;
+		z-index:2;
+		@include transform(translateY(100%));
+		@include transition(.3s ease-in-out);
+		.areas-bd-inner {
+			padding:0px rem(30) rem(30) 0px;
+			overflow:auto;
+			max-height:rem(400);
+			ul {
+				li {
+					height:rem(58);
+					line-height:rem(58);
+					border:rem(2) solid #c4ccd9;
+					display:inline-block;
+					float:left;
+					padding:0px rem(70) 0px rem(30);
+					position:relative;
+					margin-left:rem(30);
+					margin-top:rem(30);
+					max-width:rem(240);
+					@include border-radius(rem(4));
+					&:after {
+						font-family: 'iconfontcom';
+						content:'\e607';	
+						position:absolute;
+						color:#999;
+						font-size:rem(26);
+						top:0px;
+						right:rem(30);
+					}
+				}
+			}
+		}
+	}
+	.mask {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom:0px;
+		background-color: #000;
+		@include opacity(0);
+		@include transition(opacity 0.3s linear);
+	}
+}
+.mod-areas-selected {
+	top:0px;
+	.mod-areas-pop {
+	}
+	.icon-arrow {
+		@extend .icon-arrow-selected;
+	}
+	.pop-bd {
+		@extend .area-animate-up;
+	}
+	.mask {
+		@include opacity(0.6);
+	}
+}
+/* 动画效果 */
+.area-animate-up {
+    @include transform(translateY(0%));
+}

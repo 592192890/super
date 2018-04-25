@@ -1,0 +1,106 @@
+/*
+Generic button mixins
+@author Allex Wang (allex.wxn@gmail.com)
+*/
+
+/* 没有样式的button */
+.button {
+	background:none;
+	border:0px;
+}
+
+$button-fg: #fff;
+$button-bg: #ff6666;
+$button-border-color: #ff6666;
+$button-hover-bg: #fd5656;
+$button-hover-border-color: #fd5656;
+
+// ui-button mixin defines
+
+@mixin ui-button-style(
+  $fg: $button-fg,
+  $bg: $button-bg,
+  $border-color: $button-border-color,
+  $hover-bg: $button-hover-bg,
+  $hover-border-color: $button-hover-border-color
+) {
+    color: $fg;
+    background-color: $bg;
+    border: rem(2) solid $border-color;
+	padding:0px rem(30);
+    &:active, &:hover {
+      background-color: $hover-bg;
+	  color: $fg;
+      text-decoration: none;
+    }
+    @content;
+}
+
+@mixin ui-button(
+  $name,
+  $fg: $button-fg,
+  $bg: $button-bg,
+  $border-color: $button-border-color,
+  $hover-bg: $button-hover-bg,
+  $hover-border-color: $button-hover-border-color
+) {
+  .ui-button-#{"" + $name} {
+    text-align: center;
+    @include ui-button-style($fg, $bg, $border-color, $hover-bg, $hover-border-color);
+  }
+}
+
+
+.ui-button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: rem(74);
+	line-height:rem(74);
+    /* font: 400 .75rem/1.6rem sans-serif; */
+    cursor: pointer;
+    outline: none;
+    font-size: rem(28);
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @include border-radius(10px);
+    @include box-sizing(border-box);
+    @include ui-button-style();
+
+    &:active {
+        text-decoration: none;
+        // background: #fc4b7c;
+        opacity: 0.8;
+    }
+
+
+    &.disabled, &[disabled], &:disabled {
+        @include ui-button-style(#ccc, #999, #ddd, #999, #ddd) {
+            cursor: text;
+        }
+    }
+}
+
+/* button icon */
+.ui-button .icon {
+    margin-right: 5px;
+    font-size: 0.7rem;
+    line-height: 15px;
+    -webkit-text-stroke-width: 0;
+}
+
+
+/* .ui-button-red */
+@include ui-button("red", #fff, #db0000, #db0000, #db0000, #db0000);
+
+@include ui-button("red-border", #ff6767, #fff, #ff6767, #f8f8f8, #ff6767);
+
+/* .ui-button-white */
+@include ui-button("white", #666, #fff, #fff, #fff, #ccc);
+
+/* .ui-button-disabled */
+@include ui-button("disabled", #fff, #999, #999, #999, #666);
+

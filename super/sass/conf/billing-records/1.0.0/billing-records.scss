@@ -1,0 +1,175 @@
+/**
+* @file biling-records.scss
+* @author liuhui
+* @version 1.0.0
+* @date 2017-10-18
+* modify by  zgc
+*/
+
+@import "common/common";
+@import "common/nav/back2top";
+@import "common/tab/2.0.0/tab";
+// @import "module/cp-qr/1.0.0/cp-qr";
+
+html{
+	background-color: #f6f6f6;
+}
+.page-view {
+    max-width: rem(750);
+    margin: 0 auto;
+}
+.mod-tab{
+	width: 100%;
+	background-color:#fff;
+	.tab-hd{
+		// border-bottom: none;
+		width: 100%;
+		position: relative;
+		// left: 15%;
+		.hd-item{
+			width: 50%;
+			color: #999;
+			&.active {
+				color: #666;
+			}
+		}
+	}
+}
+.tab-bd{
+	margin-top:0!important;
+	background-color:#f6f6f6;
+	padding-top:rem(2);
+}
+.mod-item{
+	margin: rem(20) rem(20) 0 rem(20); 
+	background-color: #fff;
+	border-radius: rem(10);
+	height: rem(204);
+	display: -webkit-box;
+    position:relative;
+    
+	.item-hd{
+        background-color: #f95d5b;
+        height: rem(10);
+        width: 100%;
+        position: absolute;
+        border-top-right-radius: rem(10);
+        border-top-left-radius: rem(10);
+    }
+    .item-status{
+        position: absolute;
+        top:rem(32);
+        right:rem(20);
+        border:1px solid #f95d5b;
+        border-radius:rem(4);
+        padding:rem(4) rem(12);
+        color:#f95d5b;
+        font-size:rem(18);
+        line-height:rem(18);
+    }
+	.item-lf{
+        width:rem(186);
+		border-right: 2px dashed #f1f4f6;
+		text-align: center;
+        line-height: rem(204);
+        color: #f95b5d;
+		.lf-prace{
+			font-size: rem(36);
+			line-height: rem(40);
+			font-weight: 400;
+			span{
+				font-size: rem(22);
+			}
+		}
+		.lf-desc{
+			font-size: rem(26);
+			color: #999;
+			line-height: rem(30);
+		}
+	}
+	.item-rt{
+		-webkit-box-flex: 53.0;
+		padding: rem(40) 0 0 rem(30);
+		.receipt-num{
+			line-height: rem(56);
+			font-size: rem(28);
+			color: #666;
+		}
+        .gray{
+            line-height: rem(32);
+            font-size: rem(24);
+            color: #999;
+        }
+	}
+    &.in-progress{
+        .item-status{
+            display:none;
+        }
+        .item-lf{
+            color:#ccc;
+        }
+        .item-hd{
+            background-color: #ccc;
+        }
+    }
+}
+.detail-ft{
+    position: absolute;
+    bottom: rem(-2);
+    left: 0;
+    width: 100%;
+    height:rem(14);
+    background-image: url('//ssl.bbgstatic.com/super/images/conf/billing-records/1.0.0/bg-bottom.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: rem(10);
+    border-bottom-right-radius: rem(10);
+}
+/* 电子小票列表为空 */
+.mod-list-empty{
+	width:rem(578);
+	margin:rem(38) auto;
+	text-align: center;
+	img{
+		width: rem(254);
+		height: rem(246);
+	}
+	.row-1{
+		font-size: rem(28);
+		color: #666;
+	}
+	.row-2{
+		font-size: rem(24);
+		color: #999;
+	}
+}
+
+/* 加载中... */
+.loading {
+    font-size: rem(24);
+    text-align: center;
+    color: #999;
+	position:relative;
+	// padding: rem(50) 0 0 0;
+	// background-color:#f6f6f6;
+    &:before {
+        content: " ";
+        vertical-align: middle;
+		position:absolute;
+		top:50%;
+		margin-top:rem(-16);
+	}
+}
+.loading-txt{
+	font-size: rem(24);
+	color: #999;
+}
+.mod-tab .tab-hd .hd-item.active{
+	color:#333!important;
+}
+.mod-tab .tab-hd .hd-item{
+	color:#666!important;
+}
+.mod-tab .tab-hd .hd-item.active{
+    transform: scale(1);
+}

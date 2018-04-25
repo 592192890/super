@@ -1,0 +1,33 @@
+/* checkbox, radio begin ***********************************/
+input[type="checkbox"],
+input[type="radio"] {
+    color:#c4ccd9;
+    border: 0px;
+    border-radius: 0;
+    display: inline-block;
+    -webkit-appearance: none;
+    width: rem(40);
+    height: rem(40);
+    line-height: rem(40);
+    background-size: rem(40);
+    background-repeat: no-repeat;
+    border: none;
+	background: transparent;
+    &:after {
+        font-size: rem(40);
+        font-family: "iconfont";
+        content: "\e601";
+    }
+    &:checked {
+        color: #fc5d51;
+        &:after {
+            content: "\e617";
+        }
+    }
+    &:disabled {
+        &:after {
+            content: "\e600";
+        }
+    }
+}
+/* checkbox, radio end ***********************************/

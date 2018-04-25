@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- @author 吕永华 -->
+
+<html>
+
+<head>
+    <title>实名认证</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/identity-verification/1.0.0/identity-verification.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <!-- 实名认证页面 begin -->
+    <div class="page-view identity-verification">
+         <form>
+             <div class="tips">
+                 <i class="icon iconfontmod">&#xe606;</i>
+                 <span>请填写您的真实信息，通过后将不能修改！</span>
+             </div>
+             <div>
+                 <input class="first" type="text" name="name" placeholder="请输入真实姓名" />
+                 <input type="text" class="jSelect" placeholder="请选择证件类型" value="身份证" /><i class="select icon iconfontmod">&#xe772;</i>
+                 <input class="idNum" type="text" placeholder="请输入正确的证件号码"/>
+             </div>
+         </form>
+         <div class="button">
+             <!-- <button class="ui-btn-primary-line ui-btn-block">提交</button> -->
+             <button class="ui-btn-line ui-btn-block">提交</button>
+         </div>
+    </div>
+    <!-- 证件选择 -->
+    <div class="hide-all"></div>
+    <div class="shad-contact">
+        <ul class="lists">
+                <li class="tel-one item">外籍护照</li>
+                <li class="tel-two item">身份证</li>
+                <li class="tel-two item">台胞证</li>
+                <li class="tel-two item">回乡证</li>
+        </ul>
+        <div class="cancel">取消</div>
+    </div>
+
+    <!-- 实名认证页面 end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <!-- #include file="/super/html/common/statistics.html" -->
+    <script>
+        // window[$PAGE_DATA]=window[$PAGE_DATA] || {};
+        // window[$PAGE_DATA]['url']={
+        //     'ordersUrl' = 'http://m.yunhou.com/member/orders'
+        // };
+        require(['conf/identity-verification/1.0.0/identity-verification']);
+    </script>
+</body>
+
+</html>

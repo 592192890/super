@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>优惠券</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/coupon/1.0.0/detail.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <div class="ui-block">
+            <div class="mod-pic">
+                <img src="http://img2.bbgstatic.com/15c616b77ba_bc_319c1f514575125bec4e6b723c2227ad_269x240.png"
+                />
+            </div>
+            <div class="color-primary ui-list-title font-size-3">￥87</div>
+            <h2 class="ui-list-row line-2">梅溪新天地免费停车券</h2>
+            <div class="ui-list-row line-2"><i class="icon iconfontmod">&#xe604;</i>2017.03.01 - 2017.03.09</div>
+            <div class="ui-list-row tap-lt mod-shop" id="jShop">
+                <i class="icon iconfontmod">&#xe7c1;</i>
+                <ul class="txt">
+                    <li class="txt-overflow">长沙步步高梅溪新天地长沙步步高梅溪新天地长沙步步高梅溪新天地长沙步步高梅溪新天地</li>
+                    <li class="txt-overflow">长沙步步高梅溪新天地</li>
+                    <li class="txt-overflow">长沙步步高梅溪新天地</li>
+                    <li class="txt-overflow">长沙步步高梅溪新天地</li>
+                    <li class="txt-overflow">长沙步步高梅溪新天地</li>
+                    <li class="txt-overflow">长沙步步高梅溪新天地</li>
+                </ul>
+                <i class="icon iconfontcom arrow">&#xe610;</i>
+            </div>
+        </div>
+        <div class="ui-block">
+            <h3 class="ui-list-row line-2">优惠券说明</h3>	
+            <div class="ui-list-row line">
+                1、优惠券使用时间:2017年4月10日-2017年7月2日
+                <br/>2、优惠券使用规则
+                <br/>3、优惠券使用说明
+                <br/>
+            </div>
+            <div class="ui-list-row">
+                <button class="ui-btn-primary ui-btn-block" id="jReceiveCoupon" data-coupon-id="1">立即领取</button>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA ||
+        {};
+        $PAGE_DATA['couponType'] = 7;
+        $PAGE_DATA['freeType'] = 2; //1 付费  2 免费
+        $PAGE_DATA['goodsid'] = 33; 
+        $PAGE_DATA['url'] = {
+            'freeGetCoupon': './data/receiveCoupon.php', //couponId  优惠券id，car_no 车牌号码   couponType  类型  //免费
+            'payGetCoupon': './data/receiveCoupon.php', //couponId  优惠券id，car_no 车牌号码   couponType  类型 //付费
+            'plateList': './data/plateList.php',
+            'bindCarNoPage': 'http://meixi.yunhou.com/park/manage/', //绑定车牌的url
+            'login': '//wx.yunhou.com/super/passport/login/h5?returnUrl='
+        };
+        require(['conf/coupon/1.0.0/detail']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

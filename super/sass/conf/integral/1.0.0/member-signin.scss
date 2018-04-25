@@ -1,0 +1,232 @@
+/**
+* @file member-signin.scss
+* @synopsis  积分签到
+* @author zhouguangcheng,  zgc7788@gmail.com 
+* @version 1.0.0
+* @date 2017-05-27
+*/
+@import "common/common";
+
+$orange: #ff5a00;
+// @mixin pinkLine($value: -110) {
+// 　　content:'.';
+//     font-size:0;
+//     width:rem(110);
+//     height:rem(1);
+//     position:absolute;
+//     top:rem(50);
+//     left:rem($value);
+//     background:#fff4f4;
+// }
+.page-view{
+    max-width:rem(750);
+    margin:0 auto;
+}
+header{
+    height: rem(304);
+    background-image:image-url('//ssl.bbgstatic.com/super/images/conf/member-signin/1.0.0/bg.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    .mod-checkins-integral{
+        width: rem(398);
+        height: rem(140);
+        position: absolute;
+        top: 50%;
+        margin: rem(-70) 0 0 rem(20);
+        color:$orange;
+        .integral-total{
+            font-size:rem(54);
+            margin-bottom:rem(15);
+        }
+        .checkins-days{
+
+            li{
+                width:rem(40);
+                height:rem(40);
+                line-height:rem(40);
+                font-size:rem(30);
+                background:#fff;
+                margin-right:rem(14);
+                border:rem(2) solid $orange;
+                border-radius:50%;
+                text-align:center;
+                position:relative;
+                float:left;
+                &:after{
+                    content:'.';
+                    font-size:0;
+                    width:rem(14);
+                    height:rem(3);
+                    position:absolute;
+                    bottom:rem(16);
+                    right:rem(-16);
+                    background-color:#fff;
+                }
+                &:last-child{
+                    margin-right:0;
+                    &:after{
+                        width:0;
+                        height:0;
+                    }
+                }
+            }
+            .active{
+                background:$orange;
+                color:#fff;
+                &:after{
+                    background-color:$orange;
+                }
+            }
+            .today{
+                i{
+                    font-size:rem(28);
+                    position: relative;
+                    bottom: rem(-3);
+                }
+                &:after{
+                    background-color:#fff;
+                }
+            }
+        }
+        .checkins-dec{
+           font-size:rem(26); 
+        }
+    }
+    .mod-checkins-btn{
+        position:absolute;
+        bottom:rem(120);
+        right:rem(20);
+        text-align:center;
+        .checkins-btn{
+            width:rem(178);
+            height:rem(76);
+            line-height:rem(76);
+            font-size:rem(26);
+            color:#fff;
+            background:$orange;
+            border-radius:rem(8);
+            position:relative;
+            border:none;
+            padding:1px 0;
+            &:active{
+                background:#FF5A50;
+            }
+            &:after{
+                content:'.';
+                font-size:0;
+                width:rem(76);
+                height:rem(65);
+                position:absolute;
+                left:rem(-24);
+                bottom:rem(-20);
+                background-image:image-url('//ssl.bbgstatic.com/super/images/conf/member-signin/1.0.0/gold-coin.png');
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+        }
+        .combo-days{
+            display:none;
+            width:rem(174);
+            height:rem(72);
+            color:$orange;
+            background:#fff;
+            border:rem(2) solid $orange;
+            font-size:rem(24);
+            border-radius:rem(8);
+            p{
+               line-height:rem(24); 
+            }
+            .combo-txt{
+                margin:rem(10) 0;
+            }
+        }
+    }
+}
+.mod-title{
+    width:100%;
+    height:rem(100);
+    background:#fff;
+    .title-wrap{
+        position:relative;
+        width:rem(210);
+        line-height:rem(100);
+        margin:0 auto;
+        text-align:center;
+        color:#f95d5b;
+        font-size:rem(30);
+        i{
+            width:rem(34);
+            height:rem(34);
+            font-size:rem(30);
+            color:#f95d5b; 
+            background-color:#fff4f4;
+            border-radius:50%;
+        }
+        &:before{
+            // @include pinkLine(-110);
+            content:'.';
+            font-size:0;
+            width:rem(110);
+            height:rem(1);
+            position:absolute;
+            top:rem(50);
+            left:rem(-110);
+            background:#fff4f4;
+        }
+        &:after{
+            //@include pinkLine(210);
+            content:'.';
+            font-size:0;
+            width:rem(110);
+            height:rem(1);
+            position:absolute;
+            top:rem(50);
+            left:rem(210);
+            background:#fff4f4;
+        }
+    }
+}
+.mod-goodslist{
+    background:#fff;
+    li{
+        width:rem(373);
+        height:rem(502);
+        float:left;
+        border-top:rem(4) solid #f2f3f7;
+        text-align: center;
+        &:nth-child(odd){
+            border-right:rem(4) solid #f2f3f7;
+        }
+        img{
+            width:rem(330);
+            height:rem(330);
+            margin-top:rem(20);
+            vertical-align:middle;
+        }
+        .goods-dec,.preferential-price{
+            line-height:rem(28);
+            padding-left:rem(20);
+            text-align:left;
+        }
+        .goods-dec{
+            width:rem(300);
+            font-size:rem(28);
+            color:#000;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            margin:rem(20) 0 rem(30) 0;
+        }
+        .preferential-price{
+            font-size:rem(26);
+            color:#f95d5b;
+            .price{
+               font-size:rem(32); 
+            }
+            i{
+                font-style:normal;
+            }
+        }
+    }
+}

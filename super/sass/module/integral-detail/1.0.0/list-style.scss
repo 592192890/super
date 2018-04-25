@@ -1,0 +1,78 @@
+@import 'compass/css3';
+.detail-list{
+    width:100%;
+    li{
+        height:rem(120);
+        background:#fff;
+        border-top:rem(2) solid #f1f4f6;
+        //transform-style: preserve-3d;
+        div{
+            position: relative;
+            top: 50%;
+            @include transform(translateY(-50%));
+        }
+    }
+    .integral-icon{
+        width:rem(58);
+        height:rem(58);
+        line-height:rem(58);
+        text-align:center;
+        background-color:#fefaee;
+        border-radius:50%;
+        margin:0 rem(24) 0 rem(12);
+        i{
+           font-size:rem(40);
+           color:#fead35;  
+        } 
+    }
+    .integral-info{
+        
+        .integral-info-title{
+            height:rem(30);
+            line-height:rem(30);
+            font-size:rem(28);
+            color:#333;
+            margin-bottom:rem(12);
+        }
+        .integral-info-time{
+            height:rem(24);
+            line-height:rem(24);
+            font-size:rem(24);
+            color:#999;
+        }
+    }
+    .integral-num{
+
+        font-size:rem(40);
+        color:#f85e5b;
+        margin-right:rem(26);
+        display: inline-block;
+        vertical-align: middle;
+        // &:before{
+        //     font-family: iconfontmod;
+        //     content: '\e75b';
+        //     font-size:rem(26);
+        //     position: absolute; 
+        //     margin-left:rem(-26); 
+        // }
+        i{
+            font-style: normal;
+            font-size:rem(26);
+            display: inline-block;
+            height: rem(120);
+            line-height: rem(120);
+            vertical-align: middle;
+        }
+        span{
+            vertical-align: middle;
+        }
+        
+    }
+}
+/* 清除加载完成动画 */
+.loading{
+    margin-top: rem(30);
+    &:before{
+        content:"";
+    }
+}

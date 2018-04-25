@@ -1,0 +1,62 @@
+/**
+* @file list.scss
+* @synopsis  coupon list
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-05-22
+*/
+
+@import "common/common";
+@import "common/tab/2.0.0/tab";
+@import "common/pro-list/1.0.0/sass/module/pro-list";
+@import "common/page-tips/1.0.0/page-tips";
+.ui-tab .tab-hd {
+	position:fixed;
+}
+.mod-coupon {
+	margin:rem(20) rem(20) 0px;
+	background:#fff;
+	border-radius:rem(10);
+	.coupon-line {
+		border-left:rem(4) dotted #f3f3f3; 
+		position:absolute;
+		left:rem(200);
+		top:rem(20);
+		bottom:rem(20);
+		i {
+			display:block;
+			background:#f2f3f7;
+			width:rem(16);
+			height:rem(16);
+			border-radius:50%;
+			position:absolute;
+			top:rem(-28);
+			left:rem(-10);
+			&:nth-child(2) {
+				top:auto;
+				bottom:rem(-28);	
+			}
+		}	
+	}
+	.list-item .list-ctn {
+		margin-left:rem(20);
+		h3 {
+			-webkit-line-clamp: 1;	
+		}
+	}
+	.list-item .list-img img {
+	
+	}
+	&.coupon-selected {
+		background:url('http://img4.bbgstatic.com/15c3db98ee8_bc_2a039163354aee840f0f7be391d132ca_167x152.png')	#fff no-repeat top right;
+		background-size:rem(166) rem(152);
+		.ui-btn-primary {
+			display:none;
+		}
+	}
+	&.coupon-disabled {
+		.color-primary {
+			color:#c0c0c0!important;
+		}	
+	}
+}

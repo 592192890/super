@@ -1,0 +1,266 @@
+/**
+* @file my-center.scss
+* @synopsis  个人中心
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-03-28
+*/
+
+@import "common/common";
+$wFull:100%;
+$hFull:100%;
+$abso:absolute;
+$rela:relative;
+$wMax:rem(750);
+.my-center{
+    padding-bottom:rem(155);
+}
+header {
+    position:$rela;
+    width:$wFull;
+    max-width:$wMax;
+    margin:0 auto;
+    height: rem(370);
+    background: url(//ssl.bbgstatic.com/super/images/conf/my-center/1.0.0/bg.png) no-repeat;
+    background-size: 100%;
+    overflow:hidden;
+    .icon{
+        position:$abso;
+        top:rem(20);
+        font-size:rem(50);
+        color:#fff;
+    }
+    .set{
+        right:rem(20);
+    }
+    .inf{
+        // right:none;
+        left:rem(20);
+        b{
+            display:none;
+            font-weight:normal;
+            position:$abso;
+            left:rem(35);
+            top:rem(-10);
+            border-radius:50%;
+            width:rem(28);
+            height:rem(28);
+            font-size:rem(16);
+            color:#f95d5b;
+            background-color:#fff;
+            text-align:center;
+            line-height:rem(28);
+        }
+    }
+}
+.mod-vip{
+    width:rem(950);
+    height:rem(320);
+    margin:0 auto;
+    position:$abso;
+    bottom:rem(-160);
+    left:rem(-100);
+    background-color:#fff;
+    border-radius:70%;
+    text-align:center;
+    .head-portrait{
+        position:$rela;
+        left:50%;
+        top:rem(-100);
+        margin-left:rem(-75);
+        width:rem(150);
+        height:rem(150);
+        border-radius:50%;
+        border:rem(5) solid #fff;
+        overflow:hidden;
+        img{
+            width:$wFull;
+            height:$hFull;
+        }
+    }
+    .vip-level,.personal-msg{
+        display: inline-block;
+        position:$rela;
+        text-align:center;
+        color:#666;
+    }
+    .personal-msg{
+        display:block;
+        top:rem(-100);
+        margin:rem(15) 0;
+        font-size:rem(23);
+        line-height:rem(23);
+    }
+    .vip-level{
+        top:rem(-110);
+        margin-bottom:rem(20);
+        font-size:rem(26);
+        line-height:rem(26);
+        .vip-name{
+            color:#666;
+        }
+    }
+}
+.mod-money{
+    display:flex;
+    position:$rela;
+    width:$wFull;
+    max-width:$wMax;
+    height:rem(108);
+    margin:0 auto;
+    background-color:#fff;
+    .wallet,.qr-code{
+        display:flex;
+        flex-grow:1;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        border:1px solid #e5e5e5;
+        color:#666;
+        border-right:none;
+        span{
+            margin-left:rem(8);
+            font-size:rem(32);
+        }
+    }
+    .iconfontmod{
+        font-size:rem(60);
+        vertical-align:middle;
+    }
+}
+.mod-body{
+    width:$wFull;
+    max-width:$wMax;
+    margin:rem(20) auto 0;
+    .vip-order{
+        width:$wFull;
+        .my-order{
+            display:flex;
+            padding:0 rem(20);
+            height:rem(80);
+            background-color:#fff;
+            border-bottom:1px solid #e5e5e5;
+            .order-tips{
+                display:flex;
+                flex-grow:1;
+                justify-content:flex-start;
+                align-items:center;
+                font-size:rem(26);
+                line-height:rem(26);
+                color:#333;
+            }
+            .see-order{
+                display:flex;
+                align-items:center;
+                justify-content:flex-end;
+                flex-grow:1;
+                // float:right;
+                font-size:rem(26);
+                line-height:rem(26);
+                color:#666;
+                .icon{
+                    font-size:rem(30);
+                    vertical-align:middle;
+                }
+            }
+        }
+        .order-entrance{
+            display:flex;
+            height:rem(180);
+            background-color:#fff;
+            justify-content:space-around;
+            align-items:center;
+            font-size:rem(26);
+            .order-box{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                flex-grow:1;
+                color:#666;
+                border-right:1px solid #f6f6f6;
+                height:rem(180);
+                .img{
+                text-align:center;
+                width:rem(70);
+                height:rem(70);
+                    img{
+                        // width:100%;
+                        height:100%;
+                    }
+                }
+                span:last-child{
+                    width:rem(200);
+                    text-align:center;
+                }
+            }
+            .icon{
+                position:$rela;
+                font-size:rem(55);
+                vertical-align:middle;
+                b{
+                    display:none;
+                    font-weight:normal;
+                    position:$abso;
+                    left:rem(35);
+                    top:rem(-10);
+                    border-radius:50%;
+                    width:rem(28);
+                    height:rem(28);
+                    font-size:rem(16);
+                    color:#fff;
+                    background-color:#f95d5b;
+                    text-align:center;
+                    line-height:rem(28);
+                }
+            }
+        }
+    }
+
+}
+
+.mod-body .vip-list{
+    width:$wFull;
+    margin-top:rem(20);
+    background-color:#fff;
+    .member{
+        display:flex;
+        padding:0 rem(20);
+        align-items:center;
+        justify-content:flex-start;
+        height:rem(80);
+        background-color:#fff;
+        font-size:rem(26);
+        color:#333;
+        border-bottom:#e5e5e5;
+    }
+    .vip-area{
+        display:flex;
+        .vip-box{
+            flex-grow:1;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+            height:rem(188);
+            border-top:1px solid #f6f6f6;
+            border-right:1px solid #f6f6f6;
+            font-size:rem(26);
+            color:#666;
+            span{
+                // display:block;
+                width:rem(200);
+                text-align:center;
+            }
+            .img{
+                text-align:center;
+                width:rem(70);
+                height:rem(70);
+                img{
+                    // width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+}

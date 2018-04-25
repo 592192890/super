@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>选择退货方式</title>
+<!--#include file="/super/html/common/intro.html"-->
+<link href="//s1.bbgstatic.com/super/css/conf/after-sale/1.0.0/fill-flow.css" data-cdn="conf/item/1.0.0/fill-flow.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-view">
+    <div class="mode-fill-flow">
+        <div class="fill-flow-bd">
+            <div class="tip tip-container">
+                <span class="tip-head"><img src="//s1.bbgstatic.com/super/images/module/after-sale/1.0.0/fill-flow-success.png" alt="" /></span>
+                
+                <span class="tip-head">售后申请审核通过，请选择退货方式</span>
+            </div>
+            <div class="hr-line"></div>
+            <div class="information first">
+                <span class="left">退货地址</span><span>：</span>
+                <span class="right">湖南长沙雨花区劳动路赤岗村436号</span>
+            </div>   
+            <div class="information">
+                <span class="left test">联系电话</span><span>：</span>
+                <span>11111111111/22222222222</span>
+            </div>
+            <div class="information">
+                <span class="left special">收 货 人</span><span>：</span>
+                <span class="right">周丽/黄连</span>
+            </div>
+            <div class="information last">
+                <span class="left">邮　　编</span><span>：</span>
+                <span class="right">430000</span>
+            </div>
+            
+            
+        </div>
+    </div>
+        
+    <div class="mod-submit">
+        <div class="service-head">
+            <span>请选择退货方式</span>
+        </div>
+        <div class="hr-line"></div>
+        <div class="service-select">
+            <div class="service-item jFirstSelect active">
+                <span>上门退货</span>
+                <i class="iconfontmod icon">&#xe614</i>
+                <!--<img src="/images/module/after-sale/1.0.0/right.png" alt="">-->
+            </div>
+            <div class="service-item jSecondSelect">
+                <span>快递退回</span>
+                <i class="iconfontmod icon">&#xe614</i>
+                <!--<img src="/images/module/after-sale/1.0.0/right.png" alt="">-->
+            </div>
+            
+        </div>
+
+        <div class="ui-select jFlowNumber">
+            <select>
+                <option>请选择物流公司</option>
+                <option value="id1">a</option>
+                <option value="id2">b</option>
+            </select>
+        </div>
+        <div class="flow-number jFlowNumber">
+            <input class="flow-id" type="text" placeholder="请输入物流单号">
+        </div>
+        
+        <div class="button">
+            <a class="ui-button" id="jSubmitFlow">提交</a>
+        </div>
+            
+    </div>
+        
+        
+    
+</div>
+<!--#include file="/super/html/common/outro.html"-->
+<script>
+    window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+    window['$PAGE_DATA']['reverseId']=123;
+    window['$PAGE_DATA']['url']={'submitFlow':'//wx.yunhou.com/super/aftersale/doship'}
+    require(['conf/after-sale/1.0.0/fill-flow']);
+</script>
+</body>
+</html>

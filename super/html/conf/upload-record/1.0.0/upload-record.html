@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>小票上传记录</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//ssl.bbgstatic.com/super/css/conf/upload-record/1.0.0/upload-record.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="page-view">
+        <ul class="mod-list">
+            <li>
+                <div class="list-hd"></div>
+                <div class="list-ctn">
+                    <div class="audit">审核中</div>
+                    <div class="date">2015.10.12 16:34</div>
+                    <div class="preview jCheckBox">小票预览</div>
+                </div>
+                <div class="list-btm"></div>
+            </li>
+
+            <li class="done">
+                <div class="list-hd"></div>
+                <div class="list-ctn">
+                    <div class="audit">已积分</div>
+                    <div class="date">2015.10.12 16:34</div>
+                    <div class="preview jCheckBox">小票预览</div>
+                </div>
+                <div class="list-btm"></div>
+            </li>
+
+            <li class="fail">
+                <div class="list-hd"></div>
+                <div class="list-ctn">
+                    <div class="audit">积分失败</div>
+                    <div class="date">2015.10.12 16:34<br>
+                        <span>小票时间已过积分时间段</span></div>
+                    <div class="preview jCheckBox">重新上传</div>
+                </div>
+                <div class="list-btm"></div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="mask" id="jLayer">
+        <div class="layer">
+            <div class="title">小票预览</div>
+            <div class="qr-code">
+                <img src="/super/images/conf/upload-record/ticket.jpg">
+            </div>
+            <div class="ok">确定</div>
+        </div>
+    </div>
+    
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            'pageUrl' : 'http://wx.yunhou.com/super/item/'
+        };
+        require(['conf/upload-record/1.0.0/upload-record']);
+    </script>
+</body>
+</html>

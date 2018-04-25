@@ -1,0 +1,96 @@
+/**
+* @file city-list.scss
+* @synopsis  城市选择
+* @author lvyonghua, lvyonghua416000@163.com
+* @version 1.0.0
+* @date 2017-07-03
+*/
+@import "common/common";
+.city-lists{
+    background-color: #FFF;
+}
+.showLetter{
+    position: fixed;
+    color:#fff;
+    width: rem(80);
+    height:rem(80);
+    top:50%;
+    left: 50%;
+    border-radius: 50%;
+    // border: #f7f7f7 rem(2) solid;
+    text-align: center;
+    // background-color:#333;
+    background:rgba(0,0,0,0.3);
+    display: none;
+}
+.showLetter span{
+    width: rem(80);
+    height: rem(80);
+    line-height: rem(80);
+    font-size: rem(38);
+}
+/*城市弹层*/
+.container{
+    // width:100%;
+    
+}
+.letter{
+    width:auto;
+    position:fixed;
+    top:50%;
+    margin-top:rem(-380);
+    right:0;
+    text-align:center;
+    // display:none;
+}
+.letter ul{
+    list-style-type:none;
+    width:rem(32);
+    // height:rem(760);
+    background-color: #333;
+    opacity:0.3;
+}
+.letter ul li{
+    // display:inline;
+    height:rem(30);
+    line-height:rem(30);
+}
+.letter ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size: rem(20);
+}
+.city{
+    // width:100%;
+    overflow:hidden;
+    // padding:rem(20);
+}
+.city-list{
+    // width:100%;
+}
+.city-list .city-letter{
+    font-size:rem(20);
+    display:block;
+    padding:0 rem(32);
+    // width:100%;
+    height:rem(64);
+    line-height:rem(64);
+    color:#999999;
+    background-color:#f7f7f7;
+}
+.city-list p{
+    padding:0 rem(32);
+    color:#333333;
+    // width:100%;
+    height:rem(80);
+    line-height:rem(80);
+    border-bottom:1px solid #e8ecf1;
+    cursor:pointer;
+    font-size:rem(26);
+    &:hover,&:active{
+        color:#f95d5b;
+    }
+}
+.UISelect{
+    margin-top:rem(5)
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../../../jquery/1.11.1/jquery.js"></script>
+    <script src="../../../require/2.1/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: '//s1.bbgstatic.com/test/js',
+            paths: {
+                'jquery': 'lib/jquery/1.11.1/jquery'
+                // 'jquery': 'lib/zeptojs/1.1.5/zepto'
+            },
+            map: {
+                '*': {
+                    // 'css': 'lib/require/2.1/plugins/css/css',
+                    'core': 'lib/core/1.0.0'
+                }
+            },
+            crossOrigin: '*' 
+        });
+
+if (!Function.prototype.bind) {
+    require(['lib/es5-shim/4.0.3/es5-shim']);
+}
+
+// Register a global listener for track io errors.
+require(['lib/core/1.0.0/io/request'], function(io) {
+    io.on('error', function(err, res) {
+        console.log('IO request error: ' + err.message, res)
+        // suspend error callback callings
+        if (+err.error === 1) {
+            alert('系统繁忙，请稍后再试');
+            return false;
+        }
+    });
+});
+
+        var box = require(['./box'],function(a){
+            console.log(a)
+        });
+        box.alert('A plain text message!');
+    </script>
+</body>
+</html>

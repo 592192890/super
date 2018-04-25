@@ -1,0 +1,64 @@
+.ui-header {
+	height: rem(88);
+	line-height: rem(88);
+	background-color: #1c1b20;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	font-size:rem(36);
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:2;
+	.title{
+		display: inline-block;
+		max-width: rem(380);
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+	.header-r {
+		font-size:rem(28);
+		position: absolute;
+		top: 0;
+		right:0;
+		padding:0px rem(20);
+		display: block;
+		text-decoration: none;
+		background:none;
+		border:0px;
+		&:disabled {
+			color:#ccc;
+		}
+	}
+	.header-l{
+		font-size:rem(28);
+		position:absolute;
+		left:0;
+		padding:0px rem(20);
+		&:before {
+            font-size: rem(44);
+            font-family: "iconfont";
+            content: "\e612";
+			display:inline-block;
+			vertical-align:middle;
+			height:rem(40);
+			line-height:rem(40);
+			overflow:hidden;
+			width:rem(28);
+			margin-top:rem(-4);
+			margin-left:rem(-10);
+			margin-right:rem(10);
+        }
+	}
+}
+/* 白底黑字 */
+.ui-header-white {
+	background-color:white;
+	color:#333;
+}
+body {
+padding-top:rem(88);
+}

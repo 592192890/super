@@ -1,0 +1,24 @@
+/**
+* @file details.scss
+* @synopsis  活动详情页
+* @author liuwei, 541042724@qq.com
+* @version 1.0.0
+* @date 2017-03-14
+*/
+@import 'common/common';
+@import 'common/button/1.0.0/button';
+@import 'common/slider/slider';
+
+@import 'module/active/mod-details/slider';
+@import 'module/active/mod-details/act-msg';
+@import 'module/active/mod-details/act-details';
+@import 'module/active/mod-details/act-coupon';
+@import 'module/active/mod-details/act-signup';
+
+.page-view{
+    background-color: #f2f3f7;
+    padding-bottom: rem(100);
+}
+.rm-Padding{
+	padding-bottom: 0;
+}

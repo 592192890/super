@@ -1,0 +1,300 @@
+/**
+* @file cp-use.scss
+* @synopsis  cp-use
+* @author zhouwei, 1097009033@qq.com
+* @version 1.0.0
+* @date 2017-03-29
+*/
+
+@import "common/common";
+@import 'common/button/1.0.0/button';
+@import "common/nav/back2top";
+@import 'common/dialog/dialog';
+
+.page-view {
+    margin: 0 auto;
+    min-width: rem(320);
+    max-width: rem(750);
+}
+
+$border: 1px solid #e5e5e5;
+//搜索框
+.mod-use-coupon{
+    .coupon-form{
+        padding: rem(20);
+        width: 100%;
+        height: rem(60);
+        background-color: #fff;
+        input{
+            width: rem(620);
+            height: rem(60);
+            border: 0;
+            border-radius: rem(12);
+            background-color: #f2f3f7;
+        }
+        a{
+            margin-left: rem(20);
+            width: rem(60);
+            height: rem(60);
+            color: #f95d5b;
+        }
+    }
+    //优惠码提示
+    .coupon-form-desc{
+        margin: rem(20) 0 rem(40);
+        padding-left: rem(24);
+        line-height: rem(24);
+        height: rem(24);
+        font-size: rem(24);
+        color: #999;
+    }
+    //选择提示
+    .coupon-list-header{
+        display: none;
+        padding: rem(20) 0 0 rem(20);
+        line-height: rem(28);
+        height: rem(28);
+        font-size: rem(28);
+        color: #666;
+    }
+}
+//优惠券
+.mod-cp{
+    padding: rem(20);
+    padding-bottom: rem(150);
+    //显示隐藏
+    .active{
+        //display: none;
+        display: block;
+    }
+    .mod-coupon-item{
+        position: relative;
+        border-radius: 10px;
+        border-top: $border;
+        border-bottom: $border;
+        margin-top: rem(20);
+        overflow: hidden;
+        &:first-child{
+            margin-top: 0;
+        }
+        //已使用图戳
+        .used-img{
+            position: absolute;
+            top: rem(10);
+            right: rem(76);
+            z-index: 1;
+            display: none;
+            width: rem(140);
+            height: rem(120);
+        }
+        //优惠券头部边框
+        .item-hd{
+            background-color: #f95d5b;
+            height: rem(10);
+            border-left: $border;
+            border-right: $border;
+        }
+        &.active {
+            .selected {
+                display: block;
+            }
+        }
+        //优惠券的选中状态
+        .selected{
+            position: relative;
+            z-index: 2;
+            display: none;
+            .triangle{
+                position: absolute;
+                top: rem(-10);
+                width: 0;
+                height: 0;
+                border-width: rem(32);
+                border-color: #f95d5b transparent transparent #f95d5b;
+                border-style: solid;
+                border-top-left-radius: rem(10);
+                .iconfontmod{
+                    position: relative;
+                    top: rem(-30);
+                    left: rem(-30);
+                    font-size: rem(28);
+                    color: #fff;
+                }
+            }
+        }
+        //优惠券主体
+        .item-bd{
+            position: relative;
+            padding: rem(30) rem(20);
+            border-left: $border;
+            border-right: $border;
+            border-bottom: 1px dashed #dedede;
+            background-color: #fff;
+            //优惠价格
+            .cp-money{
+                float: right;
+                margin-top: rem(20);
+                color: #f95d5b;
+                font-size: rem(48);
+                em{
+                    font-size: rem(28);
+                    font-style: normal;
+                }
+            }
+            //优惠名称
+            .cp-name{
+                font-size: rem(28);
+                line-height: rem(38);
+                color: #333;
+                span{
+                    font-size: rem(24);
+                    padding: 0 rem(10);
+                    border: 1px solid #f95d5b;
+                    color: #f95d5b;
+                    border-radius: 5px;
+                    margin-right: rem(5);
+                    background-color: #fffafa;
+                }
+            }
+            //优惠时间
+            .cp-time{
+                color: #999;
+                font-size: rem(24);
+            }
+        }
+        //使用规则
+        .cp-rule{
+            border-left: $border;
+            border-right: $border;
+            background-color: #fffafa;
+            padding: 0 rem(20);
+            .rule-title{
+                height: rem(70);
+                font-size: rem(26);
+                color: #333;
+                line-height: rem(70);
+                .iconfontmod{
+                    font-size: rem(30);
+                    color: #ccc;
+                }
+                //文字前的点
+                .ico-circle{
+                    display: inline-block;
+                    width: rem(8);
+                    height: rem(8);
+                    border-radius: 50%;
+                    background-color: #f95d5b;
+                    vertical-align: middle;
+                    margin-right: rem(10);
+                }
+            }
+            //下拉框
+            .rule-bd{
+                display: none;
+                padding-bottom: rem(20);
+                line-height: rem(40);
+                font-size: rem(24);
+                color: #666;
+                .text-left{
+                    text-indent: rem(-35);
+                    margin-left: rem(40);
+                }
+                .icon{
+                    text-align: center;
+                    .iconfontmod{
+                        font-size: rem(30);
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        //优惠券齿轮边
+        .cp-spilt{
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 0;
+            .left-circle, .right-circle{
+                display: inline-block;
+                width: rem(14);
+                height: rem(14);
+                position: absolute;
+                top: rem(-1);
+                margin-top: -(rem(7));
+                z-index: 1;
+                background-color: #f2f3f7;
+                border-radius: 50%;
+                border: $border;
+            }
+            .left-circle{
+                left: 0;
+                margin-left: -(rem(7));
+            }
+            .right-circle{
+                right: 0;
+                margin-right: -(rem(7));
+            }
+        }
+    }
+    //使用规则的下拉图标
+    .animate{
+        font-size: rem(28);
+    }
+    //已使用的优惠券
+    .cp-used{
+        display: block;
+        margin-top: rem(20);
+        overflow: hidden;
+        pointer-events: none;//禁止已经使用的优惠券的点击
+        .used-img{
+            display: block;
+        }
+        .selected{
+            display: none;
+        }
+        .cp-name>span,.cp-money{
+            color: #ccc !important;
+            border-color: #ccc !important;
+        }
+        .cp-rule{
+            pointer-events: auto;//使用规则的点击事件
+        }
+        .item-hd,.ico-circle{
+            background-color: #ccc !important;
+        }
+    }
+    .cp-fail{
+        @extend .cp-used;
+        .used-img{
+            display: none;
+        }
+    }
+}
+//优惠券按钮
+.btn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: rem(118);
+    background-color: #f0f0f4;
+    .ui-button-white{
+        display: block;
+        width: rem(648);
+        margin: rem(10) rem(20);
+        height: rem(78);
+        line-height: rem(78);
+        border-radius: rem(5);
+        border-color: #ccc !important;
+        color: #333;
+    }
+}
+//无优惠券
+.none-cp{
+    width: rem(328);
+    margin: rem(100) auto 0;
+    text-align: center;
+    p{
+        color: #999;
+        text-align: center;
+    }
+}

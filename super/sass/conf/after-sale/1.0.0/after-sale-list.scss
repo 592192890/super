@@ -1,0 +1,176 @@
+/**
+* @file flow-info.scss
+* @synopsis  售后列表
+* @author scott, 592192890@qq.com
+* @version 1.0.0
+* @date 2017-03-15
+*/
+
+
+@import 'common/common';
+@import "common/page-tips/1.0.0/page-tips";
+// .page-view{
+//     background-color:#f6f6f6;
+// }
+.item{
+    margin-top:rem(20);
+}
+.goods-head{
+    position:relative;
+    height:rem(80);
+    line-height:rem(80);
+    background-color:#ffffff;
+    span.left{
+        padding-left:rem(20);
+        color:#f95d5b;
+        font-size:rem(30);
+    };
+    span.right{
+        position:absolute;
+        right:rem(26);
+        color: #999999;
+        font-size:rem(26);
+    }
+} 
+.goods-list{
+    background-color:white;
+    .goods-item {
+        margin-bottom:rem(4);
+        background-color:#f9fafc;
+        .gd-img {
+            width: rem(160);
+            height:rem(206);
+            padding:rem(10) rem(20) 0 rem(20);
+            display: table-cell;
+            vertical-align:middle;
+            img{
+                width:rem(160);
+                height:rem(160);
+            }
+        
+        }
+    };
+    .goods-item:last-child{
+        margin-bottom:0px;
+    }
+    .gd-msg{
+        width:100%;
+        display: table-cell;
+        vertical-align:middle;
+        .gd-title {
+            display: block;
+            line-height: rem(30);
+            overflow: hidden;
+            max-height:rem(60);
+            margin-bottom: rem(16);
+            text-align: left;
+            font-size: rem(28);
+            font-weight: 300;
+            .gd-title-tags{
+                font-size:rem(26);
+            }
+        };
+        .gd-price {
+            position:relative;
+            height: rem(30);
+            line-height: rem(30);
+            margin-top:rem(30);
+        };
+        .gd-comments {
+            height: rem(30);
+            color: #999;
+            font-size: rem(24);
+            line-height: rem(30);
+        };
+        // 称重商品
+        .box-weight {
+            //margin-left:rem(20);
+            padding: rem(10) 0 0;
+            span {
+                font-size: rem(22);
+                line-height: normal;
+                display: block;
+            }
+            .cprice {
+                color: #f85d5b;
+            }
+        }
+        .gd-pri {
+            height: rem(27);
+            font-size: rem(28);
+            line-height: rem(27);
+        }
+    }  
+}
+
+.goods-number{
+    position:absolute;
+    right:0px;
+    color: #999;  
+    font-size:rem(26);
+    margin-right:rem(20);
+}
+
+.goods-operation{
+    height:rem(88);
+    padding:0 rem(20) 0 rem(20);
+    position:relative;
+    background-color:#fdfdfd;
+    .active-money{
+        font-size:rem(26);
+    }
+}
+.goods-operation:last-child{
+    margin-bottom: rem(20);
+}
+.monery{
+    line-height: rem(88);
+    font-size:rem(30);
+}
+
+.ui-button{
+    padding:0;
+    background-color:white;
+    border:1px solid #e5e5e5;
+    color:#222;
+    
+    text-align: center;
+    width:rem(160);
+    height:rem(60);
+    line-height:rem(60);
+    font-size:rem(30);
+    position:absolute;
+    margin-top:rem(14);
+    border-radius:rem(4);
+    
+}
+.ui-button:hover{
+    background-color:#ffffff;
+    color:#333333;
+}
+.ui-button.last{
+    right:rem(20);
+}
+.ui-button.pre{
+    right:rem(190); 
+}
+.ui-button.flow{
+    background-color:#f95d5b;
+    color:white;
+    border:none;
+    border-radius:rem(4);
+} 
+.ui-button.refund-type{
+    background-color:#f95d5b;
+    color:white;
+    border:none;
+    border-radius:rem(4);
+    width:rem(220);
+}
+// a,a:active,
+// a:hover {
+//     color: #ffffff;
+// }
+.loading:before{
+    content: '';
+}

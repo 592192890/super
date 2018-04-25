@@ -1,0 +1,112 @@
+/**
+* @file integral-manual.scss
+* @author yanghaitao
+* @version 1.0.0
+* @date 2017-12-08
+*/
+
+@import "common/common";
+
+.page-view{
+    max-width:rem(750);
+    margin:0 auto;
+    .mod-details{
+        width:100%;
+        padding:rem(30) rem(20);
+        box-sizing:border-box;
+        li{
+            width:100%;
+            font-size:rem(28);
+            color:#666;
+            line-height:rem(44);
+        }
+    }
+    .mod-order{
+        width:rem(730);
+        height:rem(540);
+        margin:0 auto;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:100% 100%;
+        background-image:url('/super/images/conf/integral-manual/manual-bg.png');
+        .order-merchants{
+            width:100%;
+            font-size:rem(30);
+            color:#666;
+            text-align:center;
+            padding:rem(50) 0 rem(40);
+        }
+        .transaction{
+            width:100%;
+            padding:0 0 0 rem(30);
+            box-sizing:border-box;
+            font-size:rem(26);
+            color:#666;
+            li{
+                width:100%;
+            }
+        }
+        .product{
+            width:100%;
+            padding:0 rem(10) 0 rem(30);
+            box-sizing:border-box;
+            font-size:rem(26);
+            color:#666;
+            overflow:hidden;
+            margin:rem(30) 0 0 0;
+            li{
+                width:100%;
+                overflow:hidden;
+                border-bottom:rem(1) solid #ccc;
+                box-sizing:border-box;
+                height:rem(60);
+                line-height:rem(60);
+                .name{
+                    float:left;
+                    width:rem(160);
+                    text-align:left;
+                }
+                .quantity{
+                    float:right;
+                    width:rem(138);
+                    text-align:left;
+                }
+                .money{
+                    float:right;
+                    width:rem(138);
+                    text-align:center
+                }
+            }
+        }
+        .payement{
+            width:100%;
+            padding:rem(20) 0 0 rem(30);
+            box-sizing:border-box;
+            font-size:rem(26);
+            color:#666;
+            li{
+                width:100%;
+            }
+        }
+    }
+    dl{
+        width:100%;
+        padding:rem(30) rem(20);
+        margin:0;
+        box-sizing:border-box;
+        dt{
+            font-size:rem(30);
+            color:#333;
+        }
+        dd{
+            margin:0;
+            width:100%;
+            font-size:rem(28);
+            color:#666;
+            line-height:rem(44);
+        }
+    } 
+}
+
+
+

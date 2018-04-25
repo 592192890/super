@@ -1,0 +1,103 @@
+@charset 'utf-8';
+@import "common/rem/1.0.0/rem";
+@import "inc";
+@import "common/reset/1.0.0/reset";
+@import "common/button/1.0.0/button";
+@import "common/button/2.0.0/button";
+@import "fonts/common/1.0.0/common";
+@import "common/box/1.0.0/box";
+
+html {
+    background: #f2f3f7;
+}
+/* warpper */
+
+body, .page-view {
+	font: 300 1rem/1rem "Helvetica Neue", Helvetica, Arial,STHeiTi, sans-serif, "microsoft yahei";
+    color: #333;
+	font-size:rem(28);
+}
+a,a:active,
+a:hover {
+    color: #333;
+}
+/* 加载中... */
+
+.loading {
+    font-size: rem(24);
+    text-align: center;
+    color: #999;
+	position:relative;
+    &:before {
+        content: image-url('loading/loading.gif');
+        vertical-align: middle;
+		position:absolute;
+		top:50%;
+		margin-top:rem(-16);
+    }
+}
+/* 列表加载完成 */
+.list-loaded{
+    font-size: rem(24);
+    text-align: center;
+    color: #999;
+	position:relative;
+}
+/* 图片加载失败 */
+
+.img-error {
+    background: image-url('loading/error-img.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.html-overflow-hidden {
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    body {
+        overflow:hidden;
+        width:100%;
+        height:100%;
+        padding:0px;
+    }
+}
+//切换
+.mod-toggle {
+     .toggle-item:first-child {
+		 display:block;
+	 } 
+     .toggle-item:last-child {
+		 display:none;
+	 } 
+}
+.mod-toggle-selected {
+     .toggle-item:first-child {
+		 display:none;
+	 } 
+     .toggle-item:last-child {
+		 display:block;
+	 } 
+}
+/* 颜色 */
+.disabled {
+	color:#ccc;
+	&:hover,&:active {
+		color:#ccc;
+	}
+}
+.color-f85d5b {
+	color:#f85d5b!important;
+}
+.color-ccc {
+	color:#ccc!important;
+}
+/* 
+* 让页面居中以适应PC端居中显示
+* update leaytam
+* date 2017-4-25
+*/
+.page-view{
+    margin: 0 auto;
+}

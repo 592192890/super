@@ -1,0 +1,19 @@
+/**
+* @file demo.scss
+* @synopsis  demo
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-03-03
+*/
+
+//相对sass根目录来写
+
+/* @import "common/rem/1.0.0/rem"; */
+
+/* background: image-url('common/error-img.png'); */
+
+.mod-xx {
+    .xx-hd {} 
+	.xx-bd {}
+   	.xx-ft {}
+}

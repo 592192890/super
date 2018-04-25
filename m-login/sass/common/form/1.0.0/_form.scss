@@ -1,0 +1,157 @@
+/**
+* @file _select.scss
+* @synopsis  下拉框
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2016-07-08
+*/
+
+input,
+select,
+textarea {
+    vertical-align: middle;
+    display: inline-block;
+    resize: none;
+	border:1px solid #e6e6e6;
+}
+textarea {
+	line-height:rem(30);
+	width:100%;
+	height:100%;
+	font-size:rem(24);
+	color:#999;
+}
+.ui-textarea {
+    padding:rem(20);
+    background-color:#fff;
+    .textarea-inner {
+        border:1px solid #e5e5e5;
+        padding:rem(20);
+        background:#fff;
+        textarea {
+            border:none;
+        }
+    }
+}
+
+/* upload */
+.ui-upload {
+    width: rem(130);
+    height: rem(130);
+	background-color:#f3f3f3;
+	border:1px solid #d2d2d2;
+	position:relative;
+	margin-right:rem(14);
+	float:left;
+	.upload-add {
+		position:absolute;
+		width:100%;
+		height:rem(130);
+		line-height:rem(130);
+		text-align:center;
+		top:0px;
+		left:0px;
+		&:after {
+			display:inline-block;
+			vertical-align:middle;
+			width:rem(44);
+			height:rem(44);
+			line-height:rem(44);
+			overflow:hidden;
+			font-size: rem(44);
+			font-family: "iconfont";
+			content: "\e604";
+			color:#acacac;
+		}
+	}
+	.upload-delete {
+		position:absolute;
+		top:0px;
+		right:0px;
+		width:rem(46);
+		height:rem(46);
+		line-height:rem(46);
+		text-align:center;
+		.delete-mask {
+		    background-color: #000;
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0px;
+			left:0px;
+		    @include opacity(0.3);
+		}
+		.delete-txt {
+			position:absolute;
+			width:100%;
+			height:100%;
+			line-height:rem(46);
+			top:0px;
+			left:0px;
+			&:after {
+				font-size: rem(30);
+				font-family: "iconfont";
+				content: "\e607";
+				color:#fff;
+				display:inline-block;
+				vertical-align:middle;
+			}
+		}
+	}
+	.progressbar {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #ddd;
+        height: 100%;
+        z-index: 10;
+        opacity: 0.4;
+        div {
+            font-size:rem(24);
+            width: 0%;
+            background: #F26321;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            @include transition(width .2s ease-in-out);
+        }
+    }
+	.icon-delete{
+        background-size:cover;
+        height: rem(40);
+        line-height: rem(40);
+        font-size:rem(40);
+        width: rem(40);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 11;
+        background:#000;
+        background-color: rgba(0, 0, 0, .3);
+        &:after {
+            font-family: "iconfont";
+             content:'\e607';
+             color:#fff;
+             display:inline-block;
+             vertical-align:top;
+        }
+    }
+}
+
+input[type="text"] {
+	border:0;
+	width:100%;
+	background:#f8f8f8;	
+	padding: rem(24) rem(20);
+	border-radius:rem(10);
+}
+.ui-input {
+	padding: 0 rem(20);
+	background:#f8f8f8;	
+	border-radius:rem(10);
+	input[type="text"] {
+		width:100%;
+		padding:rem(26) 0px;
+		border-radius:0px;
+	}
+}

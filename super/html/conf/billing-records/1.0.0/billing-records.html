@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+
+<head>
+    <title>开票记录</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/billing-records/1.0.0/billing-records.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+    	<!-- 小票列表 begin -->
+        <div class="mod-tab jWrap">
+            <ul class="tab-hd">
+                <li class="hd-item jElectronic" href="javascript:;" role="tabItem" data-type="1"><span>电子发票</span>
+                </li>
+                <li class="hd-item jParper" href="javascript:;" role="tabItem" data-type="2"><span>纸质发票</span>
+                </li>
+                <li class="hd-line" role="line"></li>
+            </ul>
+            
+        </div>
+        <div class="mod-cp tab-bd jInvoiceWrap">
+            <!-- <a href="javascript:;" class="mod-item">
+                <div class="item-hd"></div>
+                <div class="item-status">已发送</div>   
+                <div class="item-lf">已开票</div>
+                <div class="item-rt">
+                    <p class="receipt-num">小票编号: 5678656577</p>
+                    <p class="real-pay gray">实付金额：¥40.68</p>
+                    <p class="order-date gray">交易日期：2015年12月24日&nbsp;16时34分</p>
+                </div>
+                <div class="detail-ft"></div>
+            </a>
+            <a href="javascript:;" class="mod-item">
+                <div class="item-hd"></div>
+                <div class="item-status">已发送</div>   
+                <div class="item-lf">已开票</div>
+                <div class="item-rt">
+                    <p class="receipt-num">小票编号: 5678656577</p>
+                    <p class="real-pay gray">实付金额：¥40.68</p>
+                    <p class="order-date gray">交易日期：2015年12月24日&nbsp;16时34分</p>
+                </div>
+                <div class="detail-ft"></div>
+            </a> -->
+            <!-- 开票中 -->
+            <!-- <a href="javascript:;" class="mod-item in-progress">
+                <div class="item-hd"></div>
+                <div class="item-status">已发送</div>   
+                <div class="item-lf">已开票</div>
+                <div class="item-rt">
+                    <p class="receipt-num">小票编号: 5678656577</p>
+                    <p class="real-pay gray">实付金额：¥40.68</p>
+                    <p class="order-date gray">交易日期：2015年12月24日&nbsp;16时34分</p>
+                </div>
+                <div class="detail-ft"></div>
+            </a> -->
+            <div class="mod-list-empty">
+                <img src="http://s1.bbgstatic.com/super/images/conf/electronic-list/1.0.0/elecEmpty.png"/>
+                <p class="row-1">亲，您还没有开票信息哦~</p>
+                <p class="row-2">您可以在这里管理、查看您所有开票申请以及开票处理的进度（包括电子发票下载和纸质邮寄进度）</p>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+    <script>
+     	window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+        	listUrl :'http://wx.yunhou.com/super/item/'
+        };
+         require(['conf/billing-records/1.0.0/billing-records']);
+    </script>
+</body>
+</html>

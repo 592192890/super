@@ -1,0 +1,58 @@
+<html lang="zh" data-dpr="2" class="pixel-ratio-2 retina ios ios-9 ios-9-1 ios-gt-8 ios-gt-7 ios-gt-6" style="font-size: 75px;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>母婴完善会员信息</title>
+    <meta name="description" content="">
+    <meta name="author" content="ricopter@qq.com">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript">(function(win,lib){var doc=win.document;var docEl=doc.documentElement;var metaEl=doc.querySelector('meta[name="viewport"]');var flexibleEl=doc.querySelector('meta[name="flexible"]');var dpr=0;var scale=0;var tid;var flexible=lib.flexible||(lib.flexible={});if(metaEl){console.warn("将根据已有的meta标签来设置缩放比例");var match=metaEl.getAttribute("content").match(/initial\-scale=([\d\.]+)/);if(match){scale=parseFloat(match[1]);dpr=parseInt(1/scale)}}else{if(flexibleEl){var content=flexibleEl.getAttribute("content");if(content){var initialDpr=content.match(/initial\-dpr=([\d\.]+)/);var maximumDpr=content.match(/maximum\-dpr=([\d\.]+)/);if(initialDpr){dpr=parseFloat(initialDpr[1]);scale=parseFloat((1/dpr).toFixed(2))}if(maximumDpr){dpr=parseFloat(maximumDpr[1]);scale=parseFloat((1/dpr).toFixed(2))}}}}if(!dpr&&!scale){var isAndroid=win.navigator.appVersion.match(/android/gi);var isIPhone=win.navigator.appVersion.match(/iphone/gi);var devicePixelRatio=win.devicePixelRatio;if(isIPhone){if(devicePixelRatio>=3&&(!dpr||dpr>=3)){dpr=3}else{if(devicePixelRatio>=2&&(!dpr||dpr>=2)){dpr=2}else{dpr=1}}}else{dpr=1}scale=1/dpr}docEl.setAttribute("data-dpr",dpr);if(!metaEl){metaEl=doc.createElement("meta");metaEl.setAttribute("name","viewport");metaEl.setAttribute("content","initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no");if(docEl.firstElementChild){docEl.firstElementChild.appendChild(metaEl)}else{var wrap=doc.createElement("div");wrap.appendChild(metaEl);doc.write(wrap.innerHTML)}}function refreshRem(){var width=docEl.getBoundingClientRect().width;if(width/dpr>540){width=540*dpr}var rem=width/10;docEl.style.fontSize=rem+"px";flexible.rem=win.rem=rem}win.addEventListener("resize",function(){clearTimeout(tid);tid=setTimeout(refreshRem,300)},false);win.addEventListener("pageshow",function(e){if(e.persisted){clearTimeout(tid);tid=setTimeout(refreshRem,300)}},false);if(doc.readyState==="complete"){doc.body.style.fontSize=12*dpr+"px"}else{doc.addEventListener("DOMContentLoaded",function(e){doc.body.style.fontSize=12*dpr+"px"},false)}refreshRem();flexible.dpr=win.dpr=dpr;flexible.refreshRem=refreshRem;flexible.rem2px=function(d){var val=parseFloat(d)*this.rem;if(typeof d==="string"&&d.match(/rem$/)){val+="px"}return val};flexible.px2rem=function(d){var val=parseFloat(d)/this.rem;if(typeof d==="string"&&d.match(/px$/)){val+="rem"}return val}})(window,window["lib"]||(window["lib"]={}));</script>
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/baby/1.0.0/app.css" type="text/css" charset="utf-8">
+</head>
+<body style="font-size: 24px;">
+<div class="m-login-page u-scrollBar">
+
+    <div class="ilogin-my">
+        <p class="ilogin-img"><img src="//s1.bbgstatic.com/super/images/conf/baby/login.png" alt=""></p>
+        <p class="ilogin-tipsr">完善会员信息，为您提供更贴心的母婴服务！</p>
+    </div>
+    <form class="u-form" method="post" id="loginForm" data-gourl="//wx.yunhou.com/baby/bbg_vday/">
+        <div class="ilogin2-my">
+            <!--<div class="ilogin2-myxz" id="babySex">-->
+                <!--<span class="ilogin2-myxz-tit">宝宝性别</span>-->
+                <!--<span class="ilogin2-myxz1 on" data-id="0">-->
+                    <!--<i class="iconfont icon-nan"></i>男-->
+                <!--</span>-->
+                <!--<span class="ilogin2-myxz1" data-id="1">-->
+                    <!--<i class="iconfont icon-nv"></i>女-->
+                <!--</span>-->
+                <!--<span class="ilogin2-myxz1 ilogin2-myxz2" data-id="4">-->
+                    <!--<i class="iconfont icon-wangfu-xingbie"></i>孕中-->
+                <!--</span>-->
+            <!--</div>-->
+
+            <div class="ilogin2-myxz" id="babySelectSex">
+                <span class="ilogin2-myxz-tit" id="babySelectSexVal">宝宝性别</span>
+                <i class="iconfont icon-xiajiantou"></i>
+                <input type="hidden" id="babySelectSexHide" readonly="" value="男">
+            </div>
+
+            <div class="ilogin2-myxz" id="pickerBirthday">
+                <span class="ilogin2-myxz-tit" id="pickerBirthdayVal">出生日期/预产期</span>
+                <i class="iconfont icon-xiajiantou"></i>
+                <input type="hidden" id="pickerBirthdayHide" readonly="">
+            </div>
+        </div>
+        <div class="u-lp-btn-login ilogin2-my-but">
+            <button class="u-btn u-radius u-btn-block" type="button" id="submitBtn">提交</button>
+        </div>
+    </form>
+</div>
+<script src="//s1.bbgstatic.com/lib/require/2.1/require.js" crossorigin="*" data-cdn="lib/require/2.1/require.js"></script>
+<script src="//s1.bbgstatic.com/super/js/app.js" crossorigin="*" data-cdn="super/js/app.js"></script>
+
+<script type="text/javascript">
+    require(['conf/baby/1.0.0/improveMember']);
+</script>
+
+</body></html>

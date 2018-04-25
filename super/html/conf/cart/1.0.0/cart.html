@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/cart/1.0.0/cart.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!--#include file="/super/html/module/cart/1.0.0/head.html"-->
+        <div id="jCart">
+            <div id="jNoData">
+                <div class="ui-page-tips ui-page-loading" id="jLoading">
+                    <i class="tips-img"></i>
+                    <p class="tips-txt">数据加载中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA ||
+        {};
+        $PAGE_DATA['env'] = 'test'; //测试环境(test)，正式环境(pro)
+        $PAGE_DATA['url'] = {
+            get: './data/get.php', // 获取购物车数据
+            checked: '//wx.yunhou.com/o2o/cart/checked', // 选中购物车
+            update: '//wx.yunhou.com/o2o/cart/update', // 更新购物车数据
+            del: '//wx.yunhou.com/o2o/cart/del', // 删除购物车数据
+            dels: '//wx.yunhou.com/o2o/cart/dels', //删除多个购物车数据
+            col: '//wx.yunhou.com/o2o/member/collection_add', //收藏
+            cols: '//wx.yunhou.com/o2o/member/collection_adds', //收藏
+            emptyCart: '//wx.yunhou.com/o2o/cart/cleara', //清空购物车
+            emptyFailPro: '//wx.yunhou.com/o2o/cart/invalid', //清空失效商品
+            cancelCol: '//wx.yunhou.com/o2o/member/collection_cancle', //取消收藏
+            imgPath: '//m.yunhou.com/item/', //图片路径
+            page: window.location.href, //登录回跳的页面
+            orderPage: 'http://page.com/super/html/conf/order/1.0.0/order.html', //下单页面
+            login: 'https://ssl.yunhou.com/passport/h5/login'
+        };
+    </script>
+    <!--#include file="/super/html/module/cart/1.0.0/statistics.html"-->
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+/**
+* @file _empty.scss
+* @synopsis  为空的默认界面
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2016-06-30
+*/
+
+%empty {
+    text-align: center;
+	padding-top:rem(20);
+    .empty-img {
+        background-image: image-url('public/empty/network-error.png');
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+        background-size: 100%;
+        width: rem(308);
+        height: rem(266);
+        display: inline-block;
+        margin-top: rem(30);
+    }
+    .empty-txt,.empty-txt-1 {
+        color: #747381;
+        font-size: rem(26);
+        margin-top: rem(30);
+    }
+    .empty-txt-1 {
+        color: #7c7c88;
+    }
+    .empty-tips {
+        color: #aaa9b9;
+        font-size: rem(28);
+        margin-top: rem(0);
+    }
+    .empty-btn {
+        display: inline-block;
+        padding: 0px rem(46);
+        font-size: rem(26);
+        color: #666;
+        height: rem(50);
+        line-height: rem(50);
+        background: #fff;
+        margin-top: rem(10);
+    }
+}
+/* 网络错误 */
+
+.ui-empty-network {
+    @extend %empty;
+}
+/* 时间结束 */
+
+.ui-time-end {
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/time-end.png');
+    }
+}
+/* 购物车为空 */
+.ui-empty-cart {
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/cart.png');
+    }
+	.empty-tips {
+		font-size:rem(22);
+	}
+}
+/* 地址为空 */
+.ui-empty-address {
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/address.png');
+    }
+}
+/* 商品 */
+.ui-empty-pro{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/collect-pro.png');
+    }
+}
+/* 店铺 */
+.ui-empty-shop{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/collect-shop.png');
+    }
+}
+/* 优惠券*/
+.ui-empty-coupon{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/coupon.png');
+    }
+}
+/* 身份证*/
+.ui-empty-id{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/id.png');
+    }
+}
+/* 订单*/
+.ui-empty-order{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/orders.png');
+    }
+}
+/* 待付款*/
+.ui-empty-will-pay{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/will-pay.png');
+    }
+}
+/* 待收货*/
+.ui-empty-will-receive{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/will-receive.png');
+    }
+}
+/* 待发货*/
+.ui-empty-will-ship{
+    @extend %empty;
+    .empty-img {
+        background-image: image-url('public/empty/will-ship.png');
+    }
+}

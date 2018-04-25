@@ -1,0 +1,15 @@
+/**
+* @file _block.scss
+* @synopsis  小区块
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-05-22
+*/
+
+.ui-block {
+    background: #fff;
+    margin-top: rem(20);
+	&:first-child {
+		margin-top:0;	
+	}
+}

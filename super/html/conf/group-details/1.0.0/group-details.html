@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <!-- 团购详情  周伟 -->
+    <head>
+        <title>团购详情</title>
+        <!--#include file="/super/html/common/intro.html"-->
+        <link href="//s1.bbgstatic.com/super/css/conf/group-details/1.0.0/group-details.css" data-cdn="conf/group-details/1.0.0/group-details.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="page-view">
+            <div class="page-view-body">
+                <div class="item-tab-header" >
+                    <div class="item-tab-contain" id="jItemTabHeader">
+                        <a href="javascript:;" class="item-tab-handler active">基本信息</a>
+                        <a href="javascript:;" class="item-tab-handler">图文详情</a>
+                    </div>
+                    <a href="//m.yunhou.com" class="item-tab-index"><i class="iconfontmod icon">&#xe755;</i></a>
+                </div>
+                <div class="item-tab-wrap" id="jItemTabWrap">
+                    <div class="item-tab-content active">
+                        <!--#include file="/super/html/module/group-details/1.0.0/info.html"-->
+                    </div>
+                    <div class="item-tab-content" id="jGoodsDetailCnt">
+                        <!--#include file="/super/html/module/group-details/1.0.0/details.html"-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#include file="/super/html/common/outro.html"-->
+        <!-- #include file="/super/html/common/statistics.html"-->
+        <script>
+            window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+            window['$PAGE_DATA']['url']={
+            'gProductId':'20199000001',
+            'gGoodsId':'19489000056',
+            'presale':'//wx.yunhou.com/super/item/ajaxGetData',
+            'buyNow':'//wx.yunhou.com/super/cart/addDirect',
+            'addcart':'//wx.yunhou.com/super/cart/add',
+            'login':'//wx.yunhou.com/super/passport/login?returnURL=',
+            'buy-now':'//wx.yunhou.com/super/html/order/buy-now.html',
+            'buy-at-once':'//wx.yunhou.com/super/html/order/buy-at-once.html',
+            'goAccount':'//wx.yunhou.com/super/cart/getSimple',
+            'goToCart':'//wx.yunhou.com/super/html/cart/cart.html',
+            }
+            require(['conf/group-details/1.0.0/group-details']);
+        </script>
+    </body>
+</html>

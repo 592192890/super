@@ -1,0 +1,19 @@
+/* common */
+@import "common/common";
+@import "common/slider/slider";
+@import "common/form/1.0.0/form";
+@import "common/button/1.0.0/button";
+@import "common/dialog/dialog";
+@import "common/linkage-tab/linkage-tab";
+@import "common/scroll-load/scroll-load";
+@import "common/go-top/go-top";
+
+
+/* modules */
+@import "module/address-manager/1.0.0/add/list";
+@import "module/address-manager/1.0.0/add/add";
+@import "module/address-manager/1.0.0/add/identity";
+html {
+    background: #f2f3f7;
+    padding: 0 0 rem(20);
+}

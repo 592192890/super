@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>选择优惠券</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/park-coupon/1.0.0/park-coupon.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- <header>
+            <input type="text" placeholder="请输入优惠码"><span class="submit jSubmit">提交</span>
+        </header>
+        <div class="prompt">通过站外方式获得的优惠码，请直接输入号码</div> -->
+        <div class="coupon-title">选择可用优惠券</div>
+        <!-- 有效优惠券 -->
+        <div class="mod-coupon-item jItemBox" data-value="coupon.code">
+            <!-- 优惠券头部边框 -->
+            <div class="item-hd"></div>
+            <!-- 已使用图戳 -->
+            <!-- <img src="//s1.bbgstatic.com/super/images/conf/my-cplist/1.0.0/cpUsed.png" alt="已使用" class="used-img"> -->
+            <!-- 选中状态 -->
+            <div class="selected" style="display:none;">
+                <b class="triangle"><i class="iconfontmod">&#xe614;</i></b>
+            </div>
+            <!-- 优惠券主体 -->
+            <div class="item-bd jCouponItem">
+                <!-- 优惠券价格 -->
+                <div class="cp-money f-r">
+                    <em>￥</em>20
+                </div>
+                <!-- 优惠券名字 -->
+                <div class="cp-name txt-overflow">
+                    <span>停车</span> 停车券-20停车抵用券
+                </div>
+                <!-- 优惠券时间 -->
+                <div class="cp-time">
+                    使用时间：2016.09.31 ~ 2016.12.31
+                </div>
+            </div>
+            <!-- 优惠券齿轮边 -->
+            <div class="cp-spilt">
+                <span class="left-circle"></span>
+                <span class="right-circle"></span>
+            </div>
+            <!-- 使用规则 -->
+            <div class="jShowCouponInfo cp-rule">
+                <div class="rule-title clearfix">
+                    <i class="ico-circle "></i>使用规则
+                    <i class="iconfontmod animate f-r jCouponArrow">&#xe774;</i>
+                </div>
+                <div class="rule-bd jItemCtn">
+                    <p class="">使用规则使用规则使用规使用规则使用规则使用规则使用规则使用规则使用规则则</p>
+                    <!-- 占位让图标显示 -->
+                    <p class="icon"><i class="iconfontmod">&#xe7bb;</i></p>
+                </div>
+            </div>
+        </div>
+        <!-- 无效优惠券 -->
+        <div class="mod-coupon-item jItemBox cp-used" data-value="coupon.code">
+            <!-- 优惠券头部边框 -->
+            <div class="item-hd"></div>
+            <!-- 已使用图戳 -->
+            <!-- <img src="//s1.bbgstatic.com/super/images/conf/my-cplist/1.0.0/cpUsed.png" alt="已使用" class="used-img"> -->
+            <!-- 选中状态 -->
+            <div class="selected">
+                <b class="triangle"><i class="iconfontmod">&#xe614;</i></b>
+            </div>
+            <!-- 优惠券主体 -->
+            <div class="item-bd jCouponItem">
+                <!-- 优惠券价格 -->
+                <div class="cp-money f-r">
+                    <em>￥</em>20
+                </div>
+                <!-- 优惠券名字 -->
+                <div class="cp-name txt-overflow">
+                    <span>停车</span> 停车券-20停车抵用券
+                </div>
+                <!-- 优惠券时间 -->
+                <div class="cp-time">
+                    使用时间：2016.09.31 ~ 2016.12.31
+                </div>
+            </div>
+            <!-- 优惠券齿轮边 -->
+            <div class="cp-spilt">
+                <span class="left-circle"></span>
+                <span class="right-circle"></span>
+            </div>
+            <!-- 使用规则 -->
+            <div class="jShowCouponInfo cp-rule">
+                <div class="rule-title clearfix">
+                    <i class="ico-circle "></i>使用规则
+                    <i class="iconfontmod animate f-r jCouponArrow">&#xe774;</i>
+                </div>
+                <div class="rule-bd jItemCtn">
+                    <p class="">使用规则使用规则使用规使用规则使用规则使用规则使用规则使用规则使用规则则</p>
+                    <!-- 占位让图标显示 -->
+                    <p class="icon"><i class="iconfontmod">&#xe7bb;</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="disuse-coupon">
+            <button class="ui-btn-block ui-btn-line">不使用优惠券</button>
+        </div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA || {};
+        $PAGE_DATA['url'] = {
+
+        };
+        require(['conf/park-coupon/1.0.0/park-coupon']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

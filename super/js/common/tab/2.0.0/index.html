@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>tab</title>
+    <!--#include file="/h5-lib/app/include/html/common.html"-->
+    <link href="http://page.com/h5-lib/app/common/tab/2.0.0/css/tab.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-view">
+        <div class="mod-tab jWrap">
+            <ul class="tab-hd">
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>选项一</span>
+                </li>
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>选项二<b class="count">0</b></span>
+                </li>
+                <li class="hd-item" href="javascript:;" role="tabItem"><span>选项三</span>
+                </li>
+                <li class="hd-line" role="line"></li>
+            </ul>
+            <div class="tab-bd">
+                <div class="bd-inner" role="tabInner">
+                    <div class="bd-item" role="tabPanel" style="background:purple;">1</div>
+                    <div class="bd-item" role="tabPanel" style="background:green;">2</div>
+                    <div class="bd-item" role="tabPanel" style="background:gray;">3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    require(['common/tab/2.0.0/tab', 'jquery'], function(Tab, $)
+    {
+        var tb = new Tab('.jWrap');
+    });
+</script>
+
+</html>

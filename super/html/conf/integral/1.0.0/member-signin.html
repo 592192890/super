@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+<head>
+    <title>会员签到</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/integral/1.0.0/member-signin.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="page-view">
+        <header>
+            <div class="mod-checkins-integral f-l">
+            <!-- 总积分 -->
+                <p class="integral-total jTotal">6932</p>
+                <!-- 签到天数 -->
+                <ul class="checkins-days jCheckins clearfix" data-day="6">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                </ul>
+                <p class="checkins-dec">连续7天签到积分翻倍</p>
+            </div>
+            <!-- 签到按钮 -->
+            <div class="mod-checkins-btn">
+                <div class="checkins-btn jCheckinsBtn" >签到送积分</div>
+                <!-- 连签天数 -->
+                <div class="combo-days jComboDays" >
+                    <p class="combo-txt">已连续签到</p>
+                    <p><span class="jDays">1</span>天</p>
+                </div>
+            </div>
+  
+        </header>
+        <div class="mod-title">
+            <div class="title-wrap">
+                <i class="icon iconfontmod">&#xe7c6;</i>
+                购物赚积分
+            </div>
+        </div>
+        <!-- 积分商品 -->
+        <ul class="mod-goodslist clearfix">
+            <!--#include file="/super/html/module/member-signin/1.0.0/goods-list.html"-->
+            <!--#include file="/super/html/module/member-signin/1.0.0/goods-list.html"--> 
+            <!--#include file="/super/html/module/member-signin/1.0.0/goods-list.html"-->
+            <!--#include file="/super/html/module/member-signin/1.0.0/goods-list.html"-->         
+        </ul>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            'checkinUrl' : '//wx.yunhou.com/super/item/'
+        };
+        require(['conf/integral/1.0.0/member-signin']);
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- @author zgc -->
+<html>
+<head>
+    <title>会员积分</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/integral/1.0.0/bonus-points.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="page-view">
+        <header>
+            <!-- 积分规则 -->
+            <a class="integral-rules" href="/super/html/conf/integral/1.0.0/membership-rules.html">积分规则</a>
+            <div class="integral-text">
+                <!-- 总积分 -->
+                <p class="mod-integral-total">6932</p>
+                <p class="mod-integral-dec">积分当钱花,花了还想花!</p>
+                <a class="get-point" href="./member-signin.html">赚取积分</a> 
+            </div>
+            <!-- <div class="nav">
+                <ul>
+                    <li class="integral-shop f-l"><a href="#">积分商城</a></li>
+                    <li class="convert-record f-l"><a href="#">兑换记录</a></li>
+                    <li class="get-integral f-l"><a href="#">赚取积分</a></li>
+                </ul>
+            </div>  -->
+        </header>
+        <!-- <div class="mod-integral">
+            <a class="integral-earn f-l">
+                <img src="//s1.bbgstatic.com/super/images/conf/bonus-points/1.0.0/earn.jpg" alt="赚取积分" />
+                <span>赚</span>
+            </a>
+            <a class="integral-use f-l">
+                <img src="//s1.bbgstatic.com/super/images/conf/bonus-points/1.0.0/use.jpg" alt="使用积分" />
+                <span>花</span>
+            </a>
+        </div> -->
+        <!-- 积分明细 -->
+        <div class="mod-integral-detail">
+            <p class="detail-head">
+                <span class="f-l detail-txt">收支明细</span>
+                <!-- <span class="f-r detail-more"> -->
+                <a class="f-r detail-more" href="/super/html/conf/integral/1.0.0/integral-detail.html">更多<i class="icon iconfontmod">&#xe772;</i></a>
+                <!-- </span> -->
+            </p>
+            <ul class="detail-list">
+                <li>
+                    <div class="integral-icon f-l"><i class="icon iconfontmod">&#xe7d6;</i></div>
+                    <div class="integral-info f-l">
+                        <p class="integral-info-title">签到奖励积分</p>
+                        <p class="integral-info-time">2017-03-28 17:45:30</p>
+                    </div>
+                    <div class="integral-num f-r">+2</div>
+                </li>
+                <li>
+                    <div class="integral-icon f-l"><i class="icon iconfontmod">&#xe7d7;</i></div>
+                    <div class="integral-info f-l">
+                        <p class="integral-info-title">分享奖励积分</p>
+                        <p class="integral-info-time">2017-03-28 17:45:30</p>
+                    </div>
+                    <div class="integral-num f-r">-2</div>
+                </li>
+                <li>
+                    <div class="integral-icon f-l"><i class="icon iconfontmod">&#xe7c6;</i></div>
+                    <div class="integral-info f-l">
+                        <p class="integral-info-title">购物送积分</p>
+                        <p class="integral-info-time">2017-03-28 17:45:30</p>
+                    </div>
+                    <div class="integral-num f-r">+2</div>
+                </li>
+                <li>
+                    <div class="integral-icon f-l"><i class="icon iconfontmod">&#xe7c6;</i></div>
+                    <div class="integral-info f-l">
+                        <p class="integral-info-title">积分兑换商品</p>
+                        <p class="integral-info-time">2017-03-28 17:45:30</p>
+                    </div>
+                    <div class="integral-num f-r">+2</div>
+                </li>
+                <li>
+                    <div class="integral-icon f-l"><i class="icon iconfontmod">&#xe7c2;</i></div>
+                    <div class="integral-info f-l">
+                        <p class="integral-info-title">积分抽奖</p>
+                        <p class="integral-info-time">2017-03-28 17:45:30</p>
+                    </div>
+                    <div class="integral-num f-r">-2</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url'] = {
+            //'Url' : '//wx.yunhou.com/super/item/'
+        };
+        require(['conf/integral/1.0.0/bonus-points']);
+    </script>
+</body>
+</html>

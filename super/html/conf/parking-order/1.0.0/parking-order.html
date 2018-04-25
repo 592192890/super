@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>缴费订单确认</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/parking-order/1.0.0/parking-order.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- 我的停车信息 -->
+        <div class="mod-parking-msg">
+            <div class="parking-hd">
+                <i class="iconfontmod icon">&#xe795;</i> 我的停车信息
+            </div>
+            <div class="parking-msg-content">
+                <p>进场时间：<span>2015-08-22 12:23:11</span></p>
+                <p>出场时间：<span>2015-08-22 16:22:11</span></p>
+                <p>停车时间：<span>28小时11分</span></p>
+                <p>
+                    <span>车牌号码：<span>湘A88888</span></span>
+                    <span class="parking-space">停车位：<span>B2层798</span></span>
+                </p>
+                <p>应缴费用：<span class="red">40元</span></p>
+            </div>
+        </div>
+        <!-- 优惠方式 -->
+        <div class="mod-parking-discounts">
+            <div class="parking-hd">
+                <i class="iconfontmod icon">&#xe799;</i> 优惠方式
+            </div>
+            <div class="discounts-content">
+                <div class="consumption-reduction reduction">
+                    <div class="reduction-msg clearfix">
+                        <div class="msg-title f-l">
+                            <i class="iconfontmod icon active">&#xe796;</i>消费减免
+                        </div>
+                        <ul class="f-l jReceiptsBox">
+                            <li>
+                                <i class="iconfontmod icon jReceiptItem active">&#xe796;</i>
+                                <span>217RT667899</span>
+                                <span class="f-r jReceipt">-￥15</span>
+                            </li>
+                            <li>
+                                <i class="iconfontmod icon jReceiptItem active">&#xe796;</i>
+                                <span>217RT667899</span>
+                                <span class="f-r jReceipt">-￥15</span>
+                            </li>
+                            <li class="total-receipt">
+                                <span>合计：</span>
+                                <span class="jReceiptSum">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <p class="add-discounts jAddReceipt">添加消费小票号</p> -->
+                    <!-- <p class="prompt">温馨提示：小票添加后，不再允许他人使用</p> -->
+                </div>
+                <div class="coupon-reduction reduction">
+                    <div class="reduction-msg clearfix">
+                        <div class="msg-title f-l">
+                            <i class="iconfontmod icon jAddCoupon">&#xe796;</i>优惠券减免
+                        </div>
+                        <ul class="f-l">
+                            <li>
+                                <span class="f-r add-discounts"><span class="jCouponReduce">请选择优惠券</span><i class="iconfontmod icon right-arrow">&#xe76d;</i></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="prompt">温馨提示：每次只可选择使用一张优惠券</p>
+                </div>
+                <div class="vip-reduction reduction">
+                    <div class="reduction-msg clearfix">
+                        <div class="msg-title f-l">
+                            <i class="iconfontmod icon active">&#xe796;</i>会员等级减免
+                        </div>
+                        <ul class="f-l">
+                            <li>
+                                <span>钻石会员可减免</span>
+                                <span class="f-r jVipReduce">-￥10</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="prompt">温馨提示：会员等级减免规则详见各大商场</p>
+                </div>
+            </div>
+            <div class="total-reduce">
+                本次共减免金额：<span class="green jTotalReduce">￥30</span>
+            </div>
+        </div>
+        <!-- 费用规则 -->
+        <div class="mod-expenses-rules">
+            <div class="parking-hd">
+                <i class="iconfontmod icon">&#xe79a;</i> 费用规则
+            </div>
+            <div class="parking-msg-content">
+                <p>消费减免停车费规则详见商场宣传；</p>
+                <p>消费小票当日有效；</p>
+                <p>小票微信抵用后，再出场时不能重复使用；</p>
+                <p>单张小票只能抵用一张，不能拆单；</p>
+                <p>多张小票可以累计后抵用</p>
+            </div>
+        </div>
+        <!-- 金额/缴费 -->
+        <div class="mod-total-pay">
+            需支付金额：<span class="red jNeedPay">￥10</span>
+            <button class="ui-btn-primary f-r jSurePay">确认缴费</button>
+        </div>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA || {};
+        $PAGE_DATA['url'] = {
+
+        };
+        require(['conf/parking-order/1.0.0/parking-order']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

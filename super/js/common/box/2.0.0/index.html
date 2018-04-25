@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>弹出框</title>
+    <!--#include file="/h5-lib/app/include/html/common.html"-->
+    <link href="http://page.com/h5-lib/app/common/button/2.0.0/css/button.css" rel="stylesheet">
+    <link href="http://page.com/h5-lib/app/common/box/2.0.0/css/box.css" rel="stylesheet">
+    <style>
+        p {
+            margin: 10px 0px;
+            font-size: 20px;
+        }
+        button {
+            margin: 10px 0px 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-view" id="jWrap">
+        <button id="jTransparentMask" class="ui-btn-line">transparentMask</button>
+        <button id="jAlertBox" class="ui-btn-line">alert</button>
+        <button id="jConfirmBox" class="ui-btn-line">confirm</button>
+        <button id="jFull" class="ui-btn-line">fullScreen</button>
+        <button id="jLoading" class="ui-btn-line">loading</button>
+        <button id="jBottom" class="ui-btn-line">bottom</button>
+        <button id="jLeft" class="ui-btn-line">left</button>
+        <button id="jSelect" class="ui-btn-line">select</button>
+        <!-- <button id="jIframe" class="ui-btn">iframe</button> -->
+        <p>-- tips ----------------------------------------</p>
+        <button id="jTips" class="ui-btn-line">tips</button>
+        <button id="jOk" class="ui-btn-line">ok</button>
+        <button id="jError" class="ui-btn-line">error</button>
+        <button id="jWarning" class="ui-btn-line">warn</button>
+    </div>
+</body>
+<script type="text/javascript">
+    require(['common/box/2.0.0/js/box', 'jquery'], function(box, $)
+    {
+        $('#jTransparentMask').click(function()
+        {
+            box.transparentMask();
+        });
+        //alert
+        $('#jAlertBox').click(function()
+        {
+            box.alert(
+                'alert',
+                {
+                    title: '提示'
+                        /*,//标题
+                        					hideClose: true */ //是否隐藏关闭按钮
+                }
+            ).action(
+            {
+                ok: function()
+                {
+                    console.log('确定');
+                    //确定的回调
+                }
+            });
+        });
+
+        //confirm
+        $('#jConfirmBox').click(function()
+        {
+            box.confirm(
+                'confirm',
+                {
+                    okValue: '确定1', //确定文字修改
+                    cancelValue: '取消1' //取消文字修改
+                }
+            ).action(
+            {
+                ok: function()
+                {
+                    console.log('确定');
+                    //确定的回调
+                },
+                cancel: function()
+                {
+                    console.log('取消');
+                    //取消的回调
+                }
+            });
+        });
+        //fullscreen
+        $('#jFull').click(function()
+        {
+            box.fullScreen('123',
+            {});
+        });
+        //iframe
+        $('#jIframe').click(function()
+        {
+            box.sendPost('http://www.baidu.com',
+            {
+                title: '测试'
+            });
+        });
+        //loading
+        $('#jLoading').click(function()
+        {
+            var b = box.loading('disappear in 5 seconds ...');
+            //b.hide(); 可以隐藏loading
+            setTimeout(function()
+            {
+                b.hide();
+            }, 5000);
+        });
+        //bottom
+        $('#jBottom').click(function()
+        {
+            box.bottom(
+                '<div style="background:#fff;height:4rem;">12333</div>'
+            ).on('shown', function() {
+
+            });
+        });
+        //left
+        $('#jLeft').click(function()
+        {
+            box.left(
+                '<div style="background:#fff;height:100px;width:4rem;">12333</div>'
+            ).on('shown', function() {
+
+            });
+        });
+        //select
+        $('#jSelect').click(function()
+        {
+            box.select([
+            {
+                text: 'a1',
+                value: '1'
+            },
+            {
+                text: 'a2',
+                value: '2'
+            }]).action(
+            {
+                'ok': function(obj)
+                {
+                    console.log($(obj.target).html());
+                }
+            });
+        });
+        //提示
+        $('#jTips').click(function()
+        {
+            box.tips('tips').on('hidden', function()
+            {
+                console.log('tips消失了');
+            });
+        });
+        //正确提示
+        $('#jOk').click(function()
+        {
+            box.ok('ok');
+        });
+        //错误提示
+        $('#jError').click(function()
+        {
+            box.error('error');
+        });
+        //警告提示
+        $('#jWarning').click(function()
+        {
+            box.warn('warn');
+        });
+    });
+</script>
+
+</html>

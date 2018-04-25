@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>历史缴费记录</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/park-payment-records/1.0.0/park-payment-records.css" type="text/css"
+        charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view jPage">
+        <!-- 我的停车信息 -->
+        <div class="no-parking-msg jNoParkingMsg">
+            <div class="none-licence-plate jNoLicence">
+                <img src="//ssl.bbgstatic.com/super/images/conf/park/1.0.0/default-plate.png" alt="">
+                <p>您还未添加车牌</p>
+                <p class="gray">绑定车牌，尊享会员免费停车特权！</p>
+                <a class="ui-btn-primary ui-btn-radius add-plate-btn" href="//wx.yunhou.com/super/park/mycars?shopId=012823">添加车牌</a>
+            </div>
+        </div>
+        <!-- <div class="has-parking-msg">
+            <div class="mod-parking-msg">
+                <div class="parking-hd">
+                    <i class="iconfontmod icon">&#xe794;</i> 梅溪新天地停车场
+                </div>
+                <div class="parking-msg-content">
+                    <p>车牌号码：
+                        <span>湘A88888</span>
+                    </p>
+                    <p>停车时间：
+                        <span>28小时11分</span>
+                    </p>
+                    <p>缴费时间：
+                        <span>2015-08-22 16:22:11</span>
+                    </p>
+                    <p>缴费金额：
+                        <span class="red">40元</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mod-parking-msg">
+                <div class="parking-hd">
+                    <i class="iconfontmod icon">&#xe794;</i> 步步高王府店停车场
+                </div>
+                <div class="parking-msg-content">
+                    <p>车牌号码：
+                        <span>湘A88888</span>
+                    </p>
+                    <p>停车时间：
+                        <span>28小时11分</span>
+                    </p>
+                    <p>缴费时间：
+                        <span>2015-08-22 16:22:11</span>
+                    </p>
+                    <p>缴费金额：
+                        <span class="red">40元</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mod-parking-msg">
+                <div class="parking-hd">
+                    <i class="iconfontmod icon">&#xe794;</i> 梅溪新天地停车场
+                </div>
+                <div class="parking-msg-content">
+                    <p>车牌号码：
+                        <span>湘A88888</span>
+                    </p>
+                    <p>停车时间：
+                        <span>28小时11分</span>
+                    </p>
+                    <p>缴费时间：
+                        <span>2015-08-22 16:22:11</span>
+                    </p>
+                    <p>缴费金额：
+                        <span class="red">40元</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mod-parking-msg">
+                <div class="parking-hd">
+                    <i class="iconfontmod icon">&#xe794;</i> 步步高王府店停车场
+                </div>
+                <div class="parking-msg-content">
+                    <p>车牌号码：
+                        <span>湘A88888</span>
+                    </p>
+                    <p>停车时间：
+                        <span>28小时11分</span>
+                    </p>
+                    <p>缴费时间：
+                        <span>2015-08-22 16:22:11</span>
+                    </p>
+                    <p>缴费金额：
+                        <span class="red">40元</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mod-parking-msg">
+                <div class="parking-hd">
+                    <i class="iconfontmod icon">&#xe794;</i> 梅溪新天地停车场
+                </div>
+                <div class="parking-msg-content">
+                    <p>车牌号码：
+                        <span>湘A88888</span>
+                    </p>
+                    <p>停车时间：
+                        <span>28小时11分</span>
+                    </p>
+                    <p>缴费时间：
+                        <span>2015-08-22 16:22:11</span>
+                    </p>
+                    <p>缴费金额：
+                        <span class="red">40元</span>
+                    </p>
+                </div>
+            </div>
+            <div class="mod-parking-msg">
+                <div class="parking-hd">
+                    <i class="iconfontmod icon">&#xe794;</i> 步步高王府店停车场
+                </div>
+                <div class="parking-msg-content">
+                    <p>车牌号码：
+                        <span>湘A88888</span>
+                    </p>
+                    <p>停车时间：
+                        <span>28小时11分</span>
+                    </p>
+                    <p>缴费时间：
+                        <span>2015-08-22 16:22:11</span>
+                    </p>
+                    <p>缴费金额：
+                        <span class="red">40元</span>
+                    </p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA || {};
+        $PAGE_DATA['hasHistory'] = 0,
+        $PAGE_DATA['url'] = {
+            'list': 'http://wx.yunhou.com/super/activity/list?is_ajax=1'
+        };
+        require(['conf/park-payment-records/1.0.0/park-payment-records']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

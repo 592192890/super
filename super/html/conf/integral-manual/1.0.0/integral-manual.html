@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>自助积分手册</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//ssl.bbgstatic.com/super/css/conf/integral-manual/1.0.0/integral-manual.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+
+    <div class="page-view">
+        <ul class="mod-details">
+            <li>1、积分仅限消费小票，刷卡单据无法进行积分。每次拍摄请只上传一张小票，且金额>=20元。</li>
+            <li>2、您在拍照的时候，至少要拍完完整如下框内的内容，否则将无法积分。</li>
+            <li>3、请保证上传小票为本人消费，且要保证小票图片完整清晰。</li>
+            <li>4、小票审核通过后，积分将在3-5个工作日内到账。</li>
+        </ul>
+        <div class="mod-order">
+            <div class="order-merchants">商户名</div>
+            <ul class="transaction">
+                <li><span>结账时间：</span>2017-03-10 15:06</li>
+                <li><span>交易号：</span>2343523654</li>
+            </ul>
+            <ul class="product">
+                <li>
+                    <span class="name">商品：</span>
+                    <span class="money">金额</span>
+                    <span class="quantity">数量</span>
+                </li>
+                <li>
+                    <span class="name">商品名称</span>
+                    <span class="money">88.00</span>
+                    <span class="quantity">1</span>
+                </li>
+            </ul>
+            <ul class="payement">
+                <li>小计：￥88.00</li>
+                <li>应收：￥88.00</li>
+            </ul>
+        </div>
+        <dl class="mod-details">
+            <dt>不能正常积分？</dt>
+            <dd>1、对于有消费异常的会员，我们有权怀疑是虚假消费并冻结账户。如账户被冻结，会员可致电0731-9876789出示消费证明以解冻账号。</dd>
+            <dd>2、每个商城有每日获取积分上限。</dd>
+        </dl>
+    </div>
+    <!--#include file="/super/html/common/outro.html"-->
+    <!-- #include file="/super/html/common/statistics.html" -->
+    <script>
+        window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['url']={
+            // allCity: 'http://wx.yunhou.com/super/point/getAllCity',//城市信息
+            // giftPage: 'http://wx.yunhou.com/super/point/getGiftPage'
+        };
+        require(['conf/integral-manual/1.0.0/integral-manual']);
+        
+    </script>
+</body>
+
+</html>

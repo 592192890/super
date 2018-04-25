@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>申请售后</title>
+<!--#include file="/super/html/common/intro.html"-->
+<link href="//s1.bbgstatic.com/super/css/conf/after-sale/1.0.0/after-sale-apply.css" data-cdn="conf/item/1.0.0/after-sale-apply.css" rel="stylesheet" type="text/css">
+<script>
+    var orderId = "20199000001";
+
+</script>
+</head>
+<body>
+<div class="page-view">
+    
+    <div class="goods-head">
+        <i class="iconfontmod icon">&#xe615</i>
+        <span>申请售后商品</span>
+        
+    </div>
+    <ul class="goods-list" id="jGoodsList">
+        <li data-id="9996000282" class="goods-item">
+            <input type="checkbox" class="pro-checked jChecked" checked='checked'>
+            <!--<a href="/item/9996000282.html" data-bpm="4.1.1.1.0.9996000282">-->
+                <a href="/item/9996000282.html" data-bpm="4.1.1.1.0.9996000282">
+                    <img src="http://img3.bbgstatic.com/14f6442f877_2_0077a050ad6e39265359847c5a6d354b_800x800.jpeg!m2" class="gd-img" style="opacity: 1;">
+                </a>
+                <div class="gd-msg">
+                    <div class="gd-title">
+                        <span class="gd-title-tags" data-node-type="tags">123日本REVEUR无硅 洗发水养润保湿型紫色500ml</span>
+                        <div class="gd-comments jComments" data-spec="123">
+                            红色 35码
+                        </div>
+                    </div>
+                    
+                    <div class="gd-price">
+                        <span class="price">￥138</span>
+                        <span class="del-price">￥158</span>
+                        <div class="item-counter">
+                            <button class="jMinus left"><i class="iconfontmod icon">&#xe75b;</i></button>
+                            <input type="tel" class="jNumber" data-number="10" value="10">
+                            <button class="jAdd right"><i class="iconfontmod icon">&#xe75c;</i></button>
+                        </div>
+                        <!--<span class="goods-number">×<span class="return-num jNumber">10</span></span>
+                        -->
+                    </div>
+                </div>
+            <!--</a>-->
+        </li>
+        <li data-id="9996000282" class="goods-item">
+            <input type="checkbox" class="pro-checked jChecked" checked='checked'>
+            <!--<a href="/item/9996000282.html" data-bpm="4.1.1.1.0.9996000282">-->
+                <a href="/item/9996000282.html" data-bpm="4.1.1.1.0.9996000282">
+                    <img src="http://img3.bbgstatic.com/14f6442f877_2_0077a050ad6e39265359847c5a6d354b_800x800.jpeg!m2" class="gd-img" style="opacity: 1;">
+                </a>
+                <div class="gd-msg">
+                    <div class="gd-title">
+                        <span class="gd-title-tags" data-node-type="tags">日本REVEUR无硅 洗发水养润保湿型紫色500ml</span>
+                        <div class="gd-comments jComments">
+                            红色 35码
+                        </div>
+                    </div>
+                    <div class="gd-price">
+                        <span class="price">￥138</span>
+                        <span class="del-price">￥158</span>
+                        <div class="item-counter">
+                            <button class="jMinus left"><i class="iconfontmod icon">&#xe75b;</i></button>
+                            <input type="tel" data-number="10" class="jNumber" value="10">
+                            <button class="jAdd right"><i class="iconfontmod icon">&#xe75c;</i></button>
+                        </div>
+                        <!--<span class="goods-number">×<span class="return-num jNumber">10</span></span>-->
+                        
+                    </div>
+                </div>
+            <!--</a>-->
+        </li>
+    </ul>
+    
+    <div class="service-head">
+        <i class="iconfontmod icon">&#xe615</i>
+        <span>申请服务</span>
+    </div>
+    <div class="hr-line"></div>
+    <div class="service-select">
+        <div class="service-item jFirstApply active">
+            <span>申请退货退款</span>
+            
+            <i class="iconfontmod icon">&#xe614</i>
+        </div>
+        <div class="service-item jSecondApply">
+            <span>仅申请退款</span>
+            
+            <i class="iconfontmod icon">&#xe614</i>
+        </div>
+        
+    </div>
+
+    <div class="service-head">
+            <i class="iconfontmod icon">&#xe615</i>
+        <span>退货理由</span>
+    </div>
+    <div class="hr-line"></div>
+    <div class="service-select ui-select">
+        <select id="jSelectReason">
+            <option value>请选择退货理由</option>
+        </select>
+    </div>
+    
+    <div>
+
+    <div class="description">
+        <div class="service-head">
+                <i class="iconfontmod icon">&#xe615</i>
+            <span>文字描述</span>
+        </div>
+        <div class="content">
+            <textarea class="textarea" id="jDescription" cols="30" rows="5" placeholder="请描述遇到的问题及详细的退货理由，不超过300字"></textarea>
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="service-head">
+                <i class="iconfontmod icon">&#xe615</i>
+            <span>上传凭证</span>
+        </div>
+        <!-- 如果是h5 -->
+        <div class="upload-content" id="jAddFile">
+            <div class="id-img" id="jFileButton">
+                <a href="javascript:;" class="ui-button" node-type="uploadButton" data-name="imageTest">
+                    <div class="upload-txt"></div>
+                </a>
+                
+            </div>
+            
+        </div>
+        <!-- 如果是微信小程序 -->
+        <div class="upload-content" id="jAddWXFile">
+            <div class="id-img id-wximg" id="jFileWXButton">
+                <a href="javascript:;" class="ui-button" node-type="uploadButton" data-name="imageTest">
+                    <div class="upload-txt"></div>
+                    <div id="jWXInput" class="upload-file-ctl" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;" />
+                </a>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+        <div class="button">
+        <a class="ui-button" id="jSubmit">提交申请</a>
+    </div>
+    <div class="intruction-head">
+        <div class="grad-line"></div>
+        <span class="grad-middle">商城退货说明</span>
+        <div class="grad-line"></div>
+    </div>
+    <div class="intruction">
+        <p>1.为确定您的退货申请是否有效，申请前请仔细阅读本商城的<span class="mark">退货政策</span>。</p>
+        <p>2.审核提交后，审核将在两个工作日完成。</p>
+        <p>3.为避免不必要的损失，请您将在本商城购物取得的发票及赠品随货物一并寄回。</p>
+        <p>4.请将购物清单一起寄回，若遗失，请将收货人手机及订单号写在纸片上随货物一起寄回，否则我们无法在一堆商品中识别你的货品。</p>
+    </div>
+      
+</div>
+<!--#include file="/super/html/common/outro.html"-->
+
+<script>
+    var orderId = '';
+    window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+    window['$PAGE_DATA']['url']={
+        'submitApplyUrl':'//wx.yunhou.com/super/aftersale/doapply',
+        'uploadFile':'//wx.yunhou.com/super/member/upload'
+    }
+    require(['conf/after-sale/1.0.0/after-sale-apply']);
+</script>
+</body>
+</html>

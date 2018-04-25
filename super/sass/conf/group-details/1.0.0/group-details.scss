@@ -1,0 +1,133 @@
+/**
+* @file group-details.scss
+* @synopsis  团购详情页
+* @author zhouwei, 1097009033@qq.com
+* @version 1.0.0
+* @date 2017-04-14
+*/
+
+@import "conf/item/1.0.0/item.scss";
+.item {
+    $primary_color: #f95d5b;
+    //团购价格
+    .mod-price {
+        //价格
+        .item-price {
+            padding-right: rem(10);
+            color: $primary_color;
+            font-size: rem(34);
+            em {
+                color: $primary_color;
+                font-style: normal;
+            }
+            &.show-price-tag:before {
+                position: relative;
+                top: rem(-6);
+                display: inline-block;
+                height: rem(34);
+                margin-right: rem(5);
+                padding: 0 rem(5);
+                content: attr(data-text);
+                color: #fff;
+                font-size: rem(24);
+                line-height: rem(34);
+                background-color: $primary_color;
+                border-radius: rem(3);
+            }
+        }
+        .item-price-origin {
+            color: #8c8c8c;
+            font-size: rem(24);
+            text-decoration: line-through;
+        }
+    }
+    //参团
+    .senate {
+        background: #fff;
+        padding: 0 0 rem(10) rem(20);
+        min-height: rem(40);
+        .tail-money {
+            padding-top: rem(12);
+            height: rem(40);
+            font-size: rem(26);
+        }
+        i {
+            font-style: normal;
+            color: #f95d5b;
+            margin-right: rem(520);
+        }
+        //进度条
+        .payment-date {
+            position: relative;
+            top: rem(-32);
+            left: rem(110);
+            width: rem(480);
+            height: rem(14);
+            background: #f2f3f7;
+            border-radius: rem(14);
+            .process {
+                position: absolute;
+                width: rem(0);
+                height: rem(14);
+                border-radius: rem(14) 0 0 rem(14);
+                background-image: linear-gradient(90deg, #f2669f, #fb984b);
+            }
+            i {
+                position: absolute;
+                top: rem(-16);
+                left: -4%;
+                font-size: rem(40);
+            }
+        }
+    }
+    //团购流程图
+    .mod-process {
+        .mod-hd {
+            a {
+                float: right;
+                font-size: rem(26);
+                color: #999;
+                i {
+                    font-size: rem(20);
+                }
+            }
+        }
+        .mod-ctn {
+            width: 100%;
+            padding-left: rem(10);
+            dl {
+                width: rem(120);
+                dt {
+                    margin: rem(15) auto;
+                }
+            }
+            & :nth-child(5) {
+                width: rem(162);
+            }
+            & :nth-child(7) {
+                width: rem(218);
+            }
+            .arrow {
+                width: rem(24);
+                margin: rem(45) auto;
+                font-size: rem(24);
+            }
+        }
+    }
+    //标题
+    .item-info {
+        .item-title {
+            margin-bottom: rem(20);
+            font-size: rem(30);
+        }
+    }
+    //按钮
+    .mod-pay {
+        background-color: #f0f0f4;
+        .pay-deposit {
+            &.disabled {
+                background-color: #ccc;
+            }
+        }
+    }
+}

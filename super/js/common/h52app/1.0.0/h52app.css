@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* global env vars */
+/* ui components customize consts */
+/* common includes */
+/* 选中状态 */
+/**
+* @file _h52app.scss
+* @synopsis  h52app
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2017-06-22
+*/
+.mod-h52app {
+  height: 2.34667rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  z-index: 1000;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center; }
+  .mod-h52app .app-icon {
+    width: 2.56rem; }
+    .mod-h52app .app-icon img {
+      width: 1.70667rem;
+      height: 1.70667rem;
+      display: block;
+      margin-left: 0.34133rem; }
+  .mod-h52app .app-tips {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    font-size: 0.512rem; }
+  .mod-h52app .app-btn {
+    width: 2.77333rem;
+    height: 1.28rem;
+    line-height: 1.28rem;
+    text-align: center;
+    border-radius: 0.128rem;
+    background: #f95d5b;
+    color: #fff;
+    font-size: 0.55467rem; }
+  .mod-h52app .app-close {
+    height: 100%;
+    width: 2.34667rem;
+    text-align: center;
+    background: url("http://img4.bbgstatic.com/15cced3f02f_bc_5ff65ce9bfdb1e714b4fa94e11251418_23x23.png") no-repeat 50% 50%;
+    background-size: 0.46933rem 0.46933rem; }
+
+.mod-transparent-mask:after {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  z-index: 999; }
+
+.mod-h52app-html {
+  padding-top: 2.34667rem; }
+
+.mod-h52app-hidden {
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.mod-h52app-hidden body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.mod-guide-pop {
+  top: 0px !important;
+  right: 0.64rem !important;
+  left: auto !important; }
+  .mod-guide-pop .icon-arrow {
+    width: 10.41067rem;
+    height: 3.88267rem; }
+    .mod-guide-pop .icon-arrow img {
+      width: 10.41067rem;
+      height: 3.88267rem;
+      display: block; }

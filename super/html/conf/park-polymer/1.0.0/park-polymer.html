@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>停车缴费</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//ssl.bbgstatic.com/super/css/conf/park-polymer/1.0.0/park-polymer.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- 停车场列表 -->
+        <div class="mod-park-list">
+            <!-- 停车场信息 -->
+            <div class="park-item">
+                <div class="parking-hd">步步高·梅溪新天地停车场</div>
+                <div class="parking-msg-content">
+                    <p>
+                        <img src="//ssl.bbgstatic.com/super/images/conf/park-polymer/1.0.0/icon-car.png" alt="">
+                        <span>剩余车位：</span>
+                        <span>
+                            <u class="now-carport">172</u> / 300</span>
+                    </p>
+                    <p>
+                        <img src="//ssl.bbgstatic.com/super/images/conf/park-polymer/1.0.0/open-time.png" alt="">
+                        <span>开放时间：</span>
+                        <span>10:00-24:00</span>
+                    </p>
+                    <div class="parking-address">
+                        <span class="f-l">
+                            <img src="//ssl.bbgstatic.com/super/images/conf/park-polymer/1.0.0/address.png" alt="" class="f-l">
+                            <span>地址：</span>
+                        </span>
+                        <div class="address">梅溪湖国际新城 · 枫林三路与东方红路交汇处</div>
+                    </div>
+                </div>
+                <div class="other-btn-box">
+                    <div class="rules jParkRules">
+                        <i class="iconfontmod icon">&#xe79f;</i><span>收费规则</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的车牌 -->
+        <div class="mod-my-licence">
+            <!-- <div class="parking-hd">
+                <span>您已有
+                    <i class="already-bind" id="jBindNum">2</i>个车牌（最多可添加3个车牌）</span>
+            </div> -->
+            <!-- 无车牌 -->
+            <div class="licence-list none">
+                <div class="add-licence-btn" id="jBindPlate">
+                    <i class="iconfontmod icon">&#xe7a3;</i>
+                    <span>添加车牌</span>
+                </div>
+                <p class="reminder">暂无绑定车牌~</p>
+                <p>温馨提示：绑定车牌，尊享会员免费停车特权！</p>
+            </div>
+            <!-- 1个车牌 -->
+            <div class="licence-list list-one">
+                <div class="licence-item active jLicencePlate" data-plate="湘 A88888">
+                    <div class="licence-content">
+                        <div class="licence-txt jLicenceTxt">湘 A88888</div>
+                        <a href="javascript:void(0)" class="manage-btn jFindCar">
+                            <i class="iconfontmod icon">&#xe792;</i>
+                            <span>室内找车</span>
+                        </a>
+                        <a href="javascript:void(0)" class="manage-btn jPayForPark">
+                            <i class="iconfontmod icon">&#xe798;</i>
+                            <span>停车缴费</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 2个车牌 -->
+            <!-- <div class="licence-list list-two">
+                <div class="licence-item active jLicencePlate" data-plate="湘 A88888">
+                    <div class="licence-content">
+                        <div class="licence-txt jLicenceTxt">湘 A88888</div>
+                        <a href="javascript:void(0)" class="manage-btn jFindCar">
+                            <i class="iconfontmod icon">&#xe792;</i>
+                            <span>室内找车</span>
+                        </a>
+                        <a href="javascript:void(0)" class="manage-btn jPayForPark">
+                            <i class="iconfontmod icon">&#xe798;</i>
+                            <span>停车缴费</span>
+                        </a>
+                    </div>
+                    <div class="mask-layer" id="jMaskLayer"></div>
+                </div>
+                <div class="licence-item licence-item-third jLicencePlate" data-plate="湘 A88889">湘 A88889</div>
+                <div class="licence-animate visib" id="jAnimate">
+                    <div class="licence-content">
+                        <div class="licence-txt jLicenceTxt">湘 A88888</div>
+                        <a href="javascript:void(0)" class="manage-btn jFindCar">
+                            <i class="iconfontmod icon">&#xe792;</i>
+                            <span>室内找车</span>
+                        </a>
+                        <a href="javascript:void(0)" class="manage-btn jPayForPark">
+                            <i class="iconfontmod icon">&#xe798;</i>
+                            <span>停车缴费</span>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 3个车牌 -->
+            <!-- <div class="licence-list">
+                <div class="licence-item jLicencePlate" data-plate="湘 A88887">湘 A88887</div>
+                <div class="licence-item active jLicencePlate" data-plate="湘 A88888">
+                    <div class="licence-content">
+                        <div class="licence-txt jLicenceTxt">湘 A88888</div>
+                        <a href="javascript:void(0)" class="manage-btn jFindCar">
+                            <i class="iconfontmod icon">&#xe792;</i>
+                            <span>室内找车</span>
+                        </a>
+                        <a href="javascript:void(0)" class="manage-btn jPayForPark">
+                            <i class="iconfontmod icon">&#xe798;</i>
+                            <span>停车缴费</span>
+                        </a>
+                    </div>
+                    <div class="mask-layer" id="jMaskLayer"></div>
+                </div>
+                <div class="licence-item licence-item-third jLicencePlate" data-plate="湘 A88889">湘 A88889</div>
+                <div class="licence-animate visib" id="jAnimate">
+                    <div class="licence-content">
+                        <div class="licence-txt jLicenceTxt">湘 A88888</div>
+                        <a href="javascript:void(0)" class="manage-btn jFindCar">
+                            <i class="iconfontmod icon">&#xe792;</i>
+                            <span>室内找车</span>
+                        </a>
+                        <a href="javascript:void(0)" class="manage-btn jPayForPark">
+                            <i class="iconfontmod icon">&#xe798;</i>
+                            <span>停车缴费</span>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 跳管理车牌 -->
+            <a href="#" class="manage-licence">
+                <i class="iconfontmod icon">&#xe7a3;</i>
+                <span>管理车牌</span>
+            </a>
+        </div>
+        <!-- 其他操作 -->
+        <ul class="mod-operate">
+            <li>
+                <a href="//super.com/super/html/conf/park-payment-records/1.0.0/park-payment-records.html">
+                    <img src="//ssl.bbgstatic.com/super/images/conf/park-polymer/1.0.0/park-record.png" alt="">
+                    <span>我的停车记录</span>
+                    <i class="iconfontmod icon f-r">&#xe772;</i>
+                </a>
+            </li>
+            <li>
+                <a href="tel:18229952439">
+                    <img src="//ssl.bbgstatic.com/super/images/conf/park-polymer/1.0.0/customer-service.png" alt="">
+                    <span>联系客服</span>
+                    <i class="iconfontmod icon f-r">&#xe772;</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- body end -->
+    <!--#include file="/super/html/common/outro.html"-->
+
+    <script>
+        var $PAGE_DATA =
+        window['$PAGE_DATA'] = window['$PAGE_DATA'] || {};
+        window['$PAGE_DATA']['shopId'] = '012823';
+        window['$PAGE_DATA']['url'] = {
+            'getCars':'//wx.yunhou.com/super/park/getParkInfo',//carNo=湘A7m13H&shopId=012823
+            'loginUrl':'//wx.yunhou.com/super/passport/login?returnUrl=',
+            'addcar':'http://wx.yunhou.com/super/park/oprate/add'
+        };
+        require(['conf/park-polymer/1.0.0/park-polymer']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>

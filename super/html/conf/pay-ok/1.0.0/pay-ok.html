@@ -1,0 +1,84 @@
+<!--刘慧-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支付成功</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/pay-ok/1.0.0/pay-ok.css" type="text/css" charset="utf-8">
+</head>
+    <div class="page-view">
+        <!-- 支付成功 begin -->
+        <div class="mod-item item-info pay-success">
+            <!-- 图标和状态 begin -->
+            <div class="info-tips">
+                <i class="tips-success iconfontmod"></i>
+                <div class="tips-txt">支付成功</div>
+            </div>
+            <!-- 图标和状态 end -->
+            <!-- 支付状态详情 begin -->
+            <div class="ui-list info-detail">
+                <div class="list-hd">
+                    <div class="hd-l hd-place">步步高王府花园店</div>
+                    <div class="hd-r"><span>¥200.00</span></div>
+                </div>
+                <div class="hd-txt">
+                    商务卡余额支付
+                </div>
+                <div class="list-hd info-txt">
+                    <div class="hd-l">订单编号</div>
+                    <div class="hd-r">123456789010932483957456</div>
+                </div>
+                <div class="list-hd">
+                    <div class="hd-l">交易时间</div>
+                    <div class="hd-r">2017年3月4日&nbsp;14时15分</div>
+                </div>
+                <div class="list-hd">
+                    <div class="hd-l">当前状态</div>
+                    <div class="hd-r">支付成功</div>
+                </div>                  
+            </div>
+            <!-- 支付状态详情 end -->
+            <!-- 按钮 begin -->
+            <div class="info-button">
+                <a href="javascript:void(0)" class="ui-button button-order">查看订单</a>
+                <a href="javascript:void(0)" class="ui-button button-home">返回首页</a>
+            </div>   
+            <!-- 按钮 end -->
+        </div>
+        <!-- 支付成功 end -->
+        
+        <!-- 支付失败 begin -->
+        <div class="mod-item item-info pay-error">
+            <div class="info-tips">
+                <i class="tips-error iconfontmod"></i>
+                <div class="tips-txt">支付失败</div>
+                <div class="tips-detail">失败原因：商务卡余额不足</div>
+            </div>
+            <div class="info-button">
+                <a href="javascript:void(0)" class="ui-button button-order">返回我的资产</a>
+            </div>  
+        </div>
+        <!-- 支付失败 end -->
+        <!-- 支付中 -->
+        <div class="mod-item item-info pay-success">
+            <div id="jLoading" class="pay-loading"></div>
+        </div>
+
+        <!--#include file="/super/html/common/outro.html"-->
+        <!--#include file="/super/html/common/statistics.html"-->
+        <script>
+			window['$PAGE_DATA']=window['$PAGE_DATA'] || {};
+			window['$PAGE_DATA']['url'] = {
+                payokUrl :'//wx.yunhou.com/super/pay/result/'
+            };
+            window['$PAGE_DATA']['payStatus']="2";  //1 付款成功  2 付款中   3 付款失败
+            window['$PAGE_DATA']['orderIds']="170881902001";//订单号
+
+
+            require(['conf/pay-ok/1.0.0/pay-ok']);
+        </script>
+    </div>
+</body>
+
+</html>

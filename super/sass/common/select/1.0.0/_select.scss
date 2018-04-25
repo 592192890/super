@@ -1,0 +1,43 @@
+/* select */
+.ui-select {
+    vertical-align: middle;
+    display: inline-block;
+    resize: none;
+    position: relative;
+    width: 100%;
+	&:after {
+		position:absolute;
+		right:rem(10);
+		top:50%;
+		font-size:rem(30);
+		font-family: "iconfont";
+		content: "\e605";
+		height:rem(30);
+		line-height:rem(30);
+		overflow:hidden;
+		color:#b6b6b6;
+		margin-top:rem(-16);
+	}
+    select {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        height: rem(78);
+        line-height: rem(78);
+        background-color: #f8f8f8;
+        border: 0; 
+		border-radius:rem(10);
+        padding: 0px rem(20);
+        padding-right: rem(20);
+        font-size: rem(28);
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        color: #999999;
+        option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: rem(40);
+        }
+    }
+}

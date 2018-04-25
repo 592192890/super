@@ -1,0 +1,113 @@
+/**
+* @file invitation-index.scss
+* @synopsis  我的邀请码
+* @author zgc, zgc7788@gmail.com
+* @version 1.0.0
+* @date 2017-08-11
+*/
+
+@import "common/common";
+@import "module/my-invitation-code/1.0.0/invite-list";
+body{
+  max-width:rem(750);
+  margin:0 auto;
+}
+.page-view{
+  background:#f2f3f7;
+  .bg-and-mg{
+    margin-top: rem(20);
+    background: #fff;
+  }
+}
+header{
+  width:rem(750);
+  height:rem(180);
+  background-image:url('/super/images/conf/my-invitation-code/1.0.0/index-banner.png');
+  background-size: cover;
+  background-position:center;
+}
+.mod-inviter{
+  .inviter-from{
+    height: rem(140);
+    .invite-code-input{
+      width:rem(542);
+      height:rem(74);
+      border: 1px solid #f2f2f2;
+      border-radius: rem(3);
+      text-indent: rem(20);
+      background: #fbfbfb;
+      margin: rem(30) rem(16) rem(30) 0;
+      &::-webkit-input-placeholder{
+        color:#bdbdbd;
+        font-size:rem(26);
+      }
+    }
+    button{
+      width: rem(146);
+      margin: rem(30) 0;
+    }
+  }
+}
+// .mod-inviter-already{
+//   display: none;
+// }
+.mod-invite-strategy{
+  // height: rem(338);
+  padding-bottom: rem(20);
+  .qr-code{
+    img{
+      width: rem(152);
+      margin: rem(28);
+    }
+    .qr-code-dec{
+      width: rem(500);
+      font-size: rem(26);
+      line-height: rem(32);
+      margin: rem(50) 0;
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      display: box; 
+      display: -webkit-box; 
+      line-clamp: 3;
+      -webkit-line-clamp: 3; 
+      -webkit-box-orient: vertical;
+    }
+  }
+  .warm-prompt{
+    width: rem(700);
+    background: #fcf7f7;
+    font-size: rem(24);
+    color: #f95d5b;
+    margin: 0 auto;
+    border-radius: 1px;
+    .bulb{
+      font-size: rem(30);
+      margin:rem(10) rem(8) 0 rem(20); 
+    }
+    span{
+      display: inline-block;
+      width: rem(630);
+      padding:rem(18) 0;
+      line-height: rem(30);
+    }
+  }
+}
+.mod-invite-btn{
+  margin: rem(20);
+}
+.mod-mask-layer{
+  display: none;
+  position: fixed;
+  top: 0px;
+  width: 16rem;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  z-index: 10;
+  background-color: #000;
+  background-image: url('/super/images/conf/my-invitation-code/1.0.0/share.png');
+  background-size: 71%;
+  background-repeat: no-repeat;
+  background-position: top rem(36) right rem(46);
+  opacity: .6;
+}

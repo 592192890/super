@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>优惠券详情</title>
+    <!--#include file="/super/html/common/intro.html"-->
+    <meta content="3.6" name="pageid" />
+    <link rel="stylesheet" href="//s1.bbgstatic.com/super/css/conf/coupon-share/1.0.0/index.css"
+    type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div class="page-view">
+        <!-- 头部导航 -->
+        <header class="head-wrap" id='jHeader'>
+            <div class="s-header">
+                <header class="ui-header">
+                    <a href="javascript:history.go(-1);" class="icon icon-md iconfont ui-back">&#xe612;<span>返回</span></a>
+                    <span class="ui-title">优惠券详情</span>
+                    <a href="javascript:;" class="btn-share-item icon icon-lg iconfontmod" id="jBtnShare">&#xe79c;</a>
+                </header>
+            </div>
+        </header>
+
+        <div id='coupon-details'></div>
+    
+        <footer class="mod-receive">
+            <div class="received">已领取 <span></span> 张</div>
+            <div class="getItNow" id='jGetItNow'>立即领取</div>
+            <div class="share" id='jShareTo'>
+                <i class="icon iconfontmod">&#xe79c;</i> <span>分享給好友</span>
+            </div>
+        </footer>
+        
+        <!-- 分享 -->
+        <div id="jItemShareBox" class="modal-box-wrap">
+            <div class="modal-box">
+                <a href="javascript:void(0);" class="jCloseModalBox modal-box-btn-close"><i class="icon iconfontmod">&#xe631;</i></a>
+                <h5 class="modal-box-title">分享到</h5>
+                <div class="modal-box-content">
+                    <div class="sharebuttonbox item-share-box" data-summary="data-summary" data-desc="【云猴小站】taotao1624" data-pic="http://img04.bubugao.com/14d6b61d36b_44b_7573d991348699bf6b81f2b8020896b0_100x100.jpeg" data-text="我刚关注了“taotao1624”，Ta的云猴小站有好多精选商品，快来看看吧。">
+                        <a title="分享到QQ空间" target="_blank" href="#" class="bds_qzone" data-cmd="qzone"><i class="icon iconfontmod">&#xe631;</i> <span>QQ空间</span></a>
+                        <a title="分享到QQ好友" target="_blank" href="#" class="bds_sqq" data-cmd="mqq"><i class="icon iconfontmod">&#xe62d;</i> <span>手机QQ</span></a>
+                        <a title="分享到新浪微博" target="_blank" href="#" class="bds_tsina" data-cmd="tsina"><i class="icon iconfontmod">&#xe62a;</i> <span>新浪微博</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="jCloseModalBox modal-box-mask"></div>
+        </div>
+        <!--分享引导-->
+        <div id="jGuide" class="share-guide" >
+            <img class="s-img-weixin jweixin" src="//ssl.bbgstatic.com/super/images/conf/coupon-share/1.0.0/guide.png"/>
+        </div>
+        
+        <!--成功弹窗-->
+        <div id='jAccount' class="mod-account">
+            <div class="account">
+                <div class="price">￥<b></b>.00</div>
+                <div class="alreadyGet"></div>
+                <div class="checkCoupon">可到“个人中心-我的优惠券”查看</div>
+                <div class="confirm">我知道了</div>
+                <div class="close"><i class="icon iconfontmod">&#xe7a1;</i></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--#include file="/super/html/common/outro.html"-->
+    <script>
+        var $PAGE_DATA = window.$PAGE_DATA || {};
+        $PAGE_DATA['url'] = {
+            details:'//wx.yunhou.com/super/coupon/api_detail',
+            getCoupon:'//wx.yunhou.com/super/coupon/receive',
+            sharerName: 'sharerName',
+            shareUrl:'//wx.yunhou.com/super/coupon/share_page'
+        };
+        require(['conf/coupon-share/1.0.0/index']);
+    </script>
+    <!--#include file="/super/html/common/statistics.html"-->
+</body>
+
+</html>
